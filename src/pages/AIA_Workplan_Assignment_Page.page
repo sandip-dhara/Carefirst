@@ -1,0 +1,26 @@
+<apex:page standardController="AIA_Workplan_Assignment__c" extensions="AIA_WPAController">
+<apex:form >
+<apex:pageMessages ></apex:pageMessages>
+    <apex:pageBlock title="WorkPlan Assignment">
+    
+        <apex:pageBlockSection columns="2">
+            <apex:inputfield value="{!wpa.Task_Name__c}"/>
+            <apex:inputfield value="{!wpa.recordtypeId}"/>            
+            <apex:inputfield value="{!wpa.OwnerId}"/>
+            <apex:inputfield value="{!wpa.Task_Code__c}"/>
+            <apex:inputfield value="{!wpa.Task_Description__c}"/>
+            <apex:inputfield value="{!wpa.External_Assignee__c}"/>
+            <apex:inputfield value="{!wpa.Due_Date__c}" required="true"/>                
+            <apex:inputfield value="{!wpa.Status__c}" required="true"/>
+            <apex:inputfield value="{!wpa.Assigned_Date_Time__c}"/>                
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockButtons location="top"> 
+            <apex:commandButton value="Save" action="{!save}"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:commandButton value="Cancel" action="{!Cancel}"/>    
+        </apex:pageBlockButtons>
+    
+    </apex:pageBlock>
+    
+</apex:form>    
+</apex:page>

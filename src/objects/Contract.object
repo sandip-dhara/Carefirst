@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>AIA_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>AIA Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft Creation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internal Approvals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Post Internal Review Document Creation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Additional Printed Benefit Guides</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Approved_Account__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Approved - Account</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Approved_Internal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Approved - Internal</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Approved_Sales__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Approved - Sales</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Approver_Audit__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - Audit</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approver_C_C__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - C&amp;C</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Contracts1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approver_Contract_Supervisor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - Contract Supervisor</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Contracts4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approver_Legal__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - Legal</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Contracts2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approver_Sales_Service_Rep__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - Sales Service Rep</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Contracts6</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approver_Sales__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver - Sales</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Contracts5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BSS_Codes__c</fullName>
+        <externalId>false</externalId>
+        <label>BSS Codes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Implementation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Implementation</label>
+        <referenceTo>AIA_Implementation__c</referenceTo>
+        <relationshipLabel>Contracts</relationshipLabel>
+        <relationshipName>Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Supervisor_Review_Req_d__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Supervisor Review Req&apos;d</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ASO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fully-Insured non-CFMI Matrix</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fully-Insured CFMI Matrix</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Facets Dental</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Facets Vision</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+</CustomObject>

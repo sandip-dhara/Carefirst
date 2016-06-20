@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<ol style="margin: auto; padding: 0.2em 0px 0.2em 2.7em; border: 0px; vertical-align: baseline; list-style-position: inside; color: rgb(38, 38, 38); font-family: 'Proxima Nova', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 12px; line-height: 16.1px; background-color: rgb(255, 255, 255);"><li style="margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; list-style: decimal inside;">A Group Structure Document for {!AIA_Document__c.Account__c} has been rejected. Please correct the document and re-submit it for approval.</li><li style="margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; list-style: decimal inside;">Reason for rejection:&nbsp;{!ApprovalRequest.Comments}</li></ol>]]></td>
+</tr>
+</table>

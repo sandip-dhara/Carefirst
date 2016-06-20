@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="Times New Roman, Times, serif" size="2" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><p>A Sales Data Analyst Request&nbsp;for {!AIA_Document__c.Account__c} has been submitted&nbsp;and it needs your attention. &nbsp;</p><p><br></p><p>Please click the attached link to review the request&nbsp;information.</p><p><br></p><p>Link to File Net Document: {!AIA_Document__c.Link}</p></font><font><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: arial; font-size: 16px; background-color: rgb(255, 255, 255);"><br></span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p></font><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);"><span style="color: rgb(38, 38, 38); font-family: &quot;Proxima Nova&quot;, &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif; font-size: 12px;"><br></span></div>]]></td>
+</tr>
+</table>

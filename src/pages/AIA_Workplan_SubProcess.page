@@ -1,0 +1,10 @@
+<apex:page standardController="Workplan_Stage__c" extensions="AIA_WP_SubProcess_Controller" action="{!onPageLoad}">
+
+    <apex:pageBlock title="Workplan Sub Process">
+    	<apex:form >
+    		<apex:commandlink action="/{!$currentPage.Parameters.Id}" target="_self" value="Back"/>
+    	</apex:form>
+    </apex:pageBlock>
+ <apex:pageMessages />   
+    
+</apex:page>

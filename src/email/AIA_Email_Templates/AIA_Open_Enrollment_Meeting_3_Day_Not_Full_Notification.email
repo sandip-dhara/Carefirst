@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="arial" style="font-size: 12pt;">An Open Enrollment Meeting has been scheduled for the following:</font><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;"><br><div>Account:&nbsp;{!Event.Name_of_Account__c}</div></div><div style="font-size: 12pt;">Implementation Name:&nbsp;{!Event.Implementation__c}</div><div style="font-size: 12pt;">Meeting Owner:&nbsp;{!Event.CreatedBy}</div><div style="font-size: 12pt;">Meeting Date:&nbsp;{!Event.Start_Date_Time__c}</div><div style="font-size: 12pt;">Capacity:&nbsp;{!Event.Capacity__c}</div><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;">This meeting is 3 days away and the number of required attendees is not sufficient.</div><div style="font-size: 12pt;"><br></div><div><font face="arial"><span style="font-size: 12pt;">Number of&nbsp;</span>Sign-Ups:<span style="font-size: 12pt;">&nbsp;{!Event.Current__c}</span></font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div>]]></td>
+</tr>
+</table>

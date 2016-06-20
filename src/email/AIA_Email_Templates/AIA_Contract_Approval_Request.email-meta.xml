@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>AIA_Contract_Approval_Request</name>
+    <style>freeForm</style>
+    <subject>For Review and Approval</subject>
+    <textOnly>Please review and approve the following Contract. Please be sure to review all of the attached AIA Documents.
+
+Below is a link to the Contract record to be reviewed for Approval.
+{!Contract.Link}</textOnly>
+    <type>html</type>
+</EmailTemplate>

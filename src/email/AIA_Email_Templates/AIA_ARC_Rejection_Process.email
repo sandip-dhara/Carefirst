@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p>Please schedule an ARC meeting for the following account</p><p><br></p><p>&nbsp;{!Benfit_Request_Form__c.Account__c}</p><p><br></p><p>Benefit Effective Date:{!Benfit_Request_Form__c.Benefit_Effective_Date__c}</p><p><br></p><p>RFP Request:&nbsp;{!Benfit_Request_Form__c.RFP_Request__c}</p><p><br></p><p><br></p>]]></td>
+</tr>
+</table>

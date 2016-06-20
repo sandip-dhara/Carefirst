@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CareFirst_Letterhead2</letterhead>
+    <name>Cede Document Request Renewal Account Notification1</name>
+    <style>freeForm</style>
+    <subject>{!Benfit_Request_Form__c.Account__c} Renewal Cede Agreement Request</subject>
+    <textOnly>1. {!Benfit_Request_Form__c.Account__r.name}
+2. {!Benfit_Request_Form__c.Account_Full_Address__c}
+3. {!Benfit_Request_Form__c.Broker_Consultant_Name__c}
+4. {!IF( Ispickval ({!Benfit_Request_Form__c.Jurisdiction__c},&quot;VA&quot;),&quot;VA Account outside CareFirst service area&quot;, &quot;Self-Insured Account outside VA, DC, or MD&quot; )}
+5. {!Benfit_Request_Form__c.Contract_Count__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

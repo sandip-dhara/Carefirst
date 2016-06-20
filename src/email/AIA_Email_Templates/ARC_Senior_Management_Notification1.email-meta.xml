@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CareFirst_Letterhead2</letterhead>
+    <name>ARC Senior Management Notification1</name>
+    <style>freeForm</style>
+    <subject>No Decision on ARC Meeeting</subject>
+    <textOnly>Please review the following account:
+{!Benfit_Request_Form__c.Account__c}
+{!Benfit_Request_Form__c.Benefit_Effective_Date__c}
+{!IF( ISBLANK({!Benfit_Request_Form__c.PRF__c}),&apos;No&apos;,&apos;Yes&apos;}
+
+PFB link for the Benifit Request form
+https://carefirst--devaia.cs44.my.salesforce.com/{!Benfit_Request_Form__c.Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

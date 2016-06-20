@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Closed_By_Department_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Closed By Department Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Dummy 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dummy 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dummy 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Closed_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Closed By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Created_By_Department_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Created By Department Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Dummy 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dummy 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dummy 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Implementation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Implementation</label>
+        <referenceTo>AIA_Implementation__c</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Issue_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Issue Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pre-Sales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Group Structure &amp; Admin Setup</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Benefit Design &amp; Creation of NAEGS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Open Enrollment, Materials &amp; Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Benefit Coding, Loading and Testing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enrollment &amp; ID Card Generation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Post Sales Document Generation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing (Monthly) Invoices</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account &amp; Member Tools</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Issue_Frequency__c</fullName>
+        <externalId>false</externalId>
+        <label>Issue Frequency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Account Specific</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Global</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Multiple Accounts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Issue_Sub_Category__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is dependent on Issue Category</inlineHelpText>
+        <label>Issue Sub Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Need to know values</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Members_Impacted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Members Impacted</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Performance_Guarantee_Agreement__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Performance Guarantee Agreement</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>System_In_Which_Issue_Logged__c</fullName>
+        <externalId>false</externalId>
+        <label>System In Which Issue Logged</label>
+        <picklist>
+            <picklistValues>
+                <fullName>AIA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <validationRules>
+        <fullName>ECSE021</fullName>
+        <active>true</active>
+        <description>if Implementation is entered, then Issue Category are required</description>
+        <errorConditionFormula>RecordType.Name  =&apos;AIA Account Issue&apos;&amp;&amp; IF(   Implementation__c = null &amp;&amp; Implementation__c = &apos;&apos; ,false,IF(ISBLANK(TEXT( Issue_Category__c )),true,false))</errorConditionFormula>
+        <errorDisplayField>Issue_Category__c</errorDisplayField>
+        <errorMessage>ECSE021 : If Implementation field is not blank than Issue Category field cannot be blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ECSE022</fullName>
+        <active>true</active>
+        <description>If Issue Frequency is Global then Account cannot have a value</description>
+        <errorConditionFormula>RecordType.Name =&apos;AIA Account Issue&apos; &amp;&amp; IF( ISPICKVAL( Issue_Frequency__c ,&apos;Global&apos;),IF(  AccountId &lt;&gt;  null &amp;&amp;  AccountId &lt;&gt; &apos;&apos; ,true,false),false)</errorConditionFormula>
+        <errorDisplayField>AccountId</errorDisplayField>
+        <errorMessage>ECSE022 : If Issue Frequency is &quot;Global&quot; then Account cannot have a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ECSE023</fullName>
+        <active>true</active>
+        <description>if Implementation is entered, then Issue Category are required</description>
+        <errorConditionFormula>RecordType.Name  =&apos;AIA Account Issue&apos; &amp;&amp; IF(  Implementation__c = null &amp;&amp; Implementation__c = &apos;&apos; ,false,IF(ISBLANK(TEXT(  Issue_Sub_Category__c  )),true,false))</errorConditionFormula>
+        <errorDisplayField>Issue_Sub_Category__c</errorDisplayField>
+        <errorMessage>ECSE023 : If Implementation field is not blank than Issue Sub Category field cannot be blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ECSE024</fullName>
+        <active>true</active>
+        <description>If Issue Frequency is Account Specific then Account cannot be blank</description>
+        <errorConditionFormula>RecordType.Name =&apos;AIA Account Issue&apos; &amp;&amp; IF( ISPICKVAL( Issue_Frequency__c ,&apos;Account Specific&apos;),IF(  AccountId =  null &amp;&amp;  AccountId = &apos;&apos; ,true,false),false)</errorConditionFormula>
+        <errorDisplayField>AccountId</errorDisplayField>
+        <errorMessage>ECS024 : If Issue Frequency =&apos;&quot;Account Specific&quot; then Account cannot be blank</errorMessage>
+    </validationRules>
+</CustomObject>

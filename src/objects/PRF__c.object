@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <fields>
+        <fullName>AIA_Prescription_RX__c</fullName>
+        <externalId>false</externalId>
+        <label>Prescription RX</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Preferred Choice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Exclusive Choice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maintenance Choice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Broad (National)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Account1_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Account.Name</formula>
+        <label>Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benefits_Services__c</fullName>
+        <externalId>false</externalId>
+        <label>Benefits/Services</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Care Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dental</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disease Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vision</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wellness</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Binder_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Binder Size</label>
+        <picklist>
+            <picklistValues>
+                <fullName>3&quot;</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2&quot;</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 1/2&quot;</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1&quot;</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1/2&quot;</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Carefirst_Mktg_Svc_Area_Based_Business__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Carefirst Mktg Svc Area Based Business</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Cede_Letter_Forthcoming__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Cede Letter Forthcoming</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Check_Off__c</fullName>
+        <externalId>false</externalId>
+        <label>Check Off Cede Information</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Required</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On File</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Obtaining</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Claims_Repricing_Medical__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Claims Repricing Medical</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Claims_Repricing_RX__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Claims Repricing RX</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Claims_Repricing_Vision__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Claims Repricing Vision</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Co_Title_NAFBA1_07_R_0036_or_Verizon__c</fullName>
+        <externalId>false</externalId>
+        <label>Co. Title (NAFBA1-07-R-0036 or Verizon)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Date_Needed_Date_Due_to_Coordinator__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Needed (Date Due to Coordinator)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Delivered_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Delivered Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Delivery_Person__c</fullName>
+        <externalId>false</externalId>
+        <label>Delivery Person</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dental_Employer_Sponsored__c</fullName>
+        <externalId>false</externalId>
+        <label>Dental Empl Sponsored</label>
+        <picklist>
+            <picklistValues>
+                <fullName>DHMO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DHMO/DPOS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Preferred (PPO)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Traditional (PAR)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BlueDental Basic</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BlueDental Plus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Final_Bid_Decision__c</fullName>
+        <externalId>false</externalId>
+        <label>Final Bid Decision</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Bid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Bid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Decision</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Final_Decision_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Final Decision Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FirstHelp_Nurse_Line__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional Fees apply</inlineHelpText>
+        <label>FirstHelp Nurse Line</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Fully_Insured_Self_Insured__c</fullName>
+        <externalId>false</externalId>
+        <label>Fully Insured/Self-Insured</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Fully Insured</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Self-Insured</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Guarantees__c</fullName>
+        <externalId>false</externalId>
+        <label>Guarantees</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Test</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Health_Assessment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Opt1: Health Assessment with Online Health Coaching.
+Opt2: Health Assessment with Telephonic Health Advising, Online Health Coaching.
+Opt3: Health Assessment with Telephonic Health Advising, Online Health Coaching, Telephonic Health Coaching.</inlineHelpText>
+        <label>Health Assessment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Carve In PCMH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Carve In TCCI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Carve In DM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Carve In Wellness</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Carve Out PCHM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Carve Out TCCI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Carve Out DM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Carve Out Wellness</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>How_Many_CD_Label_Tab__c</fullName>
+        <externalId>false</externalId>
+        <label>How Many (CD/Label/Tab)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Implementation_Credit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Implementation Credit</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Magellan__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Magellan</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Need_an_Electronic_Cover__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Need an Electronic Cover</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Network_Title_Reg_HMO_POS_Network_Prov__c</fullName>
+        <externalId>false</externalId>
+        <label>Network Title (Reg HMO/POS Network Prov)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>No_Bid_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>No Bid Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Proposal Request Forms</relationshipLabel>
+        <relationshipName>Proposal_Request_Forms</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Original_Bid_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Bid Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Other_Delivery_Method__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Delivery Method</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Info__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Info</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Other</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Product_Jurisdiction_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Product/Jurisdiction(s)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RFP_Summary__c</fullName>
+        <externalId>false</externalId>
+        <label>RFP Summary</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Sent_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Sent Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Title_Page_Instructions__c</fullName>
+        <externalId>false</externalId>
+        <label>Title Page Instructions</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non Standard</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Total_Number_of_Copies__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Number of Copies</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Wellness_Credit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Wellness Credit</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <recordTypes>
+        <fullName>AIA_CF_200</fullName>
+        <active>true</active>
+        <description>CF Proposal Request (200+)</description>
+        <label>CF (200+)</label>
+        <picklistValues>
+            <picklist>AIA_Prescription_RX__c</picklist>
+            <values>
+                <fullName>Broad %28National%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exclusive Choice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Choice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Choice</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Benefits_Services__c</picklist>
+            <values>
+                <fullName>Care Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disease Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wellness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Binder_Size__c</picklist>
+            <values>
+                <fullName>1 1%2F2%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2F2%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%22</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Check_Off__c</picklist>
+            <values>
+                <fullName>Not Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obtaining</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On File</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dental_Employer_Sponsored__c</picklist>
+            <values>
+                <fullName>BlueDental Basic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BlueDental Plus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DHMO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DHMO%2FDPOS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred %28PPO%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional %28PAR%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Final_Bid_Decision__c</picklist>
+            <values>
+                <fullName>Bid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Bid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Decision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Fully_Insured_Self_Insured__c</picklist>
+            <values>
+                <fullName>Fully Insured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self-Insured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Guarantees__c</picklist>
+            <values>
+                <fullName>Test</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Health_Assessment__c</picklist>
+            <values>
+                <fullName>Carve In DM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve In PCMH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve In TCCI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve In Wellness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve Out DM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve Out PCHM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve Out TCCI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve Out Wellness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Title_Page_Instructions__c</picklist>
+            <values>
+                <fullName>Non Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>AIA_TPA_200</fullName>
+        <active>true</active>
+        <description>TPA Proposal Request (200+)</description>
+        <label>TPA (200+)</label>
+        <picklistValues>
+            <picklist>AIA_Prescription_RX__c</picklist>
+            <values>
+                <fullName>Broad %28National%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exclusive Choice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Choice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Choice</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Benefits_Services__c</picklist>
+            <values>
+                <fullName>Care Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disease Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wellness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Binder_Size__c</picklist>
+            <values>
+                <fullName>1 1%2F2%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2F2%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%22</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Check_Off__c</picklist>
+            <values>
+                <fullName>Not Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obtaining</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On File</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dental_Employer_Sponsored__c</picklist>
+            <values>
+                <fullName>DHMO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DHMO%2FDPOS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred %28PPO%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional %28PAR%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Final_Bid_Decision__c</picklist>
+            <values>
+                <fullName>Bid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Bid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Decision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Fully_Insured_Self_Insured__c</picklist>
+            <values>
+                <fullName>Fully Insured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self-Insured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Guarantees__c</picklist>
+            <values>
+                <fullName>Test</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Health_Assessment__c</picklist>
+            <values>
+                <fullName>Carve In DM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve In PCMH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve In TCCI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve In Wellness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve Out DM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve Out PCHM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve Out TCCI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carve Out Wellness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Title_Page_Instructions__c</picklist>
+            <values>
+                <fullName>Non Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

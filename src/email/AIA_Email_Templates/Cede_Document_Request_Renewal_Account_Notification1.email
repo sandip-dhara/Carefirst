@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div><font face="Times New Roman, Times, serif" size="4"><font style="color: rgb(0, 0, 0);">1.&nbsp;</font><span style="background-color: rgb(255, 255, 255);">{!Benfit_Request_Form__c.Account__c}<font color="#262626"><span style="line-height: 16.1px;">&nbsp;</span></font></span><span style="color: rgb(38, 38, 38); line-height: 16.1px; background-color: rgb(255, 255, 255);">is renewing. Please request an updated cede agreement.</span></font></div><div style="color: rgb(0, 0, 0);"><font face="Times New Roman, Times, serif" size="4">2.&nbsp;<span style="color: rgb(38, 38, 38); line-height: 16.1px; background-color: rgb(255, 255, 255);">Updated</span>&nbsp;Contract Count {!Benfit_Request_Form__c.Contract_Count__c}</font></div><div style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><br></div>]]></td>
+</tr>
+</table>

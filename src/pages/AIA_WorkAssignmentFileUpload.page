@@ -1,0 +1,35 @@
+<apex:page standardController="AIA_Workplan_Assignment__c" extensions="AIA_WorkAssignmentFileUploadCX" >  
+  <apex:sectionHeader title="Workplan Assignment"/>
+  <apex:form >
+    <apex:pageMessages />
+    <apex:pageBlock >
+    <apex:pageBlockButtons location="top">
+        <apex:commandButton action="{!processUpload}" value="Attach File"/>
+        <apex:commandButton action="{!cancel}" value="Cancel"/>
+    </apex:pageBlockButtons>
+    <apex:pageBlockSection columns="1">
+     <apex:inputfield value="{!work_Assignment_Obj.Comments__c}" id="comment"  style="width:500px"/>
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection columns="1">
+     <apex:inputfield value="{!fNetAttachment.Document_Status__c}" id="status"/>
+     <apex:inputfield value="{!fNetAttachment.Document_Type__c}" id="Doc_Type" required="true"/>
+     <apex:inputfield value="{!fNetAttachment.Active__c}" id="Active"/>
+     <apex:inputfield value="{!fNetAttachment.Start_Date__c}" id="StartDate"/>
+     <apex:inputfield value="{!fNetAttachment.End_Date__c}" id="EndDate"/>
+    </apex:pageBlockSection>
+  
+    <apex:pageBlockSection columns="1"> 
+        <apex:pageBlockSectionItem >
+          <apex:outputLabel value="File" for="file_File"/>
+          <apex:inputFile id="file_File" value="{!fileBody}" filename="{!fileName}"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+          <apex:outputLabel value="Description" for="description"/> 
+          <apex:inputTextarea id="description" value="{!description}" rows="4" cols="50"/>
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

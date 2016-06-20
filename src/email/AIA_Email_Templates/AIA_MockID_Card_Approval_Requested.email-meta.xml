@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>AIA_MockID_Card_Approval_Requested</name>
+    <style>freeForm</style>
+    <subject>Mock ID Card Approval Requested</subject>
+    <textOnly>Please review and approve the following Mock ID Card.
+
+Below is a link to the request.
+{!AIA_Document__c.Link}
+
+Please review the latest version of all attachments to  this record.
+
+You can Approve or Reject this by replying to this email with Approve or Reject in the Body, or through the AIA Application.</textOnly>
+    <type>html</type>
+</EmailTemplate>

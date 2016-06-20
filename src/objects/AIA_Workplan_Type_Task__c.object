@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Action__c</fullName>
+        <externalId>false</externalId>
+        <label>Action</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Create</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upload</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enter Data</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Send</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confirm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approve</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Notify</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Assgin_To_Non_AIA_Contact__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Assign To Non-AIA Contact</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Assignee_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Assignee Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Queue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Role</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Assignment_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Assignment Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Workplan Type Assignment</relationshipLabel>
+        <relationshipName>Workplan_Type_Assignment</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Default_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Workplan_Type_Task</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date_Determined_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date Determined By</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Expected Days To Complete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Implementation Timeline</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Days_To_Complete__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Days To Complete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Instructions__c</fullName>
+        <externalId>false</externalId>
+        <label>Instructions</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Queue_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Queue Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Queue_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Queue Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Benefit Design Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Benefits Core Team</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing Queue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Broker Compliance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Broker Escalation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Broker Sales Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Group Structure Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LGIT Queue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non Platinum Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Platinum Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project 51 Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quality Audit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RFP Queue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Settlement Queue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFDC Support Team</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Workplan Queue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AIA Default Queue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Required__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Required</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Role</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Sales Consultant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Service Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Assistant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Implementation Project Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Implementation Coordinator</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Underwriter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ancillary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Analyst</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AE BA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enrollment Tech</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing Tech</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Settlements Tech</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LGIT Tech</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LGIT ID Card Tech</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CDH Benefit Liaison</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BeneFact Coder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BeneFact Tester</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NASCO Coder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NASCO Tester</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NASCO Account Implementer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ID Card Contact (TOS)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account Dedicated Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account Dedicated Rep Back-up</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>QA Auditor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contract Tech</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>C&amp;C Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Facets Migration Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Send_Chatter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Send Chatter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Send_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Send Notification</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sequence_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Sequence Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>System_Generated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>System Generated</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Task_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Assignment Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Assignment Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Workplan_Type_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Workplan Type Stage</label>
+        <referenceTo>Workplan_Type_Stage__c</referenceTo>
+        <relationshipName>Workplan_Type_Task</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Workplan_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Workplan Type</label>
+        <referenceTo>AIA_Workplan_Type__c</referenceTo>
+        <relationshipName>Workplan_Type_Task</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>X120_Day_Offset__c</fullName>
+        <externalId>false</externalId>
+        <label>120 Day Offset</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X180_Day_Offset__c</fullName>
+        <externalId>false</externalId>
+        <label>180 Day Offset</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X60_Day_Offset__c</fullName>
+        <externalId>false</externalId>
+        <label>60 Day Offset</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X90_Day_Offset__c</fullName>
+        <externalId>false</externalId>
+        <label>90 Day Offset</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Workplan Type Assignment</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>WPT</fullName>
+        <columns>NAME</columns>
+        <columns>Workplan_Type__c</columns>
+        <columns>Workplan_Type_Stage__c</columns>
+        <columns>Task_Name__c</columns>
+        <columns>Sequence_Number__c</columns>
+        <columns>Queue_Name__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <label>WPT</label>
+    </listViews>
+    <nameField>
+        <displayFormat>WTA-{000000}</displayFormat>
+        <label>Workplan Type Assignment Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Workplan Type Assignment</pluralLabel>
+    <recordTypes>
+        <fullName>Workplan_Assignment</fullName>
+        <active>true</active>
+        <label>Workplan Assignment</label>
+        <picklistValues>
+            <picklist>Action__c</picklist>
+            <values>
+                <fullName>Approve</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enter Data</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Notify</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upload</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Assignee_Type__c</picklist>
+            <values>
+                <fullName>Queue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Role</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Due_Date_Determined_By__c</picklist>
+            <values>
+                <fullName>Expected Days To Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Timeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Queue_Name__c</picklist>
+            <values>
+                <fullName>AIA Default Queue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Design Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefits Core Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Billing Queue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Broker Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Broker Escalation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Broker Sales Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Structure Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LGIT Queue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Platinum Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Platinum Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project 51 Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quality Audit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RFP Queue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SFDC Support Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settlement Queue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workplan Queue</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Role__c</picklist>
+            <values>
+                <fullName>AE BA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Dedicated Rep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Dedicated Rep Back-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ancillary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BeneFact Coder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BeneFact Tester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Billing Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C%26C Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CDH Benefit Liaison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facets Migration Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID Card Contact %28TOS%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Project Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LGIT ID Card Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LGIT Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NASCO Account Implementer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NASCO Coder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NASCO Tester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QA Auditor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Assistant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Consultant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Service Rep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settlements Tech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Underwriter</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Task_Code__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Task_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Instructions__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Assignee_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Queue_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Role__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Default_Owner__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Active__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Task_Code__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Task_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Instructions__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Assignee_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Default_Owner__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Queue_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Role__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Active__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>EWTA_001</fullName>
+        <active>false</active>
+        <description>Making user field mandatory if assignee type is user</description>
+        <errorConditionFormula>IF( 
+AND( 
+TEXT(  Assignee_Type__c  ) = &quot;User&quot;, 
+ISBLANK(  Default_Owner__c  )), True, False 
+)</errorConditionFormula>
+        <errorDisplayField>Default_Owner__c</errorDisplayField>
+        <errorMessage>EWTA_001 :  Please Enter Value in User</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EWTA_002</fullName>
+        <active>true</active>
+        <description>Making user mandatory if assignee type is Queue</description>
+        <errorConditionFormula>IF( 
+AND( 
+TEXT(  Assignee_Type__c  ) = &quot;Queue&quot;, 
+ISBLANK(  TEXT( Queue_Name__c)   )), True, False 
+)</errorConditionFormula>
+        <errorDisplayField>Queue_Name__c</errorDisplayField>
+        <errorMessage>EWTA_002: Please Enter Value in Queue Name</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EWTA_003</fullName>
+        <active>true</active>
+        <description>Making Role mandatory if assignee type is Role</description>
+        <errorConditionFormula>IF( 
+AND( 
+TEXT(  Assignee_Type__c  ) = &quot;Role&quot;, 
+ISBLANK(  TEXT(  Role__c )   )), True, False 
+)</errorConditionFormula>
+        <errorDisplayField>Role__c</errorDisplayField>
+        <errorMessage>EWTA_003 : Please select a Value in Role</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EWTA_004</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( Assgin_To_Non_AIA_Contact__c =true, ISBLANK(    Contact__c  )  )</errorConditionFormula>
+        <errorMessage>Please Enter Value in Contact</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Queue_Mandatory_Assigneetype_Queue</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND( ispickval(Assignee_Type__c,&apos;Queue&apos;), ISBLANK( text( Queue_Name__c) )  )</errorConditionFormula>
+        <errorMessage>Please Enter Value in Queue Name</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Role_Mandatory_Assigneetype_Role</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND( ispickval(Assignee_Type__c,&apos;Role&apos;), ISBLANK( text(  Role__c ) )  )</errorConditionFormula>
+        <errorMessage>Please select a Value in Role</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>User_Mandatory_Assigneetype_user</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND( ispickval(Assignee_Type__c,&apos;User&apos;), ISBLANK( Default_Owner__c )  )</errorConditionFormula>
+        <errorMessage>Please Enter Value in User</errorMessage>
+    </validationRules>
+</CustomObject>

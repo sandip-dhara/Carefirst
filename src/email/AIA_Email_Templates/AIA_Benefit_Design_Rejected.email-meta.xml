@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CareFirst_Letterhead2</letterhead>
+    <name>AIA_Benefit_Design_Rejected</name>
+    <style>freeForm</style>
+    <subject>Benefit Design Rejected</subject>
+    <textOnly>The following Benefit Design package has been Rejected.
+Below is a link to the request.
+
+{!AIA_Benefit_Design__c.Link}</textOnly>
+    <type>html</type>
+</EmailTemplate>

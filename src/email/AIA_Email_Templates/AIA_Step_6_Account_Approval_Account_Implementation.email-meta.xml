@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>2 day notification after entering Step 6: Account Approval (Account Implementation)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CareFirst_Letterhead2</letterhead>
+    <name>AIA Step 6: Account Approval (Account Implementation)</name>
+    <style>freeForm</style>
+    <subject>Reassign Approver as Group Structure Document Approval has neither been Approved/Rejected</subject>
+    <textOnly>1. &quot;Account {!AIA_Document__c.Account__c} has not yet approved/rejected the Group Structure document. Please reassign the approver to Sales Management.&quot;
+2. Link to Group Structure Document : {!AIA_Document__c.Link}</textOnly>
+    <type>html</type>
+</EmailTemplate>

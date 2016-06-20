@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CareFirst_Letterhead2</letterhead>
+    <name>New Cede Document Notification</name>
+    <style>freeForm</style>
+    <subject>New Cede Document Notification</subject>
+    <textOnly>Please verify the cede agreement for {!Account.Name} to ensure an up-to-date agreement is in place upon renewal. UW will not release renewals or quotes unless the account as an active cede document in place. Should a new cede document need to be obtained, please initiate a request to obtain an updated cede document</textOnly>
+    <type>html</type>
+</EmailTemplate>

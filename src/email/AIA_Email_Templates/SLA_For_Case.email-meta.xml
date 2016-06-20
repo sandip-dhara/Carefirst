@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This Email template is used if the case is not solved according to priority</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CareFirst_Letterhead2</letterhead>
+    <name>SLA For Case</name>
+    <style>freeForm</style>
+    <subject>SLA for Priority of Issues</subject>
+    <type>html</type>
+</EmailTemplate>

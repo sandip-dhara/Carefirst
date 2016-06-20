@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Account_Name__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Proposal_Request_Form__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Assigned_To__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Task_Name__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Task_Description__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Assigned_Date_Time__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Date_Accepted__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Date_Completed__c</field>
+    </columns>
+    <columns>
+        <field>AIA_Workplan_Assignment__c.Due_Date__c</field>
+    </columns>
+    <description>Displays a list of open PRF Assignments owned by the running user, grouped by status</description>
+    <filter>
+        <criteriaItems>
+            <column>CUST_RECORDTYPE</column>
+            <operator>equals</operator>
+            <value>AIA_Workplan_Assignment__c.PRF_Assignment</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AIA_Workplan_Assignment__c.Status__c</column>
+            <operator>notEqual</operator>
+            <value>Completed,Not Required</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>AIA_Workplan_Assignment__c.Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>My PRF Assignments by Status</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$AIA_Workplan_Assignment__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>AIA_Workplan_Assignment__c.Assigned_Date_Time__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

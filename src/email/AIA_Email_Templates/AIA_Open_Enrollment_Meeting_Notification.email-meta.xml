@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>AIA Open Enrollment Meeting Notification</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CarefirstBlueCrossBlueShield</letterhead>
+    <name>AIA Open Enrollment Meeting Notification</name>
+    <style>formalLetter</style>
+    <subject>Notification - Open Enrollment Meeting Scheduled</subject>
+    <type>html</type>
+</EmailTemplate>

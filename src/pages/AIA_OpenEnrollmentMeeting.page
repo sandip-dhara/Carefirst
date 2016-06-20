@@ -1,0 +1,30 @@
+<apex:page controller="AIA_OpenEnrollmentMeetingController">
+<apex:form >
+<apex:actionstatus id="counterStatus">
+    <apex:facet name="start">
+        <div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb; height:100%;opacity:0.65;width:100%;">
+            <div class="waitingHolder" style="top: 100px; width: 91px;">
+            <img class="waitingImage" src="/img/loading.gif" title="Please Wait..." />
+            <span class="waitingDescription">Loading...</span>
+            </div>  
+        </div>
+    </apex:facet>
+</apex:actionstatus>
+<apex:actionFunction name="FetchOEM" action="{!fetchOpenEnrollmentMettings}" reRender="pgBlkId" status="counterStatus"/>
+<apex:pageBlock title="Open Enrollment Meetings" id="pgBlkId">
+<apex:outputLabel value="Open" /><apex:inputCheckbox value="{!isOpen}" style="margin-right:20px;" onchange="FetchOEM();"/>
+<apex:outputLabel value="Full" /><apex:inputCheckbox value="{!isFull}" style="margin-right:20px;" onchange="FetchOEM();"/>
+<apex:outputLabel value="Completed" /><apex:inputCheckbox value="{!isCompleted}" style="marginpgBlkId-right:20px;" onchange="FetchOEM();"/>
+<apex:pageBlockTable value="{!eventList}" var="event">
+<apex:column headerValue="Meeting Name">
+<apex:outputLink value="/{!event.id}" target="_blank">{!event.subject}</apex:outputLink>
+</apex:column>
+<apex:column value="{!event.ActivityDate}" headerValue="Meeting Date"/>
+<apex:column value="{!event.Name_of_Account__c}" headerValue="Account Name"/>
+<apex:column value="{!event.Capacity__c}" headerValue="Capacity"/>
+<apex:column value="{!event.Signed_Up__c}" headerValue="Signed Up"/>
+<apex:column value="{!event.Meeting_Status1__c}" headerValue="Meeting Status"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

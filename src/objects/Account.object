@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Account_Alias_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Alias 1</label>
+        <length>32</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Alias_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Alias 2</label>
+        <length>32</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Alias_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Alias 3</label>
+        <length>32</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Legal_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Legal Name</label>
+        <length>32</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Final_Renewal_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Final Renewal Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Grandfathered_PPACA_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Grandfathered PPACA Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mixed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Jurisdiction__c</fullName>
+        <externalId>false</externalId>
+        <label>Jurisdiction</label>
+        <picklist>
+            <picklistValues>
+                <fullName>DC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Other_Jurisdiction__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Jurisdiction</label>
+        <length>32</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewal_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Renewal_Anniversary_Month__c , 
+&apos;JAN&apos;,DATE( YEAR( TODAY() ) ,1,1), 
+&apos;FEB&apos;,DATE( YEAR( TODAY() ) ,2,1), 
+&apos;MAR&apos;,DATE( YEAR( TODAY() ) ,3,1), 
+&apos;APR&apos;,DATE( YEAR( TODAY() ) ,4,1), 
+&apos;MAY&apos;,DATE( YEAR( TODAY() ) ,5,1), 
+&apos;JUN&apos;,DATE( YEAR( TODAY() ) ,6,1), 
+&apos;JUL&apos;,DATE( YEAR( TODAY() ) ,7,1), 
+&apos;AUG&apos;,DATE( YEAR( TODAY() ) ,8,1), 
+&apos;SEP&apos;,DATE( YEAR( TODAY() ) ,9,1), 
+&apos;OCT&apos;,DATE( YEAR( TODAY() ) ,10,1), 
+&apos;NOV&apos;,DATE( YEAR( TODAY() ) ,11,1), 
+&apos;DEC&apos;,DATE( YEAR( TODAY() ) ,12,1), 
+NULL)</formula>
+        <label>Renewal Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Test_Account_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>left($Api.Enterprise_Server_URL_200 , FIND(&quot;/&quot;, $Api.Enterprise_Server_URL_200, 9))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <webLinks>
+        <fullName>Grandfathered_Rules</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Grandfathered Rules</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://broker.carefirst.com/brokers/health-care-reform/grandfathering.page</url>
+    </webLinks>
+</CustomObject>

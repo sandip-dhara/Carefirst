@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Task assigned to you</p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Task Name: {!AIA_Workplan_Task_List__c.Task_Name__c}</p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Task Description: {!AIA_Workplan_Task_List__c.Task_Description__c}</p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Click on the link to see the workplan assignment:</p><p><font face="arial">{!AIA_Workplan_Assignment__c.Link}</font></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><br></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

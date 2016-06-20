@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>AIA_Meeting</fullName>
+        <active>true</active>
+        <description>AIA_Meeting</description>
+        <label>AIA: Meeting</label>
+        <picklistValues>
+            <picklist>Approval_Meeting_Decision__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Bid_Meeting_Decision__c</picklist>
+            <values>
+                <fullName>Bid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Bid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Decision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Market_Segment__c</picklist>
+            <values>
+                <fullName>2-50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>51%2B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Meeting_Status1__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Meeting_Type__c</picklist>
+            <values>
+                <fullName>ARC Approval Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Kickoff Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Design Review Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bid Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Structure Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Debrief Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Kick-Off Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Pre-Kick-Off Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRF Kickoff Meeting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-Person Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Enrollment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter%2FQuote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>AIA_Open_Enrollment_Meeting</fullName>
+        <active>true</active>
+        <description>Open Enrollment Meeting</description>
+        <label>AIA Open Enrollment Meeting</label>
+        <picklistValues>
+            <picklist>Approval_Meeting_Decision__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Bid_Meeting_Decision__c</picklist>
+            <values>
+                <fullName>Bid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Bid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Decision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Market_Segment__c</picklist>
+            <values>
+                <fullName>2-50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>51%2B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Meeting_Status1__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Meeting_Type__c</picklist>
+            <values>
+                <fullName>ARC Approval Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Kickoff Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benefit Design Review Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bid Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Structure Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Debrief Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Kick-Off Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Pre-Kick-Off Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRF Kickoff Meeting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-Person Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Enrollment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter%2FQuote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>EEvent001</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( 
+AND( 
+ISPICKVAL (Meeting_Type__c, &apos;Benefit Design Review Meeting&apos;), 
+ISBLANK(  Benefit_Design__c  )), True, False 
+)</errorConditionFormula>
+        <errorDisplayField>Benefit_Design__c</errorDisplayField>
+        <errorMessage>EEvent001: When Meeting Type is &apos;Benefit Design Review Meeting&apos;. Benefit Design is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_Bid_Comments_Mandatory</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (ISPICKVAL( Bid_Meeting_Decision__c , &apos;No Bid&apos;) , ISBLANK( No_Bid_Comments__c ) )</errorConditionFormula>
+        <errorDisplayField>No_Bid_Comments__c</errorDisplayField>
+        <errorMessage>Please enter No Bid Comments</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Send_Email</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Send Email</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/_ui/core/email/author/EmailAuthor?p3_lkid={!Event.What}&amp;template_id=00X7A000000QLyb</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Sign_Up</fullName>
+        <availability>online</availability>
+        <description>Button to open enrollment meeting details page</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Sign Up</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/apex.js&quot;)} 
+try{
+if({! ISPICKVAL(Event.Meeting_Status1__c, &apos;Full&apos;) } ){
+alert(&apos;This enrollment meeting has already reached capacity.&apos;);  
+} 
+else if({!ISPICKVAL(Event.Meeting_Status1__c, &apos;Completed&apos;)}){ 
+alert(&apos;This enrollment meeting has already been completed&apos;); 
+} 
+else{ 
+var result = sforce.apex.execute(&quot;AIA_OpenEnrollmentMeetingSignUp&quot;,&quot;signUp&quot;,{eventId:&quot;{!Event.Id}&quot;}); 
+} 
+}
+catch(err){
+alert(&apos;You have already signed up for the meeting or the meeting date is over&apos;);
+}
+//alert(result); 
+window.location.reload();</url>
+    </webLinks>
+</CustomObject>

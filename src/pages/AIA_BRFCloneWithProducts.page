@@ -1,0 +1,5 @@
+<apex:page standardController="Benfit_Request_Form__c"  
+     extensions="AIA_BRFCloneWithProductsCX"
+     action="{!cloneWithProducts}">
+     <apex:pageMessages />
+</apex:page>

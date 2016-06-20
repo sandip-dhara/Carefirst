@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>ARC_Meeting_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>ARC Meeting Comments</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Account_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Agenda__c</fullName>
+        <externalId>false</externalId>
+        <label>Agenda</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Meeting_Decision__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Meeting Decision</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Decision</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Benefit_Design__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Benefit Design</label>
+        <referenceTo>AIA_Benefit_Design__c</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bid_Meeting_Decision__c</fullName>
+        <externalId>false</externalId>
+        <label>Bid Meeting Decision</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Bid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Bid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Decision</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CDH_Benefit_Liaison_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CDH Benefit Liaison Required</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Capacity__c</fullName>
+        <externalId>false</externalId>
+        <label>Capacity</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City_State_of_Meeting_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>City/State of Meeting Location</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Current</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Document_Link_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Link 1</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Document_Link_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Link 2</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Document_Link_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Link 3</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date/Time</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Implementation_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;?id=&quot;&amp;Benefit_Design__r.Implementation__r.Id , &quot;open&quot;)</formula>
+        <label>Implementation Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Implementation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Implementation</label>
+        <referenceTo>AIA_Implementation__c</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Market_Segment__c</fullName>
+        <description>Allows users to select if it is 2-50 or 51+ market segment</description>
+        <externalId>false</externalId>
+        <label>Market Segment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>2-50</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>51+</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Meeting_Location_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Meeting Location Address</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meeting_Status1__c</fullName>
+        <externalId>false</externalId>
+        <label>Meeting Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Full</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Meeting_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Meeting Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Bid Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRF Kickoff Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ARC Approval Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account Kickoff Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Group Structure Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Implementation Pre-Kick-Off Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Implementation Kick-Off Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Implementation Debrief Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Benefit Design Review Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Misc_information__c</fullName>
+        <externalId>false</externalId>
+        <label>Misc. information</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Name_of_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Name of Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>No_Bid_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>No Bid Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Service_Rep__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Service Rep</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Signed_Up__c</fullName>
+        <externalId>false</externalId>
+        <label>Signed Up</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date/Time</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Translation_Required__c</fullName>
+        <externalId>false</externalId>
+        <label>Translation Required</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Wellness_Serv__c</fullName>
+        <externalId>false</externalId>
+        <label>Wellness Serv</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip_Code_of_Meeting_Location1__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Zip_Code_of_Meeting_Location__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Zip Code of Meeting Location</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip_Code_of_Meeting_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Zip Code of Meeting Location</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

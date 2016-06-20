@@ -1,0 +1,39 @@
+<!--
+/********************************************************************************
+********************************************************************************    
+ *  Page             : AIA_IntermediatPage 
+ *  Author           : Laveen Kattela
+ *  Version History  : 1.0
+ *  Creation         : 06/15/16
+ *  Description      : This page is for selecting the Workplan type stage Record Type (Process/Sub-process)
+ *
+ ********************************************************************************
+ ********************************************************************************/  -->
+ 
+<apex:page standardController="Workplan_Type_Stage__c" extensions="AIA_IntermediatController">
+     &nbsp; &nbsp;&nbsp;  <h1><b>New Workplan Type Stage</b></h1><br></br>
+     &nbsp; &nbsp;&nbsp;  <font size="4" color="black"> Select Workplan Type Stage Record Type  </font>
+    <br></br>
+    <br></br>
+    <font size="2" color="black"> Select a record type for the new Workplan type stage. To skip this page in the future, change your record type settings on your personal setup page.</font>
+    <apex:form > 
+        <apex:pageBlock title="Select Workplan Type Stage Record Type">
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Continue" action="{!doContinue}"/>
+                <apex:commandButton value="Cancel" action="{!doCancel}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel >Record Type of new record</apex:outputLabel>
+                    <apex:outputPanel layout="block" styleClass="requiredInput" >
+                    <apex:outputPanel layout="block" styleClass="requiredBlock"/> 
+                        <apex:selectList required="true" value="{!selectedRecordType}" size="1" multiselect="false">
+                            <apex:selectOptions value="{!options }"/>
+                        </apex:selectList>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+  
+</apex:page>

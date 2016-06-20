@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>AIA_Account_Legal_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account.Account_Legal_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Legal Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AIA_Email_RFP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>AIA_Email_RFP</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Business_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Type</label>
+        <picklist>
+            <controllingField>Division__c</controllingField>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+                <controllingFieldValues>51-199 New Business</controllingFieldValues>
+                <controllingFieldValues>Commercial Business</controllingFieldValues>
+                <controllingFieldValues>Healthcare/Education/Par</controllingFieldValues>
+                <controllingFieldValues>Labor Affairs</controllingFieldValues>
+                <controllingFieldValues>State &amp; Municipalities</controllingFieldValues>
+                <controllingFieldValues>Strategic Accounts 1000+</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <controllingFieldValues>51-199 Renewals</controllingFieldValues>
+                <controllingFieldValues>CFA</controllingFieldValues>
+                <controllingFieldValues>Commercial Business</controllingFieldValues>
+                <controllingFieldValues>FEHBP Account Management</controllingFieldValues>
+                <controllingFieldValues>Healthcare/Education/Par</controllingFieldValues>
+                <controllingFieldValues>Labor Affairs</controllingFieldValues>
+                <controllingFieldValues>NCAS</controllingFieldValues>
+                <controllingFieldValues>State &amp; Municipalities</controllingFieldValues>
+                <controllingFieldValues>Strategic Accounts 1000+</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CloseProspect__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CloseProspect</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract End Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <externalId>false</externalId>
+        <label>Division</label>
+        <picklist>
+            <controllingField>Market_Segment_New__c</controllingField>
+            <picklistValues>
+                <fullName>51-199 New Business</fullName>
+                <default>false</default>
+                <controllingFieldValues>51-199</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>51-199 Renewals</fullName>
+                <default>false</default>
+                <controllingFieldValues>2-50</controllingFieldValues>
+                <controllingFieldValues>51-199</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CFA</fullName>
+                <default>false</default>
+                <controllingFieldValues>1000+</controllingFieldValues>
+                <controllingFieldValues>2-50</controllingFieldValues>
+                <controllingFieldValues>200-999</controllingFieldValues>
+                <controllingFieldValues>51-199</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial Business</fullName>
+                <default>false</default>
+                <controllingFieldValues>1000+</controllingFieldValues>
+                <controllingFieldValues>200-999</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FEHBP Account Management</fullName>
+                <default>false</default>
+                <controllingFieldValues>1000+</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Labor Affairs</fullName>
+                <default>false</default>
+                <controllingFieldValues>1000+</controllingFieldValues>
+                <controllingFieldValues>200-999</controllingFieldValues>
+                <controllingFieldValues>51-199</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NCAS</fullName>
+                <default>false</default>
+                <controllingFieldValues>1000+</controllingFieldValues>
+                <controllingFieldValues>2-50</controllingFieldValues>
+                <controllingFieldValues>200-999</controllingFieldValues>
+                <controllingFieldValues>51-199</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>State &amp; Municipalities</fullName>
+                <default>false</default>
+                <controllingFieldValues>1000+</controllingFieldValues>
+                <controllingFieldValues>200-999</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Healthcare/Education/Par</fullName>
+                <default>false</default>
+                <controllingFieldValues>1000+</controllingFieldValues>
+                <controllingFieldValues>200-999</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Strategic Accounts 1000+</fullName>
+                <default>false</default>
+                <controllingFieldValues>1000+</controllingFieldValues>
+                <controllingFieldValues>200-999</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Legal_Account_Name_Verified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Legal Account Name Verified</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Plan_Year_Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Plan Year Effective Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Potential_Contracts_new__c</fullName>
+        <description>Returns the Potential contracts (old) value when the opportunity created date &lt; migration date (05/08/2013, 9 pm)
+Returns the Estimated Actuals value when the opportunity created date &gt;= migration date (05/08/2013, 9 pm)</description>
+        <externalId>false</externalId>
+        <formula>IF(
+       (CreatedDate &lt;  DATETIMEVALUE(&quot;2013-05-08 21:00:00&quot;)),  Potential_Contracts__c ,   Estimated_Actuals__c )</formula>
+        <label>Potential Contracts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Potential_RFP_Receipt_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Potential RFP Receipt Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ProspectingCloseDate__c</fullName>
+        <externalId>false</externalId>
+        <label>ProspectingCloseDate</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ProspectingDate__c</fullName>
+        <description>This field captures the date and time of the prospecting opportunities</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is populated with date automatically when the stage is Prospecting</inlineHelpText>
+        <label>ProspectingDate</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ProspectingDays__c</fullName>
+        <description>This field populates number of days opportunity is in prospecting stage</description>
+        <externalId>false</externalId>
+        <formula>IF(!ISPICKVAL(StageName, &apos;Prospecting&apos;),Null,IF(AND(ISPICKVAL(StageName, &apos;Prospecting&apos;),IF( !CloseProspect__c ,true,false)),NOW() - ProspectingDate__c,IF(AND(ISPICKVAL(StageName, &apos;Prospecting&apos;),IF( CloseProspect__c ,true,false)),ProspectingCloseDate__c - ProspectingDate__c,Null)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This field populates number of days opportunity is in prospecting stage before closing</inlineHelpText>
+        <label>ProspectingDays</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sold_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Sold Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Underwriting_Entity__c</fullName>
+        <description>Where Underwriting is performed.  Usually the location of the company headquarters.</description>
+        <externalId>false</externalId>
+        <label>Underwriting Entity</label>
+        <picklist>
+            <controllingField>Division__c</controllingField>
+            <picklistValues>
+                <fullName>CFA</fullName>
+                <default>false</default>
+                <controllingFieldValues>51-199 New Business</controllingFieldValues>
+                <controllingFieldValues>51-199 Renewals</controllingFieldValues>
+                <controllingFieldValues>CFA</controllingFieldValues>
+                <controllingFieldValues>Commercial Business</controllingFieldValues>
+                <controllingFieldValues>Healthcare/Education/Par</controllingFieldValues>
+                <controllingFieldValues>Labor Affairs</controllingFieldValues>
+                <controllingFieldValues>State &amp; Municipalities</controllingFieldValues>
+                <controllingFieldValues>Strategic Accounts 1000+</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DC</fullName>
+                <default>false</default>
+                <controllingFieldValues>51-199 New Business</controllingFieldValues>
+                <controllingFieldValues>51-199 Renewals</controllingFieldValues>
+                <controllingFieldValues>Commercial Business</controllingFieldValues>
+                <controllingFieldValues>FEHBP Account Management</controllingFieldValues>
+                <controllingFieldValues>Healthcare/Education/Par</controllingFieldValues>
+                <controllingFieldValues>Labor Affairs</controllingFieldValues>
+                <controllingFieldValues>State &amp; Municipalities</controllingFieldValues>
+                <controllingFieldValues>Strategic Accounts 1000+</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MD</fullName>
+                <default>false</default>
+                <controllingFieldValues>51-199 New Business</controllingFieldValues>
+                <controllingFieldValues>51-199 Renewals</controllingFieldValues>
+                <controllingFieldValues>Commercial Business</controllingFieldValues>
+                <controllingFieldValues>Healthcare/Education/Par</controllingFieldValues>
+                <controllingFieldValues>Labor Affairs</controllingFieldValues>
+                <controllingFieldValues>State &amp; Municipalities</controllingFieldValues>
+                <controllingFieldValues>Strategic Accounts 1000+</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NCAS</fullName>
+                <default>false</default>
+                <controllingFieldValues>51-199 New Business</controllingFieldValues>
+                <controllingFieldValues>51-199 Renewals</controllingFieldValues>
+                <controllingFieldValues>Commercial Business</controllingFieldValues>
+                <controllingFieldValues>Healthcare/Education/Par</controllingFieldValues>
+                <controllingFieldValues>Labor Affairs</controllingFieldValues>
+                <controllingFieldValues>NCAS</controllingFieldValues>
+                <controllingFieldValues>State &amp; Municipalities</controllingFieldValues>
+                <controllingFieldValues>Strategic Accounts 1000+</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Workplan_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Workplan Type</label>
+        <referenceTo>AIA_Workplan_Type__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <recordTypes>
+        <fullName>AIA_200</fullName>
+        <active>true</active>
+        <businessProcess>AIA Large Group Sales Process</businessProcess>
+        <description>200+ Opportunity Record Type</description>
+        <label>200+</label>
+        <picklistValues>
+            <picklist>Business_Type__c</picklist>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Division__c</picklist>
+            <values>
+                <fullName>51-199 New Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>51-199 Renewals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FEHBP Account Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthcare%2FEducation%2FPar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Labor Affairs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NCAS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State %26 Municipalities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>AON Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Rep - Cold Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Seminar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Ancillary Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dental Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical %2B Ancillary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network Leasing Local</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shared Processing - Flexx</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shared Processing - Nasco</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Underwriting_Entity__c</picklist>
+            <values>
+                <fullName>CFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NCAS</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Prospecting</fullName>
+        <active>true</active>
+        <businessProcess>ProspectingSalesProcess</businessProcess>
+        <description>Prospecting Opportunity Record Type</description>
+        <label>Prospecting</label>
+        <picklistValues>
+            <picklist>Business_Type__c</picklist>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Division__c</picklist>
+            <values>
+                <fullName>51-199 New Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>51-199 Renewals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FEHBP Account Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthcare%2FEducation%2FPar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Labor Affairs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NCAS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State %26 Municipalities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategic Accounts 1000%2B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>AON Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Rep - Cold Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Seminar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Ancillary Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dental Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical %2B Ancillary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network Leasing Local</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shared Processing - Flexx</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shared Processing - Nasco</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Underwriting_Entity__c</picklist>
+            <values>
+                <fullName>CFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NCAS</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>EOPP070</fullName>
+        <active>true</active>
+        <description>EOPP070: Account Legal Name = null and Account Legal Name Verified = true, then User cannot save the record</description>
+        <errorConditionFormula>AND( ISBLANK( Account.Account_Legal_Name__c ) , Legal_Account_Name_Verified__c == true)</errorConditionFormula>
+        <errorMessage>EOPP070:Cannot Verify Account Legal Name</errorMessage>
+    </validationRules>
+</CustomObject>

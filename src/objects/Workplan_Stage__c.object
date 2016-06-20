@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.AccountId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>All_Assignments_Must_Be_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>All Assignments Must Be Completed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Display_Order__c</fullName>
+        <externalId>false</externalId>
+        <label>Display Order</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Duration_Business_Hours__c</fullName>
+        <externalId>false</externalId>
+        <label>Duration (Business Hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Duration_Hours__c</fullName>
+        <externalId>false</externalId>
+        <label>Duration (Hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Implementation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Implementation</label>
+        <referenceTo>AIA_Implementation__c</referenceTo>
+        <relationshipLabel>Workplan Stage</relationshipLabel>
+        <relationshipName>AIA_Workplan_Stage1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mark_Not_Required__c</fullName>
+        <description>Displays a &quot;not required&quot; button that allows the user to mark a SubProcess as not required when the Workplan Stage Status is &quot;Not Started&quot;</description>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Status__c, &quot;Not Started&quot;), HYPERLINK(&quot;/apex/AIA_Workplan_SubProcess?type=mnr&amp;Id=&quot;+Id, IMAGE(&quot;/servlet/servlet.FileDownload?file=0157A000000E4kC&quot;, &quot;Mark as Not Required&quot;, 25, 25), &quot;_self&quot;), NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mark Not Required</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>AIA_Workplan_Stage</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order__c</fullName>
+        <externalId>false</externalId>
+        <formula>Workplan_Type_Stage__r.Display_Order__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Workplan_Stage__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Workplan Stage</label>
+        <referenceTo>Workplan_Stage__c</referenceTo>
+        <relationshipLabel>Workplan Stage</relationshipLabel>
+        <relationshipName>Workplan_Stage</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Workplan_Type_Stage__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Workplan_Type_Stage__r.Stage_Category__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Parent Workplan Type Stage</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Start_SubProcess__c</fullName>
+        <description>Displays a &quot;play&quot; button that allows the user to start a SubProcess when the Workplan Stage Status is &quot;Not Started&quot;</description>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Status__c, &quot;Not Started&quot;), HYPERLINK(&quot;/apex/AIA_Workplan_SubProcess?type=ssp&amp;Id=&quot;+Id, IMAGE(&quot;/servlet/servlet.FileDownload?file=0157A000000E4k7&quot;, &quot;Start&quot;, 25, 25), &quot;_self&quot;), NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Start SubProcess</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Required</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Tasks_Completed__c</fullName>
+        <externalId>false</externalId>
+        <formula>of_Completed_Tasks__c / of_Total_Tasks__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>% Tasks Completed</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Workplan_Stage_Category__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Workplan_Type_Stage__r.Stage_Category__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Workplan Stage Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Workplan_Stage__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Workplan_Type_Stage__r.Stage__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Workplan Stage</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Workplan_Type_Stage__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Workplan Type Stage</label>
+        <referenceTo>Workplan_Type_Stage__c</referenceTo>
+        <relationshipName>Workplan_Type_Stage</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Workplan_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Workplan Type</label>
+        <referenceTo>AIA_Workplan_Type__c</referenceTo>
+        <relationshipLabel>Workplan Stage</relationshipLabel>
+        <relationshipName>Workplan_Stage</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>of_Completed_Tasks__c</fullName>
+        <externalId>false</externalId>
+        <label># of Completed Tasks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Total_Tasks__c</fullName>
+        <externalId>false</externalId>
+        <label># of Total Tasks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Workplan Stage</label>
+    <nameField>
+        <displayFormat>WS-{000000}</displayFormat>
+        <label>Workplan Stage Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Workplan Stage</pluralLabel>
+    <recordTypes>
+        <fullName>Process</fullName>
+        <active>true</active>
+        <label>Process</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sub_Process</fullName>
+        <active>true</active>
+        <label>Sub-Process</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Implementation__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Opportunity__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Workplan_Stage_Category__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Workplan_Stage__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>EWPS001</fullName>
+        <active>true</active>
+        <description>End date Cannot Be Earlier than Start Date</description>
+        <errorConditionFormula>End_Date__c   &lt;   Start_Date__c</errorConditionFormula>
+        <errorDisplayField>End_Date__c</errorDisplayField>
+        <errorMessage>EWPS001: End date Cannot Be Earlier than Start Date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EWPS002</fullName>
+        <active>true</active>
+        <description>User cannot change the status once it is &quot;Completed&quot;</description>
+        <errorConditionFormula>ISPICKVAL(PRIORVALUE( Status__c ),&quot;Completed&quot;)&amp;&amp; ISCHANGED( Status__c )</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>EWPS002: User cannot change the status once it is &quot;Completed&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EWPS003</fullName>
+        <active>true</active>
+        <description>User cannot change the status once it is &quot;Not Required&quot;</description>
+        <errorConditionFormula>ISPICKVAL(PRIORVALUE( Status__c ),&quot;Not Required&quot;)&amp;&amp; ISCHANGED( Status__c )</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>EWPS003: User cannot change the status once it is &quot;Not Required&quot;</errorMessage>
+    </validationRules>
+</CustomObject>
