@@ -63,7 +63,13 @@ public class AIA_TestUtil{
     
     public static Opportunity AIA_createopportunity(String AccId)
     {
-         Opportunity opp = new Opportunity();
+        AIA_Workplan_Type__c wpt = new AIA_Workplan_Type__c();
+        wpt.Used_For__c ='Pre-Sales';
+        wpt.Workplan_Type__c = 'Renewal';
+        wpt.Active__c=true;
+        insert wpt;
+        
+        Opportunity opp = new Opportunity();
         opp.Name = 'Test opp';
         opp.FullServiceProducer__c = 'BenefitMall'; // Validation rule where I cannot leave this blank
         opp.StageName = 'Proposal';
@@ -78,6 +84,7 @@ public class AIA_TestUtil{
         opp.CloseDate = opp.Effective_Date__c.addDays(-11);  // validation rule requires effective date be after close date i.e. effective > closedate
         opp.Contract_End_Date__c = opp.Effective_Date__c.addMonths(1);  // VR requires contract_end_date > effective_date and contract_end_date be last day of a month
         opp.Contract_End_Date__c = opp.Contract_End_Date__c.addDays(-1);
+        opp.Workplan_Type__c = wpt.id;
         insert opp;
         return opp;
      }
@@ -1598,7 +1605,8 @@ public class AIA_TestUtil{
     }
      /*******************************************
      * Test Data for population of opportunity
-       from PRF to BRF. IF BRF is created from
+       from 
+        to BRF. IF BRF is created from
        PRF
      ******************************************/
      
@@ -1644,8 +1652,19 @@ public class AIA_TestUtil{
         insert prf;
         return prf;
     }
+    public static AIA_Implementation__c CreateImp(string oid){
+        AIA_Implementation__c Imp = new AIA_Implementation__c();
+        Imp.Name__c = 'testprf';
+        Imp.Opportunity__c = oid;
+        Imp.Generate_Workplan_Stages__c = true;
+        Imp.Effective_Date__c = system.today();
+        Imp.Implementation_Plan_Timeline_Days__c = '60';
+        insert Imp;
+        return Imp;
+    }
     public static Benfit_Request_Form__c CreateBRF(string pid,string aid){
         Benfit_Request_Form__c nbrf = new Benfit_Request_Form__c();
+        if(pid != null)
         nbrf.Proposal_Request_Form__c = pid;
         nbrf.Contract_Count__c = 123;
         nbrf.Benefit_Effective_Date__c = system.today();
@@ -1655,6 +1674,13 @@ public class AIA_TestUtil{
         nbrf.Status__c = 'new';
         insert nbrf;
         return nbrf;
+    }
+    //Create FileNet document
+    public static void createAIADocument(Benfit_Request_Form__c brf){
+        AIA_Document__c fileNetDoc = new AIA_Document__c();
+        fileNetDoc.Document_Type__c='Signed Quote';
+        fileNetDoc.Benefit_Request_Form__c = brf.id;
+        insert fileNetDoc;
     }
     public static Benfit_Request_Form__c updateBRF(string pid,string aid,string brfid){
         Benfit_Request_Form__c ubrf = new Benfit_Request_Form__c();
@@ -1735,7 +1761,7 @@ public class AIA_TestUtil{
         ws3.Parent_Workplan_Stage__c = pwpslst1[1].Id;
         ws3.of_Total_Tasks__c = null;
         ws3.of_Completed_Tasks__c = null;
-        ws2.Opportunity__c = olst[1].Id;
+        ws3.Opportunity__c = olst[1].Id;
         cowpslst.add(ws3);
         insert cowpslst;
         return cowpslst;
@@ -1793,15 +1819,33 @@ public class AIA_TestUtil{
         List<Workplan_Stage__c> wpslst = new List<Workplan_Stage__c>();
         Workplan_Stage__c ws = new Workplan_Stage__c();
         ws.Status__c = 'Not Started';
+        ws.End_Date__c = system.today();
         wpslst.add(ws);
         
         Workplan_Stage__c ws1 = new Workplan_Stage__c();
         ws1.Status__c = 'Not Started';
+        ws1.End_Date__c = system.today();
         wpslst.add(ws1);
         
         Workplan_Stage__c ws2 = new Workplan_Stage__c();
         ws2.Status__c = 'Not Started';
+        ws2.End_Date__c = system.today();
         wpslst.add(ws2);
+        
+        Workplan_Stage__c ws3 = new Workplan_Stage__c();
+        ws3.Status__c = 'Not Started';
+        ws3.End_Date__c = system.today();
+        wpslst.add(ws3);
+        
+        Workplan_Stage__c ws4 = new Workplan_Stage__c();
+        ws4.Status__c = 'Not Started';
+        ws4.End_Date__c = system.today();
+        wpslst.add(ws4);
+        
+        Workplan_Stage__c ws5 = new Workplan_Stage__c();
+        ws5.Status__c = 'Not Started';
+        ws5.End_Date__c = system.today();
+        wpslst.add(ws5);
         insert wpslst;
         return wpslst;
     }
@@ -1834,32 +1878,32 @@ public class AIA_TestUtil{
         
         AIA_Workplan_Assignment__c wa1 = new AIA_Workplan_Assignment__c();
         wa1.Status__c = 'In Progress';
-        wa.Workplan_Stage__c = wpslst[1].Id;
-        wa.Proposal_Request_form__c = prflst[1].Id;
+        wa1.Workplan_Stage__c = wpslst[1].Id;
+        wa1.Proposal_Request_form__c = prflst[1].Id;
         walst.add(wa1);
         
         AIA_Workplan_Assignment__c wa2 = new AIA_Workplan_Assignment__c();
         wa2.Status__c = 'In Progress';
-        wa.Workplan_Stage__c = wpslst[2].Id;
-        wa.Proposal_Request_form__c = prflst[2].Id;
+        wa2.Workplan_Stage__c = wpslst[2].Id;
+        wa2.Proposal_Request_form__c = prflst[2].Id;
         walst.add(wa2);
         
         AIA_Workplan_Assignment__c wa3 = new AIA_Workplan_Assignment__c();
         wa3.Status__c = 'In Progress';
-        wa.Workplan_Stage__c = wpslst[0].Id;
-        wa.Proposal_Request_form__c = prflst[0].Id;
+        wa3.Workplan_Stage__c = wpslst[3].Id;
+        wa3.Proposal_Request_form__c = prflst[0].Id;
         walst.add(wa3);
         
         AIA_Workplan_Assignment__c wa4 = new AIA_Workplan_Assignment__c();
         wa4.Status__c = 'In Progress';
-        wa.Workplan_Stage__c = wpslst[1].Id;
-        wa.Proposal_Request_form__c = prflst[1].Id;
+        wa4.Workplan_Stage__c = wpslst[4].Id;
+        wa4.Proposal_Request_form__c = prflst[1].Id;
         walst.add(wa4);
         
         AIA_Workplan_Assignment__c wa5 = new AIA_Workplan_Assignment__c();
         wa5.Status__c = 'In Progress';
-        wa.Workplan_Stage__c = wpslst[2].Id;
-        wa.Proposal_Request_form__c = prflst[2].Id;
+        wa5.Workplan_Stage__c = wpslst[5].Id;
+        wa5.Proposal_Request_form__c = prflst[2].Id;
         walst.add(wa5);
         
         insert walst;
@@ -1872,6 +1916,7 @@ public class AIA_TestUtil{
         wpalst[3].Status__c = 'Completed';        
         wpalst[4].Status__c = 'Not Required';
         wpalst[5].Status__c = 'Completed';
+        
         update wpalst;
         return wpalst; 
     }
@@ -1997,6 +2042,7 @@ public class AIA_TestUtil{
         BRF.Broker_Commission__c =31.0;
         BRF.Renewal_Date__c = system.today();
         BRF.Account__c = acct.id;
+        BRF.Funding_Arrangements__c = 'Other';
         insert BRF;
 
         // create a BRF Proposed Products record
@@ -2007,10 +2053,12 @@ public class AIA_TestUtil{
 }       
     //Chida to test implemenation
     
-    public static void AIA_Implemenation_Test (){
+    public static void AIA_Implemenation_Test (){ 
+    
     Account acc = new Account();
         acc.Name = 'testAcc';
         acc.Type = 'testType';
+        acc.Account_Legal_Name__c='Legal';
         insert acc;
 
     //Insert Test Record For Opportunity
@@ -2018,20 +2066,268 @@ public class AIA_TestUtil{
         opp.Name = 'Testopp';
         opp.AccountId = acc.id;
         opp.FullServiceProducer__c = 'testpro';
-        opp.Effective_Date__c = Date.Today() - 5 ;
-        opp.Contract_End_Date__c = Date.Today() + 24;
-        opp.CloseDate = Date.Today() - 3;
+        opp.Legal_Account_Name_Verified__c=true;
+        opp.Effective_Date__c = system.today().toStartofMonth();
+        Integer numberOfDays = Date.daysInMonth(Date.Today().year(), Date.Today().month());     
+        opp.Contract_End_Date__c = Date.newInstance(Date.Today().year(), Date.Today().month(), numberOfDays);
+        opp.CloseDate = Date.Today() - 34;
         opp.StageName = 'test';
         insert opp;    
-        //Insert test Account for Opportunity
+    //Insert test Account for Opportunity
       //  Account acc = new Account();
       AIA_Implementation__c Imp=new AIA_Implementation__c();
     //    acc.Name = 'testAcc';
      //   acc.Type = 'testType';
-      Imp.Name__c = 'Test10';
-     Imp.Opportunity__c = opp.id;
-     Imp.Workplan_Type__c = 'WPT-000023';
-     Imp.Generate_Workplan_Stages__c = true;
-        insert Imp;}
-           
+        Imp.Name__c = 'Test10';
+        Imp.Opportunity__c = opp.id;
+        AIA_Workplan_Type__c wpt = AIA_CreateWorkPlan();
+        Imp.Workplan_Type__c =wpt.id;
+        Imp.Generate_Workplan_Stages__c = true;
+        insert Imp;
+        
+        
+        event e =new event();
+        e.recordTypeId=QueryBase.getRecordtypeId('Event', 'AIA_Open_Enrollment_Meeting');
+        e.Implementation__c = imp.id;
+        e.whatId = imp.id;
+        e.durationinminutes=90;
+        e.activityDateTime =system.now();
+        e.subject='TestOpenEvent';
+        e.capacity__C=1;        
+        insert e;       
+        
+    }
+    
+    public static void AIA_CreateEvents(){
+        Account acc =createAccount('TestOEMAcc');
+        Opportunity opp =AIA_createopportunity(acc.id);
+        AIA_Implementation__c imp = CreateImplementation(opp.id);
+        list<event> eventList = new list<event>();
+        event e =new event();
+        e.recordTypeId=QueryBase.getRecordtypeId('Event', 'AIA_Open_Enrollment_Meeting');
+        e.Implementation__c = imp.id;
+        e.whatId = imp.id;
+        e.durationinminutes=90;
+        e.activityDateTime =system.now();
+        e.subject='TestOpenEvent';
+        e.capacity__C=1;
+        e.Meeting_Status1__c='Open';
+        eventList.add(e);
+        
+        e =new event();
+        e.recordTypeId=QueryBase.getRecordtypeId('Event', 'AIA_Open_Enrollment_Meeting');
+        e.Implementation__c = imp.id;
+        e.whatId = imp.id;
+        e.durationinminutes=90;
+        e.activityDateTime =system.now();
+        e.subject='TestFullEvent';
+        e.capacity__C=1;
+        e.Meeting_Status1__c='Full';
+        eventList.add(e);
+        
+        e =new event();
+        e.recordTypeId=QueryBase.getRecordtypeId('Event', 'AIA_Open_Enrollment_Meeting');
+        e.Implementation__c = imp.id;
+        e.whatId = imp.id;
+        e.durationinminutes=90;
+        e.activityDateTime =system.now();
+        e.subject='TestCompletedEvent';
+        e.capacity__C=1;
+        e.Meeting_Status1__c='Completed';
+        eventList.add(e);
+        insert eventList;
+    }
+    
+    public static void createContract(){
+        //Create Account
+        Account acc =createAccount('TestOEMAcc');
+        //Create Opportunity
+        Opportunity opp =AIA_createopportunity(acc.id);     
+        //Create testusers
+        List<user> userList = new list<user>();
+        user u1 = AIA_createUser('alias1');
+        userList.add(u1);
+        user u2 = AIA_createUser('alias2');
+        userList.add(u2);        
+        user u3 = AIA_createUser('alias3');
+        userList.add(u3);        
+        user u4 = AIA_createUser('alias4');
+        userList.add(u4);        
+        user u5 = AIA_createUser('alias5');
+        userList.add(u5); 
+        insert userList;       
+        
+        //Create Account teams for all the relevant roles
+        AIA_createAccountTeamMember(acc.Id, u1.id, 'Audit');
+        AIA_createAccountTeamMember(acc.Id, u2.id, 'C&C Contact');
+        AIA_createAccountTeamMember(acc.Id, u3.id, 'Contract Supervisor');
+        AIA_createAccountTeamMember(acc.Id, u4.id, 'Legal');
+        AIA_createAccountTeamMember(acc.Id, u5.id, 'Sales Service Rep');        
+        
+        //Create an Implementation
+        AIA_Implementation__c Imp = new AIA_Implementation__c();
+        Imp.Name__c = 'testprf';
+        Imp.Opportunity__c = opp.Id;
+        Imp.account__c = acc.id;
+        Imp.Generate_Workplan_Stages__c = true;
+        Imp.Effective_Date__c = system.today();
+        Imp.Implementation_Plan_Timeline_Days__c = '60';
+        insert Imp;
+        
+        //Create the contract
+        contract contractRec = new contract();
+        contractRec.accountId=acc.Id;
+        contractRec.StartDate=system.today();
+        contractRec.ContractTerm=3;
+        contractRec.Implementation__c=imp.id;
+        insert contractRec;
+    }
+        
+     
+    public static User createTestUser(){ 
+        Profile pro = [SELECT Id FROM Profile WHERE Name='AIA 200+ Standard User - Custom']; 
+        User u = new User(Alias = 'TAlias', Email='TestUserBRF@testorg.com',
+        EmailEncodingKey='UTF-8', LastName='TestingUSer', LanguageLocaleKey='en_US',
+        LocaleSidKey='en_US', ProfileId = pro.Id,
+        TimeZoneSidKey='America/Los_Angeles', UserName='TestingUserBRF@testorg.com');
+        return u;
+     }  
+     public static AIA_Document__c createAIADocument(){ 
+        AIA_Document__c aiaDoc = new AIA_Document__c();
+        aiaDoc.Document_Status__c = 'Complete';
+        aiaDoc.Document_Type__c = 'Additional Documentation';
+        aiaDoc.Active__c = True;
+        aiaDoc.Start_Date__c = System.today();
+        aiaDoc.End_Date__c = System.today()+10;
+        aiaDoc.Approval_Status__c = 'Pending';
+        insert aiaDoc;
+        return aiaDoc;
+     } 
+     
+     public static Proposed_Products__c createProposedProducts(string BRFID){ 
+        Proposed_Products__c pp = new Proposed_Products__c();
+        pp.Benefit_Request_Form__c = BRFID;
+        pp.Blue_Rewards__c ='No';
+        insert pp;
+        return pp;
+     } 
+     
+      public static List<Proposed_Products__c> createListProposedProducts(string BRFID,string testResult){ 
+        List<Proposed_Products__c> ppList = new List<Proposed_Products__c>();
+        for(integer i=1;i<10;i++){
+            Proposed_Products__c pp = new Proposed_Products__c();
+            pp.Benefit_Request_Form__c = BRFID;
+            pp.Blue_Rewards__c ='No';
+            pp.MHP_Test_Result__c = testResult;
+            ppList.add(pp);
+        }
+        insert ppList;
+        return ppList;
+     } 
+     
+     public static AIA_Benefit_Design__c createBenefitDesign(string oppId){ 
+        AIA_Implementation__c Imp = new AIA_Implementation__c();
+        Imp.Name__c = 'testprf';
+        Imp.Opportunity__c = oppId;
+        Imp.Generate_Workplan_Stages__c = true;
+        Imp.Effective_Date__c = system.today();
+        Imp.Implementation_Plan_Timeline_Days__c = '60';
+        insert Imp;
+        
+        AIA_Benefit_Design__c aiaBD = new AIA_Benefit_Design__c();
+        aiaBD.Implementation__c = Imp.id;
+        insert aiaBD;
+        return aiaBD;
+     }  
+     
+     public static AIA_Workplan_Assignment__c createWPAssignment(List<Workplan_Stage__c> wpslst,string prfId){
+        
+        AIA_Workplan_Assignment__c wa = new AIA_Workplan_Assignment__c();
+        wa.Status__c = 'In Progress';
+        wa.Workplan_Stage__c = wpslst[0].Id;
+        wa.Proposal_Request_form__c = prfId;
+        insert wa;
+        return wa;
+     }
+     
+     public static List<AIA_Implementation__c> CreateImpList(string oid){
+        AIA_Workplan_Type__c wpt = new AIA_Workplan_Type__c();
+        wpt.Used_For__c ='Pre-Sales';
+        wpt.Workplan_Type__c = 'Renewal';
+        wpt.Used_For__c = 'Implementation';
+        wpt.Active__c=true;
+        insert wpt;
+        
+        Workplan_Type_Stage__c wpts = new Workplan_Type_Stage__c();
+        wpts.Workplan_Type__c = wpt.id;
+        wpts.Active__c = true;
+        insert wpts; 
+        
+        List<AIA_Implementation__c> ImpList = new List<AIA_Implementation__c>();
+        for(integer i=1;i<10;i++){
+            AIA_Implementation__c Imp = new AIA_Implementation__c();
+            Imp.Name__c = 'testprf';
+            Imp.Opportunity__c = oid;
+            Imp.Generate_Workplan_Stages__c = true;
+            Imp.Effective_Date__c = system.today();
+            Imp.Implementation_Plan_Timeline_Days__c = '60';
+            Imp.Workplan_Type__c = wpt.id;
+            Imp.Generate_Workplan_Stages__c = true;
+            ImpList.add(Imp);
+        }
+        insert ImpList;
+        return ImpList;
+    } 
+    
+    public static AIA_Implementation__c CreateImplementation(string oid){
+      
+        AIA_Workplan_Type__c wpt = new AIA_Workplan_Type__c();
+        wpt.Used_For__c ='Pre-Sales';
+        wpt.Workplan_Type__c = 'Renewal';
+        wpt.Used_For__c = 'Implementation';
+        wpt.Active__c=true;
+        insert wpt;
+        
+        Workplan_Type_Stage__c wptsObj = new Workplan_Type_Stage__c();
+        wptsObj.Workplan_Type__c = wpt.id;
+        wptsObj.Active__c = true;
+        insert wptsObj; 
+        
+        Id wps_RTID = QueryBase.getRecordtypeId('Workplan_Stage__c', 'Process');
+        AIA_Implementation__c Imp = new AIA_Implementation__c();
+        Imp.Name__c = 'testprf';
+        Imp.Opportunity__c = oid;
+        Imp.Generate_Workplan_Stages__c = true;
+        Imp.Effective_Date__c = system.today();
+        Imp.Implementation_Plan_Timeline_Days__c = '60';
+        Imp.Workplan_Type__c = wpt.id;
+        Imp.Generate_Workplan_Stages__c = true;
+        insert Imp;
+        
+        Workplan_Stage__c wpts = new Workplan_Stage__c();
+        wpts.Workplan_Type__c = wpt.id;
+        wpts.Workplan_Type_Stage__c = wptsObj.id;
+        wpts.Implementation__c = Imp.id;
+        wpts.Status__c = 'Completed';
+        wpts.recordTypeId =wps_RTID;
+        insert wpts; 
+        
+        Workplan_Stage__c wpts1 = new Workplan_Stage__c();
+        wpts1.Workplan_Type__c = wpt.id;
+        wpts1.Workplan_Type_Stage__c = wptsObj.id;
+        wpts1.Implementation__c = Imp.id; 
+        wpts1.Parent_Workplan_Stage__c = wpts.id;
+        wpts1.Status__c = 'Not Started';
+        insert wpts1; 
+        
+        return Imp;
+    } 
+    public static AccountTeamMember AIA_createAccountTeamMember(string accId, string usrId, string strRole){
+        AccountTeamMember acctMbr = new AccountTeamMember(); 
+        acctMbr.AccountId = accId;
+        acctMbr.TeamMemberRole = strRole;
+        acctMbr.UserId = usrId;
+        insert acctMbr;
+        return acctMbr;
+    }   
 }

@@ -17,7 +17,9 @@ public with sharing class AIA_WP_SubProcess_Controller {
     public string actionType {get;set;}
     //current wpStage in context
     public static Workplan_Stage__c wpStage {get;set;}
+    //information message
     public static string infoMsg = '';
+    //string variable to check which process to execute
     public static final string SSP_ACTION = 'ssp'; //Start Sub Process
     public static final string MNR_ACTION = 'mnr'; //Mark Not Required
     static Map<id,Workplan_Stage__c> newwpsmap = new Map<id,Workplan_Stage__c>();                                 // Mapping Workplan Stage and Id's
@@ -37,6 +39,12 @@ public with sharing class AIA_WP_SubProcess_Controller {
         wpStage = new Workplan_Stage__c();
     } 
     
+    /*
+        This method is called from VF page "Action" attribute and based on action type it will invoke the desired process.
+        It will query Workplan Stage record based on workplan stage record Id passed in URL. 
+        @param: none
+        @return: pageReference (null)
+    */
     public pageReference onPageLoad(){
         if(string.isNotBlank(wpStageId) && string.isNotBlank(actionType)){
             infoMsg = '';
@@ -46,9 +54,10 @@ public with sharing class AIA_WP_SubProcess_Controller {
                 wpStage = getWPstage();
                 //setup maps used to create WP assignments
                 dataSetup(new list<Workplan_Stage__c>{wpStage});
-                
+                //if actionType param is SSP, initiate sup Process
                 if(actionType.equalsIgnoreCase(SSP_ACTION))
                     startSubProcess();
+                //if actionType param is MNR, initiate mark not required action
                 if(actionType.equalsIgnoreCase(MNR_ACTION))
                     MarkNotRequired();
                 if(string.isNotBlank(infoMsg))
@@ -64,7 +73,13 @@ public with sharing class AIA_WP_SubProcess_Controller {
         return null;
     }
     
-    //@RemoteAction
+    /*
+        This method is called from "onPageLoad" method when the actionType param is "ssp". It will create Workplan_Assignment__c records
+        from Workplan_Type_Task__c records of Workplan_Type_Stage__c record. It will also set the ownerId of Workplan_Assignment__c records
+        based on Assignee_Type__c field on Workplan_Type_Task__c records. It calls "sendEmail" method to send emails to external or internal users.
+        @param: none
+        @return: none
+    */
     public static void startSubProcess(){
         map<string,Workplan_Type_Stage__c> WPTSmap = new map<string,Workplan_Type_Stage__c>();
         set<Id> externalUserIds = new set<Id>();
@@ -85,6 +100,7 @@ public with sharing class AIA_WP_SubProcess_Controller {
                             AIA_Workplan_Assignment__c wpa = new AIA_Workplan_Assignment__c();
                             wpa.Workplan_Stage__c = wpStageId;
                             wpa.Post_Sales_Implementation__c = wpStage.Implementation__c;
+                            wpa.Account__c=wpStage.Implementation__r.Account__c;
                             wpa.Status__c = 'Sent';
                             wpa.System_Generated__c = true;
                             wpa.Assigned_Date_Time__c = system.now();
@@ -116,7 +132,7 @@ public with sharing class AIA_WP_SubProcess_Controller {
                                       id Accid = newwpsmap1.get(wpStage.id);  // Assigning the Particular Acount Id to Accid
                                       Integer count = 0;                  //Declared Count 
                                       Id UserId ;
-                                      //Looping AccountTeamMember by above query result line: 379
+                                      //Looping over AccountTeamMember
                                       for(AccountTeamMember atm: ateamlist){
                                           if(atm.AccountId == Accid && atm.TeamMemberRole == wptt.Role__c ){
                                               count=count+1;
@@ -133,37 +149,29 @@ public with sharing class AIA_WP_SubProcess_Controller {
                                   }
                             }
                             //Assigning Due date to today plus expected days to complete
-                            Date dt = system.today();
+                            /*Date dt = system.today();
                             if( wptt.Expected_Days_To_Complete__c != null ){ 
                                 dt = dt.addDays(integer.valueOf(wptt.Expected_Days_To_Complete__c));                          
-                            }
+                            }*/
                             if(WPstage.implementation__r.Implementation_Plan_Timeline_Days__c=='60'){
-                                if(wptt.X60_Day_Offset__c!=null)
-                                wpa.Due_Date__c = WPstage.implementation__r.Effective_Date__c-integer.valueOf(wptt.X60_Day_Offset__c);
-                                else
-                                wpa.Due_Date__c = WPstage.implementation__r.Effective_Date__c;                              
+                                if(wptt.X60_Day_Offset__c!=null && WPstage.implementation__r.Effective_Date__c!=null)
+                                wpa.Due_Date__c = WPstage.implementation__r.Effective_Date__c-integer.valueOf(wptt.X60_Day_Offset__c);                                                                                                                                
                             }
                             
                             if(WPstage.implementation__r.Implementation_Plan_Timeline_Days__c=='90'){
-                                if(wptt.X90_Day_Offset__c!=null)
-                                wpa.Due_Date__c = WPstage.implementation__r.Effective_Date__c-integer.valueOf(wptt.X90_Day_Offset__c);
-                                else
-                                wpa.Due_Date__c = WPstage.implementation__r.Effective_Date__c;                              
+                                if(wptt.X90_Day_Offset__c!=null && WPstage.implementation__r.Effective_Date__c!=null)
+                                wpa.Due_Date__c = WPstage.implementation__r.Effective_Date__c-integer.valueOf(wptt.X90_Day_Offset__c);                               
                             }
                             
                             if(WPstage.implementation__r.Implementation_Plan_Timeline_Days__c=='120'){
-                                if(wptt.X120_Day_Offset__c!=null)
-                                wpa.Due_Date__c = WPstage.implementation__r.Effective_Date__c-integer.valueOf(wptt.X120_Day_Offset__c);
-                                else
-                                wpa.Due_Date__c = WPstage.implementation__r.Effective_Date__c;                              
+                                if(wptt.X120_Day_Offset__c!=null && WPstage.implementation__r.Effective_Date__c!=null)
+                                wpa.Due_Date__c = WPstage.implementation__r.Effective_Date__c-integer.valueOf(wptt.X120_Day_Offset__c);                                
                             }
                             
                             
                             if(WPstage.implementation__r.Implementation_Plan_Timeline_Days__c=='180'){
-                                if(wptt.X180_Day_Offset__c!=null)
-                                wpa.Due_Date__c = WPstage.implementation__r.Effective_Date__c-integer.valueOf(wptt.X180_Day_Offset__c);
-                                else
-                                wpa.Due_Date__c = WPstage.implementation__r.Effective_Date__c;                              
+                                if(wptt.X180_Day_Offset__c!=null && WPstage.implementation__r.Effective_Date__c!=null)
+                                wpa.Due_Date__c = WPstage.implementation__r.Effective_Date__c-integer.valueOf(wptt.X180_Day_Offset__c);                                
                             }
                             
                             
@@ -206,7 +214,11 @@ public with sharing class AIA_WP_SubProcess_Controller {
             }   
     }
     
-    //@RemoteAction
+     /*
+        This method is called from "onPageLoad" method when the actionType param is "mnr". It will update the Status of workplan stage to "Not Required".
+        @param: none
+        @return: none
+    */
     public static void MarkNotRequired(){
         infoMsg = '';
         if(wpStage != NULL && wpStage.Id != NULL){
@@ -218,10 +230,15 @@ public with sharing class AIA_WP_SubProcess_Controller {
     
     /*
         Send email to External & Internal Contacts/Users
+        @param1: set<Id> - set of unique Ids, either contact or user
+        @param2: list<AIA_Workplan_Assignment__c> - list of AIA_Workplan_Assignment__c records which will be used to merge data in email body.
     */
     public static void sendMail(set<Id> idSet, list<AIA_Workplan_Assignment__c> wpAsgnList){
+        //Key-UserId, Value-User email
         map<string,string> userToAddr = new map<string,string>();
+        //Key-Contact Id, Value-Contact email
         map<string,string> contToAddr = new map<string,string>();
+        //list to store single email messages
         list<Messaging.SingleEmailMessage> msgList = new list<Messaging.SingleEmailMessage>();
         boolean isUser = false;
         boolean isContact = false;
@@ -229,7 +246,7 @@ public with sharing class AIA_WP_SubProcess_Controller {
         list<Id> recIds = new list<Id>();
         recIds.addAll(idSet);
         if(recIds != NULL && recIds.size() > 0){
-            if(Schema.Contact.SObjectType == Id.valueOf(recIds[0]).getSObjectType()){
+            if(Schema.Contact.SObjectType == Id.valueOf(recIds[0]).getSObjectType()){//if contact Ids are passed
                 isContact = true;
                 for(Contact cont : [Select Id, email from contact where Id IN : recIds]){
                     if(cont.email != NULL)
@@ -237,7 +254,7 @@ public with sharing class AIA_WP_SubProcess_Controller {
                 }
             }
             
-            if(Schema.User.SObjectType == Id.valueOf(recIds[0]).getSObjectType()){
+            if(Schema.User.SObjectType == Id.valueOf(recIds[0]).getSObjectType()){ //if User Ids are passed
                 isUser = true;
                 for(User usr : [Select Id, email from User where Id IN : recIds]){
                     if(usr.email != NULL)
@@ -248,16 +265,20 @@ public with sharing class AIA_WP_SubProcess_Controller {
         if(wpAsgnList != NULL && wpAsgnList.size() > 0){
             for(AIA_Workplan_Assignment__c wpAsgn : wpAsgnList){
                 if(isContact && contToAddr != NULL && contToAddr.size() >0 && contToAddr.containsKey(wpAsgn.External_Assignee__c)){
+                    //get email address from contact map
                     string emailAdr = contToAddr.get(wpAsgn.External_Assignee__c);
+                    //list of merge fields which will replace placeholders in a custom label to generate email body
                     list<string> replaceVars = new list<string>{wpStage.Account__c, wpAsgn.owner.name, wpAsgn.owner.email, string.valueOf(wpAsgn.Assigned_Date_Time__c),string.valueOf(wpAsgn.Due_Date__c), wpAsgn.Task_Description__c}; 
                     //replace the placeholders with actual content
-                    
                     string msg = string.format(system.label.AIA_WP_SubProcess_EmailTemplate,replaceVars);
                     msgList.add(generateEmailMsg(emailAdr,msg));    
                 }
                 if(isUser && userToAddr != NULL && userToAddr.size() >0){
+                    //get email address from user map
                     string emailAdr = userToAddr.get(wpAsgn.ownerId);
+                    //generate link to WPA record
                     string link = '<a href="https://'+URL.getSalesforceBaseUrl().toExternalForm()+'/'+wpAsgn.Id+'">'+'here</a>';
+                    //list of merge fields which will replace placeholders in a custom label to generate email body
                     list<string> replaceVars = new list<string>{wpStage.Account__c,link}; 
                     //replace the placeholders with actual content
                     string msg = string.format(system.label.AIA_WP_SubProcess_EmailTemplate_2,replaceVars);
@@ -274,7 +295,10 @@ public with sharing class AIA_WP_SubProcess_Controller {
     }
     
     /*
-        generate email content
+        This method is called from "sendMail" method to generate email content.
+        @param1: string - email address
+        @param2: string - html body of email
+        @return: Messaging.SingleEmailMessage - email message with email address and body
     */
     private static Messaging.SingleEmailMessage generateEmailMsg(string emailAddr, string msgbody){
         Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
@@ -286,16 +310,26 @@ public with sharing class AIA_WP_SubProcess_Controller {
        return mail;
     }
     
+    /*
+        This method will query Workplan_Stage__c record from database based on Workplan_Stage__c record Id passed in the page URL.
+        @param: none
+        @return: Workplan_Stage__c - Workplan Stage record 
+    */
     @testVisible
     private static Workplan_Stage__c getWPstage(){
         list<Workplan_Stage__c> thisWpsList = new list<Workplan_Stage__c>();
         Workplan_Stage__c thisWPstage;
-        thisWpsList = [select Id, Workplan_Type__c, Status__c,Account__c,End_Date__c,Start_Date__c,Implementation__c,Implementation__r.Implementation_Plan_Timeline_Days__c,Implementation__r.Effective_Date__c,Workplan_Type_Stage__c,Workplan_Type__r.ownerId from Workplan_Stage__c where Id=: wpStageId];
+        thisWpsList = [select Id, Workplan_Type__c, Status__c,Account__c,End_Date__c,Start_Date__c,Implementation__c,Implementation__r.Account__c,Implementation__r.Implementation_Plan_Timeline_Days__c,Implementation__r.Effective_Date__c,Workplan_Type_Stage__c,Workplan_Type__r.ownerId from Workplan_Stage__c where Id=: wpStageId];
         if(thisWpsList != NULL && thisWpsList.size() > 0)
             thisWPstage = thisWpsList[0];
         return thisWPstage;
     }
     
+    /*
+        This method will query AIA_Workplan_Type_Task__c records from database based on Workplan_Type_Stage__c record Ids related to Workplan_Stage__c record.
+        @param: set<String> - set of Ids of Workplan_Type_Stage__c records
+        @return: list<AIA_Workplan_Type_Task__c> - list of AIA_Workplan_Type_Task__c records 
+    */
     @testVisible
     private static list<AIA_Workplan_Type_Task__c> getWPTypeAssignments(set<String> impIds){
         list<AIA_Workplan_Type_Task__c> wpTypeAsgnmntList = new list<AIA_Workplan_Type_Task__c>();
@@ -309,6 +343,12 @@ public with sharing class AIA_WP_SubProcess_Controller {
         return wpTypeAsgnmntList;
     }
     
+    /*
+        This method is used to query record types of an object. It will query record types for sObject token passed as param and return
+        record type Id for record type name passed as other param.
+        @param1: string - record type label name
+        @param2: Schema.SObjectType
+    */
     public static string getRecordTypeIdByName(string recTypeName, Schema.SObjectType token){
         string recTypeId;
         // Get the Describe Result
@@ -320,7 +360,7 @@ public with sharing class AIA_WP_SubProcess_Controller {
     }
     
     /*
-        This method will setup data in MAPs decalred above, which will be used in populating data in WPA records while Starting Sub Process.
+        This method will setup data in MAPs declared above, which will be used in populating data in WPA records while Starting Sub Process.
     */
     public static void dataSetup(list<Workplan_Stage__c> wpStageList){
         // Get list of workplan stages

@@ -54,7 +54,7 @@ public class AIA_WorkplanTypeAssignmentTrigger_Test{
                 List<AIA_Workplan_Type_Task__c> WPTTlst = AIA_TestUtil.createWPTT(WPTS.Id);
                 
                 List<AIA_Workplan_Type_Task__c> lst1 = [select Id from AIA_Workplan_Type_Task__c];
-                system.assertequals(3,lst1.size());
+                system.assertequals(6,lst1.size());
             
                 //update Work Plan Task Type With Existing Records
                 List<AIA_Workplan_Type_Task__c> UPWPTTlst = AIA_TestUtil.updateWPTT(WPTTlst);

@@ -135,11 +135,10 @@ Public static void TotalCountofTask(set<id> SetOfIds){
             }
         }
     }
-    //wpsidset contains all workplan stage id's,for these workplan assignments records are completed  
+    //wpsidset contains all workplan stage id's,for these workplan assignments records are completed
     if(wpsidset != null && wpsidset.size()>0)
     {
         List<Workplan_Stage__c> wpslist =[select id,Status__c,End_Date__c from Workplan_Stage__c where id in :wpsidset ];
-        
         for(Workplan_Stage__c obj: wpsList)
         {
             obj.Status__c ='Completed';                //Making Status as Completed when all its Assignments are completed         

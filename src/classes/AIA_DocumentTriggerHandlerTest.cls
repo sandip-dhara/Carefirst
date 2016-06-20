@@ -12,42 +12,28 @@
 *******************************************************************************************************/
 
 @isTest
-private class AIA_DocumentTriggerHandlerTest {
+// First test is for positive testing where the code runs as desired.
+public class AIA_DocumentTriggerHandlerTest {
+    // Run positive test when check testing is false as expected in the Account Process code
     static testMethod void CreateAIADocument() {
-        Account a = new Account();
-        a.Name = 'SomeTest' + Date.Today();
-        a.Type = 'Customer';
-        a.billingstate = 'MD';
-        a.billingCountry = 'United States';
-        a.billing_County_Code__c = 'CA-Carroll';
-        a.shippingstate = 'MD';
-        a.shippingcountry = 'USA';        
-        insert a;
-        
-        Id AdminPID = [select id from profile where Name = 'System Administrator'].Id;
+        Profile p = [SELECT Id FROM Profile WHERE Name='AIA 200+ Standard User - Custom']; 
+                     User u = new User(Alias = 'standt', Email='spmss.process@carefirst.com.xxx', 
+                     EmailEncodingKey='UTF-8', LastName='Testing', LanguageLocaleKey='en_US', 
+                     LocaleSidKey='en_US', ProfileId = p.Id, 
+                     TimeZoneSidKey='America/Los_Angeles', UserName='spmss.process@carefirst.com.xxx');
+
+
         List<User> lstinsertuser=new List<User>();
-        for(Integer i=0;i<4;i++)
-        {
-            User admin = new User();
-            admin.FirstName = 'MrX';
-            admin.LastName = 'LastMrx';
-            admin.email = 'mrxzz@mytest.com';
-            admin.alias = 'zzts';
-            admin.communityNickname = 'MrXLastMrx'+i;
-            admin.username = 'mrxzzt'+i+'@mytest.com';
-            admin.EmailEncodingKey = 'ISO-8859-1';
-            admin.LanguageLocaleKey = 'en_US';
-            admin.LocaleSidKey = 'en_US';
-            admin.TimeZoneSidKey = 'America/New_York';
-            admin.ProfileId = AdminPID;
-            lstinsertuser.add(admin);
-        }        
-        
-        insert lstinsertuser;
-        
+
+
+            System.runAs(u) {
+             Account a = AIA_TestUtil.AIA_createAccount();
+             
         List<AccountTeamMember> lstAcctTeamMbr=new List<AccountTeamMember>();
-        for(Integer i=0;i<4;i++)
+        for(Integer i=0;i<7;i++)
         {
+        
+
             AccountTeamMember member=new AccountTeamMember();
             member.AccountAccessLevel ='Edit';
             member.AccountId =a.Id;
@@ -62,6 +48,15 @@ private class AIA_DocumentTriggerHandlerTest {
                 member.TeamMemberRole ='Sales Service Rep';
             }else if(i==3)
             {
+                member.TeamMemberRole ='QA Auditor';
+            }else if(i==4)
+            {
+                member.TeamMemberRole ='Billing Tech';
+            }else if(i==5)
+                        {
+                member.TeamMemberRole ='Settlements Tech';
+            }else if(i==6)
+            {
                 member.TeamMemberRole ='Implementation PM';
             }
             member.UserId =lstinsertuser[i].Id;
@@ -70,8 +65,8 @@ private class AIA_DocumentTriggerHandlerTest {
         
         insert lstAcctTeamMbr;
         List<AccountTeamMember> lstquery=[Select Id,TeamMemberRole from AccountTeamMember Where AccountId =: a.Id];
-        for(AccountTeamMember tesam: lstquery){
-            System.debug('\n'+tesam.TeamMemberRole);
+        for(AccountTeamMember team: lstquery){
+            System.debug('\n'+team.TeamMemberRole);
         }
         
         System.debug(lstAcctTeamMbr);
@@ -82,10 +77,12 @@ private class AIA_DocumentTriggerHandlerTest {
             doc.Account__c = a.Id;
             doc.Document_Type__c ='Production Id Card';
             insert doc;
-
+            doc.Document_Type__c ='Group Structure Document';
+            insert doc;
             doc.Document_Type__c ='Mock ID Card';
             update doc;
             
         Test.StopTest();
     }
+}
 }

@@ -6,7 +6,15 @@
         <detailHeading>false</detailHeading>
         <editHeading>false</editHeading>
         <label>Implementation Process</label>
-        <layoutColumns/>
+        <layoutColumns>
+            <layoutItems>
+                <height>200</height>
+                <page>AIA_PostSalesControl</page>
+                <showLabel>false</showLabel>
+                <showScrollbars>false</showScrollbars>
+                <width>100%</width>
+            </layoutItems>
+        </layoutColumns>
         <style>OneColumn</style>
     </layoutSections>
     <layoutSections>

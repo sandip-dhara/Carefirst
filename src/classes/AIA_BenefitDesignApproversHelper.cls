@@ -13,12 +13,20 @@
 * @Purpose: This class is populates Approvers from account team role in Benefit Design
 * Input List of Benefit Request's
 */
-//public static String E1 = 'There is more than one user configured for the Ancillary Analyst role on the Account. Please make sure only one user is configured as  Ancillary Analyst';
 
 
 public Class AIA_BenefitDesignApproversHelper
 {
 
+public static final string ERROR1 = 'There is more than one user configured for the Ancillary Analyst role on the Account. Please make sure only one user is configured as  Ancillary Analyst';
+public static final string ERROR2 ='The Ancillary Analyst role is not configured on the Account Team. Please assign a user to this role before saving the Benefit Design';
+public static final string ERROR3 ='There is more than one user configured for the Contract Tech role on the Account. Please make sure only one user is configured as  Contract Tech' ;
+public static final string ERROR4 ='The Benefact Coder role is not configured on the Account Team. Please assign a user to this role before saving the Benefit Design';
+public static final string ERROR5 ='There is more than one user configured for the Contract Tech role on the Account. Please make sure only one user is configured as  Contract Tech';
+public static final string ERROR6 ='The Contract Tech role is not configured on the Account Team. Please assign a user to this role before saving the Benefit Design';
+public static final string ERROR7 ='There is more than one user configured for the QA Auditor role on the Account. Please make sure only one user is configured as  QA Auditor' ;
+public static final string ERROR8 = 'The QA Auditor role is not configured on the Account Team. Please assign a user to this role before saving the Benefit Design';
+  
     public void beforeInsert(List<AIA_Benefit_Design__c> lstAIABenefitDesign)
     {
         //Set of Accounts from Benifit Design
@@ -100,42 +108,45 @@ public Class AIA_BenefitDesignApproversHelper
                 {
                     if(bd.Account_Name__c == accTeam1.AccountId)
                     {
-                          //If roles excists assign else throw error 
+                          //If roles excists assign user id  else throw error 
                           if(count1 == 1 && accTeam1.TeamMemberRole == 'Ancillary Analyst')
                             {
                                 bd.Approver_Ancillary_Analyst__c = accTeam1.UserId;
                                
                             }  else if (count1 > 1 && accTeam1.TeamMemberRole == 'Ancillary Analyst'){
-                                bd.addError('There is more than one user configured for the Ancillary Analyst role on the Account. Please make sure only one user is configured as  Ancillary Analyst' );
+                                bd.addError(ERROR1);
                             }else if (count1 < 1){
-                            bd.addError('The Ancillary Analyst role is not configured on the Account Team. Please assign a user to this role before saving the Benefit Design');
+                            bd.addError(ERROR2);
                             }
+                            //If roles excists assign user id  else throw error 
 
                            if(count2 == 1 && accTeam1.TeamMemberRole == 'Benefact Coder')
                             {
                                 bd.Approver_Benefit_Coder__c = accTeam1.UserId;
                             } else if (count2 > 1 && accTeam1.TeamMemberRole == 'Benefact Coder'){
-                            bd.addError('There is more than one user configured for the Benefact Coder role on the Account. Please make sure only one user is configured as  Benefact Coder' );
+                            bd.addError(ERROR3 );
                             }else if (count2 < 1){
-                            bd.addError('The Benefact Coder role is not configured on the Account Team. Please assign a user to this role before saving the Benefit Design');
+                            bd.addError(ERROR4);
                             }
-                            
+                            //If roles excists assign user id  else throw error 
+
                             if(count3 == 1 && accTeam1.TeamMemberRole == 'Contract Tech')
                             {
                                 bd.Approver_Contract_Tech__c = accTeam1.UserId;
                             } else if (count3 > 1 && accTeam1.TeamMemberRole == 'Contract Tech'){
-                            bd.addError('There is more than one user configured for the Contract Tech role on the Account. Please make sure only one user is configured as  Contract Tech' );
+                            bd.addError(ERROR5);
                             }else if ( count3 < 1){
-                            bd.addError('The Contract Tech role is not configured on the Account Team. Please assign a user to this role before saving the Benefit Design');
+                            bd.addError(ERROR6);
                             }   
-                                                       
+                             //If roles excists assign user id  else throw error 
+                          
                             if(count4 == 1 && accTeam1.TeamMemberRole == 'QA Auditor')
                             {
                                 bd.Approver_QA_Auditor__c = accTeam1.UserId;
                             } else if (count4 > 1 && accTeam1.TeamMemberRole == 'QA Auditor'){
-                            bd.addError('There is more than one user configured for the QA Auditor role on the Account. Please make sure only one user is configured as  QA Auditor' );
+                            bd.addError(ERROR7);
                             }else if ( count4 < 1){
-                                bd.addError('The QA Auditor role is not configured on the Account Team. Please assign a user to this role before saving the Benefit Design');
+                                bd.addError(ERROR8);
                             }     
                         
                     }

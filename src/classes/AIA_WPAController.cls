@@ -25,8 +25,10 @@ public class AIA_WPAController {
     */  
     public pagereference save(){
         try{
-            wpa.Proposal_Request_Form__c= apexpages.currentpage().getparameters().get('PRFid');
-            
+            id prfId = apexpages.currentpage().getparameters().get('PRFid');
+            wpa.Proposal_Request_Form__c= prfId;
+            PRF__c prf=[select opportunity__c,Opportunity__r.AccountId from PRF__c where id =: prfId];
+            wpa.Account__c = prf.Opportunity__r.AccountId;
             insert wpa;
         }
         catch(exception e){

@@ -14,17 +14,16 @@ public class AIA_WorkplanAssignmentTrigger_Test{
                 List<AIA_Workplan_Assignment__c> waslst = AIA_TestUtil.createWPA(wpslst,prflst);
                 List<AIA_Workplan_Assignment__c> upwaslst = AIA_TestUtil.updateWPA(waslst);
                 
-                
                 List<Workplan_Stage__c> wpslst1 = [select Id from Workplan_Stage__c];
-                system.assertequals(3,wpslst1.size());
+                system.assertequals(6,wpslst1.size());
                 
                 List<PRF__c> prflst1 = [select Id from PRF__c];
                 system.assertequals(3,prflst1.size());
                 
-                List<AIA_Workplan_Assignment__c> waslst1 = [select Id from AIA_Workplan_Assignment__c];
+                List<AIA_Workplan_Assignment__c> waslst1 = [select Id,status__c,Workplan_Stage__c  from AIA_Workplan_Assignment__c];
                 system.assertEquals(6,waslst1.size());
                 
-                List<AIA_Workplan_Assignment__c> upwaslst1 = [select id from AIA_Workplan_Assignment__c];
+                List<AIA_Workplan_Assignment__c> upwaslst1 = [select id,status__c,Workplan_Stage__c from AIA_Workplan_Assignment__c];
                 system.assertEquals(6,upwaslst1.size());
                 
                 AIA_TestUtil.deleteWPA(waslst);
@@ -47,15 +46,15 @@ public class AIA_WorkplanAssignmentTrigger_Test{
                 List<AIA_Workplan_Assignment__c> upwaslst = AIA_TestUtil.updateWPA(waslst);
                 
                 List<Workplan_Stage__c> wpslst1 = [select Id from Workplan_Stage__c];
-                system.assertequals(6,wpslst1.size());
+                system.assertequals(12,wpslst1.size());
                 
                 List<PRF__c> prflst1 = [select Id from PRF__c];
                 system.assertequals(6,prflst1.size());
                 
-                List<AIA_Workplan_Assignment__c> waslst1 = [select Id from AIA_Workplan_Assignment__c];
+                List<AIA_Workplan_Assignment__c> waslst1 = [select Id,status__c,Workplan_Stage__c  from AIA_Workplan_Assignment__c];
                 system.assertEquals(6,waslst1.size());
                 
-                List<AIA_Workplan_Assignment__c> upwaslst1 = [select id from AIA_Workplan_Assignment__c];
+                List<AIA_Workplan_Assignment__c> upwaslst1 = [select id,status__c,Workplan_Stage__c from AIA_Workplan_Assignment__c];
                 system.assertEquals(6,upwaslst1.size());
                 
                 AIA_TestUtil.deleteWPA(waslst);

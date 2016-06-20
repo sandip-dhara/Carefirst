@@ -10,10 +10,19 @@
   *************************************************************************************
  */
  
+ //---------------------------------------------------------------------------------------------------------
+
+/**
+* @Author: Chida
+* @Purpose: User can mark the Opportunity as sold (contract was awarded) if there is a Benefit Request Form marked as sold
+    
+* Input List of Opportunities
+*/
 
 
 public class AIA_Opportunity_Helper
 {
+    //List of Opportunities
     public void AIA_Opportunity_Helper(List<Opportunity> listOppty)
     {
       //  User can mark the Opportunity as sold (contract was awarded) if there is a Benefit Request Form marked as sold

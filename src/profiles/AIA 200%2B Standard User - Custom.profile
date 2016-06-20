@@ -1414,7 +1414,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Benfit_Request_Form__c.Zip_Code_Validation__c</field>
         <readable>true</readable>
     </fieldPermissions>
