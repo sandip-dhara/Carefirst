@@ -32,6 +32,7 @@ public static boolean firstRun=false;
  }
  
  public static void validateContract(list<contract> contractList){
+ system.debug('@@ in validateContract list'+contractList);
      set<id>implementationIdSet = new set<id>();
      for(contract contractRec: contractList){
          if(contractRec.Implementation__c!=null){
@@ -40,7 +41,7 @@ public static boolean firstRun=false;
      }
      //Map<id,Implementation__c> implementationAccMap = new Map<id,implementation__c>([select id,name,account__c from implementation__c where id in:implementationIdSet]);
      List<contract> finalContractList = [select id,name,implementation__c,implementation__r.account__c from contract where id  in:contractList];
-     
+      system.debug('@@ in finalContractList '+finalContractList );
      set<id> accIdSet = new set<id>();
     for(contract cont: finalContractList){
         if(cont.implementation__r.account__c!=null)

@@ -14,19 +14,13 @@
 @isTest
 private class AIA_DocumentTriggerHandlerTest {
     static testMethod void CreateAIADocument() {
-        Account a = new Account();
-        a.Name = 'SomeTest' + Date.Today();
-        a.Type = 'Customer';
-        a.billingstate = 'MD';
-        a.billingCountry = 'United States';
-        a.billing_County_Code__c = 'CA-Carroll';
-        a.shippingstate = 'MD';
-        a.shippingcountry = 'USA';        
-        insert a;
+        // Create Account
+        Account a = AIA_TestUtil.CreateAccount('TestAccount');
+        system.assertNotEquals(null,a.id);
         
         Id AdminPID = [select id from profile where Name = 'System Administrator'].Id;
         List<User> lstinsertuser=new List<User>();
-        for(Integer i=0;i<4;i++)
+        for(Integer i=0;i<7;i++)
         {
             User admin = new User();
             admin.FirstName = 'MrX';
@@ -44,24 +38,27 @@ private class AIA_DocumentTriggerHandlerTest {
         }        
         
         insert lstinsertuser;
+        system.assertNotEquals(0, lstinsertuser.size());
         
         List<AccountTeamMember> lstAcctTeamMbr=new List<AccountTeamMember>();
-        for(Integer i=0;i<4;i++)
+        for(Integer i=0;i<7;i++)
         {
             AccountTeamMember member=new AccountTeamMember();
             member.AccountAccessLevel ='Edit';
             member.AccountId =a.Id;
-            if(i==0)
-            {
-                member.TeamMemberRole ='Implementation Coordinator';
-            }else if(i==1)
-            {
-                member.TeamMemberRole ='Sales Consultant';
-            }else if(i==2)
-            {
+            if(i==0){
+                member.TeamMemberRole ='Par Plan';
+            }else if(i==1){
+                member.TeamMemberRole ='Customer Support';
+            }else if(i==2){
                 member.TeamMemberRole ='Sales Service Rep';
-            }else if(i==3)
-            {
+            }else if(i==3){
+                member.TeamMemberRole ='QA Auditor';
+            }else if(i==4){
+                member.TeamMemberRole ='Billing Tech';
+            }else if(i==5){
+                member.TeamMemberRole ='Settlements Tech';
+            }else if(i==6){
                 member.TeamMemberRole ='Implementation PM';
             }
             member.UserId =lstinsertuser[i].Id;
@@ -69,6 +66,8 @@ private class AIA_DocumentTriggerHandlerTest {
         }
         
         insert lstAcctTeamMbr;
+        system.assertNotEquals(0, lstAcctTeamMbr.size());
+        
         List<AccountTeamMember> lstquery=[Select Id,TeamMemberRole from AccountTeamMember Where AccountId =: a.Id];
         for(AccountTeamMember tesam: lstquery){
             System.debug('\n'+tesam.TeamMemberRole);
@@ -84,6 +83,9 @@ private class AIA_DocumentTriggerHandlerTest {
             insert doc;
 
             doc.Document_Type__c ='Mock ID Card';
+            update doc;
+            
+            doc.Document_Type__c ='Group Structure Document';
             update doc;
             
         Test.StopTest();

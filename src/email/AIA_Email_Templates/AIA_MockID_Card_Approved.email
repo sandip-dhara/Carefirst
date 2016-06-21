@@ -1,6 +1,14 @@
 <table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
 <tr valign="top" height="400" >
 <td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
-<![CDATA[<font face="arial" style="font-size: 12pt;">The following Mock ID Card has been approved</font><br><br><font face="arial" style="font-size: 12pt;">Below is a link to the request.</font><br><font face="arial">{!AIA_Document__c.Link}</font>]]></td>
+<![CDATA[<span style="background-color: rgb(255, 255, 255);"><font color="#262626" face="Proxima Nova, Lucida Sans Unicode, Lucida Grande, sans-serif"><span style="font-size: 12px; line-height: 13.728px;">Mock Id Card Document for&nbsp;{!AIA_Document__c.Name}&nbsp;has been accepted.</span></font></span><div><span style="background-color: rgb(255, 255, 255);"><font color="#262626" face="Proxima Nova, Lucida Sans Unicode, Lucida Grande, sans-serif"><span style="font-size: 12px; line-height: 13.728px;"><br></span></font></span></div><div><span style="background-color: rgb(255, 255, 255);"><font color="#262626" face="Proxima Nova, Lucida Sans Unicode, Lucida Grande, sans-serif"><span style="font-size: 12px; line-height: 13.728px;"><br></span></font></span></div><div>
+
+
+
+
+
+
+
+<p class="p1"><span class="s1">{!AIA_Document__c.Link}&nbsp;</span></p></div>]]></td>
 </tr>
 </table>

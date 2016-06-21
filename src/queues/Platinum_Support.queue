@@ -4,9 +4,6 @@
     <email>sfdcteam@carefirst.com</email>
     <name>Platinum Support</name>
     <queueSobject>
-        <sobjectType>AIA_Workplan_Assignment__c</sobjectType>
-    </queueSobject>
-    <queueSobject>
         <sobjectType>Case</sobjectType>
     </queueSobject>
 </Queue>

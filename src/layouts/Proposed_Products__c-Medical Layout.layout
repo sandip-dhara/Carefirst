@@ -63,15 +63,15 @@
                 <field>Out_of_Pocket_Max__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Medical_Product_Name__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Medical_Product_Option__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Drug_Product_Options__c</field>
             </layoutItems>
         </layoutColumns>

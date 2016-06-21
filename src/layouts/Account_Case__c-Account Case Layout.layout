@@ -8,7 +8,7 @@
         <label>Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
@@ -38,10 +38,6 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Issue_Sub_Category__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Implementation__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

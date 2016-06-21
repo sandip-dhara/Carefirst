@@ -89,6 +89,27 @@ Public class AIA_BRFTriggerHandler_Test{
             // Stop Test
             Test.stopTest();
        }
-   } 
+   }
+    public static testmethod void testValidateBRF(){
+            // Step 1 - Create Account
+            Account a = AIA_TestUtil.CreateAccount('TestAccount');
+            // Step 2 - Create Opportunity
+            Opportunity o = AIA_TestUtil.CreateOpportunity(a.Id);
+            // Step 3 - Create PRF
+            PRF__c p = AIA_TestUtil.CreatePRF(o.Id);           
+            
+            // Start Test
+            Test.startTest();
+            
+            try{
+                // Step 4 -  Create BRF
+                Benfit_Request_Form__c b = AIA_TestUtil.CreateBRF(p.Id,a.id);
+                AIA_TestUtil.createAIADocument(b);
+                b.Status__c='Sold';
+                update b;
+            }catch(exception e ){
+                RETURN;   
+            }
+    }
   
 }

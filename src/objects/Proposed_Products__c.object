@@ -1042,7 +1042,6 @@
             <picklistValues>
                 <fullName>$8/$15/$35/50% w/ $75 maximum and combined Medical/Rx deductible</fullName>
                 <default>false</default>
-                <controllingFieldValues>BlueChoice Advantage HRA Non-Integrated Deductible</controllingFieldValues>
                 <controllingFieldValues>BluePreferred HRA Integrated Deductible</controllingFieldValues>
                 <controllingFieldValues>BluePreferred HSA Integrated Deductible</controllingFieldValues>
                 <controllingFieldValues>BluePreferred Integrated High Deductible</controllingFieldValues>
@@ -2233,7 +2232,7 @@
                 <controllingFieldValues>Group Medigap - 65</controllingFieldValues>
             </picklistValues>
             <picklistValues>
-                <fullName>Plan L-N</fullName>
+                <fullName>Plan L</fullName>
                 <default>false</default>
                 <controllingFieldValues>Group Medigap - 65</controllingFieldValues>
             </picklistValues>
@@ -2285,6 +2284,16 @@
                 <default>false</default>
                 <controllingFieldValues>HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)</controllingFieldValues>
                 <controllingFieldValues>HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Plan M</fullName>
+                <default>false</default>
+                <controllingFieldValues>Group Medigap - 65</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Plan N</fullName>
+                <default>false</default>
+                <controllingFieldValues>Group Medigap - 65</controllingFieldValues>
             </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>
             <sorted>false</sorted>
@@ -2497,19 +2506,16 @@
                 <fullName>Option 1 - Core to HealthyBlue HMO, BlueChoice HMO Open Access, BlueChoice Opt-Out Plus Open Access, BlueChoice HMO</fullName>
                 <default>false</default>
                 <controllingFieldValues>Blue Vision (Core)</controllingFieldValues>
-                <controllingFieldValues>BlueVision Plus</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Option 2 - Core to HealthyBlue 2.0, HealthyBlue Advantage, and BlueChoice Opt-out Open Access</fullName>
                 <default>false</default>
                 <controllingFieldValues>Blue Vision (Core)</controllingFieldValues>
-                <controllingFieldValues>BlueVision Plus</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Option 3 - Core to HealthyBlue PPO, BluePreferred, BlueChoice Advantage</fullName>
                 <default>false</default>
                 <controllingFieldValues>Blue Vision (Core)</controllingFieldValues>
-                <controllingFieldValues>BlueVision Plus</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Option A - $0 exam copay/12/12/24 month benefit period</fullName>
@@ -2536,6 +2542,21 @@
                 <default>false</default>
                 <controllingFieldValues>BlueVision Plus</controllingFieldValues>
                 <controllingFieldValues>Voluntary Blue Vision Plus</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Option 1 - $0 exam copay/12 month benefit period</fullName>
+                <default>false</default>
+                <controllingFieldValues>BlueVision Plus</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Option 2 - $0 exam copay/24 month benefit period</fullName>
+                <default>false</default>
+                <controllingFieldValues>BlueVision Plus</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Option 3 - $10 exam copay/12 month benefit period</fullName>
+                <default>false</default>
+                <controllingFieldValues>BlueVision Plus</controllingFieldValues>
             </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>
             <sorted>false</sorted>
@@ -5867,6 +5888,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>1-S</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>10</fullName>
                 <default>false</default>
             </values>
@@ -5911,6 +5936,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>2-S</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>20</fullName>
                 <default>false</default>
             </values>
@@ -5931,7 +5960,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>3-S</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-S</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5959,7 +5996,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>A-S</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B-S</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5967,7 +6012,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>C-S</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D-S</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5975,7 +6028,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>E-S</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F-S</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -6063,7 +6124,15 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Plan L-N</fullName>
+                <fullName>Plan L</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan N</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -6956,11 +7025,23 @@
         <picklistValues>
             <picklist>Vision_Product_Options__c</picklist>
             <values>
+                <fullName>Option 1 - %240 exam copay%2F12 month benefit period</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Option 1 - Core to HealthyBlue HMO%2C BlueChoice HMO Open Access%2C BlueChoice Opt-Out Plus Open Access%2C BlueChoice HMO</fullName>
                 <default>false</default>
             </values>
             <values>
+                <fullName>Option 2 - %240 exam copay%2F24 month benefit period</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Option 2 - Core to HealthyBlue 2%2E0%2C HealthyBlue Advantage%2C and BlueChoice Opt-out Open Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Option 3 - %2410 exam copay%2F12 month benefit period</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -7017,6 +7098,14 @@
         <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules) &amp;&amp; IF( TEXT(PRIORVALUE(Funding_Arrangement__c))=&apos;ASO&apos;  &amp;&amp; ISCHANGED( Funding_Arrangement__c ),true,false)</errorConditionFormula>
         <errorDisplayField>Funding_Arrangement__c</errorDisplayField>
         <errorMessage>EPP010 : If Benfit Request form is of type &quot;ASO&quot; then funding arrangements should be only &quot;ASO&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP0102</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP102 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>EPP011</fullName>
@@ -7151,14 +7240,6 @@
         <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice HMO&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
         <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
         <errorMessage>EPP032 : Option 4: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>EPP033</fullName>
-        <active>true</active>
-        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
-        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice HMO&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
-        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
-        <errorMessage>EPP033 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>EPP035</fullName>
@@ -7559,5 +7640,1157 @@
         <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BluePreferred PPO&apos;,OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )&lt;&gt;&apos;MD&apos;,OR(TEXT( Medical_Product_Option__c ) = &apos;22&apos;,TEXT( Medical_Product_Option__c ) = &apos;23&apos;)),TEXT( Drug_Product_Options__c )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;))</errorConditionFormula>
         <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
         <errorMessage>EPP086 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot; and Medical Product Option is not &quot;22&quot; or &quot;23&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP087</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP026 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP088</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP030 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP089</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP027 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP090</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP031 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP091</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP028 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP092</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP092 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP093</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP093 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP094</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP094 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP095</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP095 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP096</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP096 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP097</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP097 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP098</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP098 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP099</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP099 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP100</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0100 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP101</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0101 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP103</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP103 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP104</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP104 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP105</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP105 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP106</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP106 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP108</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP108 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP109</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0109 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP110</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP110 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP111</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0111 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP112</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP103 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP114</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP114 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP116</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP116 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP117</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP117 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP118</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP118 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP119</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP119 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP120</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0120 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP121</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO/HealthyBlue PPO HRA (Non-integrated Deductible)&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP121 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP122</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO/HealthyBlue PPO HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP122 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP123</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO/HealthyBlue PPO HRA (Non-integrated Deductible)&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP123 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP124</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO/HealthyBlue PPO HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP124 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP125</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO/HealthyBlue PPO HRA (Non-integrated Deductible)&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP125 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP126</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO/HealthyBlue PPO HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP126 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP127</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO/HealthyBlue PPO HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0127 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP128</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO/HealthyBlue PPO HRA (Non-integrated Deductible)&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0128 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP129</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO/HealthyBlue HMO HRA (Non-integrated Deductible)&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0129 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP130</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO/HealthyBlue HMO HRA (Non-integrated Deductible)&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP130 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP131</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO/HealthyBlue HMO HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP131 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP132</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO/HealthyBlue HMO HRA (Non-integrated Deductible)&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP132 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP133</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO/HealthyBlue HMO HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP133 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP134</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO/HealthyBlue HMO HRA (Non-integrated Deductible)&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP134 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP135</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO/HealthyBlue HMO HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP135 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP136</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO/HealthyBlue HMO HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0136 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP137</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO HRA Non-Integrated Deductible&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0137 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP138</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP138 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP139</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP139 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP140</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP140 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP141</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP141 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP142</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP142 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP143</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP143 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP144</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0144 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP145</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO Non-Integrated Deductible&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0145 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP146</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP146 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP147</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP147 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP148</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP148 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP149</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP149 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP150</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP150 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP151</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP151 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP152</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0152 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP153</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage HRA Non-Integrated Deductible&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0153 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP154</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP154 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP155</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP155 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP156</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP156 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP157</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP157 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP158</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP158 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP159</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP159 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP160</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0160 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP161</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage Non-Integrated Deductible&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0161 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP162</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP162 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP163</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP163 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP164</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP164 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP165</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP165 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP166</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP166 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP167</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP167 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP168</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0168 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP169</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 HRA Non-Integrated Deductible&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0169 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP170</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP170 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP171</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP171 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP172</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP172 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP173</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP173 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP174</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP174 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP175</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP175 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP176</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0176 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP177</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 Non-Integrated Deductible&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0177 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP178</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP178 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP179</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP179 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP180</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP180 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP181</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP181 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP182</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP182 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP183</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP183 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP184</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0184 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP185</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO HRA Non-Integrated Deductible&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0185 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP186</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP186 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP187</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP187 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP188</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP188 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP189</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP189 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP190</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP190 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP191</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP191 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP192</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0192 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP193</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO Non-Integrated Deductible&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0193 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP194</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP194 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP195</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP195 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP196</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP196 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP197</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP197 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP198</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP198 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP199</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0199 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP200</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BluePreferred HRA Non-Integrated Deductible&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP200 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP201</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BluePreferred HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP201 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP202</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BluePreferred HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP202 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP203</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BluePreferred HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP203 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP204</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BluePreferred HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP204 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP205</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BluePreferred HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP205 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP206</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BluePreferred HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0206 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP207</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage HRA Non-Integrated Deductible&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0207 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP208</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is valid only when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible &apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP208 : Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP209</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible only when jurisdiction is &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BluePreferred HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible &apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP209 : Option 4: $8/$15/$30 w/ $0 deductible only when jurisdiction is &quot;MD&quot; VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP210</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP210 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP211</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP211 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP212</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP212 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP213</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP213 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP214</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP214 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP215</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP215 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP216</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP216 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP217</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Advantage HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0217 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP218</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access HRA Non-Integrated Deductible&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0218 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP219</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP219 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP220</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP220 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP221</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP221 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP222</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP222 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP223</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP223 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP224</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP224 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP225</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice Opt-Out Plus Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0225 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP226</fullName>
+        <active>true</active>
+        <description>Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules)  &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice HMO Open Access HRA Non-Integrated Deductible&apos;)&amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0226 : Option 1: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP227</fullName>
+        <active>true</active>
+        <description>Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice HMO Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP219 : Option 2: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP228</fullName>
+        <active>true</active>
+        <description>Option 2: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice HMO Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 2: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP220 : Option 2: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP229</fullName>
+        <active>true</active>
+        <description>Option 4: $8/$15/$30 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice HMO Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $8/$15/$30 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP229 : Option 4: $8/$15/$30 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP230</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice HMO Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP230 :Option 4: $10/$20/$35 w/ $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP231</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice HMO Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP232 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP232</fullName>
+        <active>true</active>
+        <description>Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice HMO Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP232 : Option 8: $0/$25/$45/50% w/ $75 max and $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP233</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice HMO Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP0233 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP234</fullName>
+        <active>true</active>
+        <description>Blue Rewards field cannot have value if the funding arrangements is of type Risk</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; AND(TEXT( Benefit_Request_Form__r.Funding_Arrangements__c )=&apos;Risk&apos;,NOT(ISBLANK( TEXT(Blue_Rewards__c)) ) )</errorConditionFormula>
+        <errorDisplayField>Blue_Rewards__c</errorDisplayField>
+        <errorMessage>EPP234 : If Funding Arrangements on BRF is &quot;Risk&quot; then Blue Rewards field cannot have value</errorMessage>
     </validationRules>
 </CustomObject>

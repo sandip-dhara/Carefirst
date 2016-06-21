@@ -73,10 +73,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>AIA_ImplementationHandler</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>AIA_ImplementationTriggerHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -915,11 +911,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account_Case__c.Case_Owner__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Account_Case__c.Implementation__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2485,6 +2476,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Workplan_Type_Stage__c.Display_Order__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Workplan_Type_Stage__c.Number_of_Assignments__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

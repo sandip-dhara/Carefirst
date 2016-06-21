@@ -90,10 +90,6 @@
     </layoutSections>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>AIA_Workplan_Type_Task__c.Workplan_Type__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
         <fields>RECORDTYPE</fields>
         <fields>Stage_Category__c</fields>
         <fields>Stage__c</fields>

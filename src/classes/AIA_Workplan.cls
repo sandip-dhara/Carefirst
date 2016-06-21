@@ -188,8 +188,14 @@ public class AIA_Workplan
         
         /*Creating Workplan stage */
         if (!toCreate.isEmpty())
-        {
-            insert tocreate;
+        {    
+            try{
+                insert tocreate;
+            }
+            catch(Exception ex){
+                System.debug(' \n CLog : '+ex.getMessage());
+            }
+            
             Map<id,id> parentMap = new Map<id,id>();
             for(Workplan_Stage__c ws:tocreate)
             {
@@ -259,7 +265,9 @@ public class AIA_Workplan
                 Map<id,Workplan_Type_Stage__c> wptsmap = new Map<id,Workplan_Type_Stage__c>();
                 wptsmap.putAll(wptslist);
  
-                //Looping through opp with new values and checking the particular workplan stage.opp is same opp which is linked to workplan type stage (Checking with the map that we got from above)
+                //Looping through opp with new values and checking the particular workplan stage.opp 
+                //is same opp which is linked to workplan type stage 
+                //(Checking with the map that we got from above)
                 for(Opportunity opp:newMap.values()){
  
                     for(Workplan_Stage__c wps:wpslist){

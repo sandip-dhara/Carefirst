@@ -850,7 +850,7 @@
     <sharingModel>ControlledByParent</sharingModel>
     <validationRules>
         <fullName>EWTA_001</fullName>
-        <active>false</active>
+        <active>true</active>
         <description>Making user field mandatory if assignee type is user</description>
         <errorConditionFormula>IF( 
 AND( 
@@ -858,7 +858,7 @@ TEXT(  Assignee_Type__c  ) = &quot;User&quot;,
 ISBLANK(  Default_Owner__c  )), True, False 
 )</errorConditionFormula>
         <errorDisplayField>Default_Owner__c</errorDisplayField>
-        <errorMessage>EWTA_001 :  Please Enter Value in User</errorMessage>
+        <errorMessage>EWTA_001:  Please Enter Value in User</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>EWTA_002</fullName>
