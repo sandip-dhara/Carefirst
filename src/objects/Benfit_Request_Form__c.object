@@ -2176,6 +2176,7 @@ IF (Count_of_Medical_Proposed_Products__c   =  0 , &apos;No&apos; , NULL)))</for
         <columns>Submit_to_ARC_Approval__c</columns>
         <columns>Submit_to_Underwriting__c</columns>
         <columns>Count_of_Proposed_Products__c</columns>
+        <columns>Count_of_Medical_Proposed_Products__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -5493,6 +5494,20 @@ ISBLANK(  Enrollment_Vendor__c  ))))</errorConditionFormula>
         <errorMessage>EBRF004 : For Enrollment Option is &quot;eExchange&quot; then enrollment vendor field cannot be blank</errorMessage>
     </validationRules>
     <validationRules>
+        <fullName>EBRF005</fullName>
+        <active>true</active>
+        <description>If MHP Required is true and MHP Test Result is &quot;Fail&quot; or &quot;Pending&quot; and &quot;Submit to Underwriting&quot; = true, then prevent saving record</description>
+        <errorConditionFormula>AND(MHP_Required__c == &apos;Yes&apos; , MHP_Test_Result__c == &quot;Fail&quot; || MHP_Test_Result__c == &quot;Pending&quot;,Submit_to_Underwriting__c == True == True)</errorConditionFormula>
+        <errorMessage>EBRF005: If MHP Required is true and MHP Test Result is &quot;Fail&quot; or &quot;Pending&quot; then cannot Submit to Underwriting.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBRF006</fullName>
+        <active>true</active>
+        <description>EBRF006: Cannot Submit to Underwriting if MHP Required is blank</description>
+        <errorConditionFormula>AND(MHP_Required__c == null ,  Submit_to_Underwriting__c  == True)</errorConditionFormula>
+        <errorMessage>EBRF006: Cannot Submit to Underwriting if MHP Required is blank</errorMessage>
+    </validationRules>
+    <validationRules>
         <fullName>EBRF007</fullName>
         <active>true</active>
         <description>Benefit Request Form: if Account Legal Name Verified = false on the related Opportunity, then User cannot save the record</description>
@@ -5516,27 +5531,23 @@ ISBLANK(  Enrollment_Vendor__c  ))))</errorConditionFormula>
     </validationRules>
     <validationRules>
         <fullName>EBRF010</fullName>
-        <active>false</active>
-        <errorConditionFormula>AND ( 
- Submit_to_Underwriting__c , 
-OR ( 
-NOT(ISCHANGED(Status__c)) 
-), 
-LastModifiedDate &lt;&gt; Now() 
-)</errorConditionFormula>
+        <active>true</active>
+        <errorConditionFormula>AND ( Submit_to_Underwriting__c ,  NOT(ISCHANGED(Status__c)))</errorConditionFormula>
         <errorMessage>EBRF010: You cannot edit BRF fields after it is sent to underwriting</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>EBRF011</fullName>
-        <active>false</active>
-        <errorConditionFormula>AND ( 
- Submit_to_ARC_Approval__c , 
-OR ( 
-NOT(ISCHANGED(Status__c)) 
-), 
-LastModifiedDate &lt;&gt; Now() 
-)</errorConditionFormula>
+        <active>true</active>
+        <errorConditionFormula>AND ( Submit_to_ARC_Approval__c ,  NOT(OR(ISCHANGED(Status__c),ISCHANGED(Submit_to_Underwriting__c))))</errorConditionFormula>
         <errorMessage>EBRF011:  You cannot edit a BRF when an ARC Approval Required BRF has been submitted for ARC approval</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EBRF012</fullName>
+        <active>true</active>
+        <description>if &quot;ARC Approval Required&quot; = Yes and &quot;ARC Approval Status&quot; &lt;&gt; &quot;Approved by Committee&quot; and &quot;Submit to Underwriting&quot; = true, then prevent saving record</description>
+        <errorConditionFormula>AND(ARC_Approval_Required__c = True , 	
+(NOT(ISPICKVAL(ARC_Approval_Status__c, &quot;Approved by Committee&quot;))) , Submit_to_Underwriting__c == True)</errorConditionFormula>
+        <errorMessage>EBRF012: If ARC Approval Required = Yes and ARC Approval Status is not &quot;Approved by Committee&quot; then cannot Submit to Underwriting.</errorMessage>
     </validationRules>
     <webLinks>
         <fullName>AIA_Clone_With_Product</fullName>

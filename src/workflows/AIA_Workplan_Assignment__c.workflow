@@ -48,18 +48,6 @@
         <template>AIA_Email_Templates/AIA_Workplan_Assignment</template>
     </alerts>
     <alerts>
-        <fullName>External_Assignee_Notification_For_Workplan_Assignment_From_PRF</fullName>
-        <ccEmails>chidagn@yahoo.ccom</ccEmails>
-        <description>External Assignee Notification For Workplan Assignment From PRF</description>
-        <protected>false</protected>
-        <recipients>
-            <field>External_Assignee__c</field>
-            <type>contactLookup</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>AIA_Email_Templates/External_Users_Notification_for_WorkPlan_Assignment_From_PRF</template>
-    </alerts>
-    <alerts>
         <fullName>External_Assignee_Notification_For_Workplan_Assignment_Reminder_From_PRF</fullName>
         <description>External Assignee Notification For Workplan Assignment Reminder From PRF</description>
         <protected>false</protected>
@@ -69,26 +57,6 @@
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>AIA_Email_Templates/External_Users_Notification_for_WorkPlan_Assignment_Reminder_From_PRF</template>
-    </alerts>
-    <alerts>
-        <fullName>Internal_Assignee_Notification_For_Workplan_Assignment_From_PRF</fullName>
-        <description>Internal Assignee Notification For Workplan Assignment From PRF</description>
-        <protected>false</protected>
-        <recipients>
-            <type>owner</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>AIA_Email_Templates/Internal_Users_Notification_for_WorkPlan_Assignment_from_PRF</template>
-    </alerts>
-    <alerts>
-        <fullName>Internal_Assignee_Notification_For_Workplan_Assignment_From_PRF_When_Created</fullName>
-        <description>Internal Assignee Notification For Workplan Assignment From PRF When Created</description>
-        <protected>false</protected>
-        <recipients>
-            <type>accountOwner</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>AIA_Email_Templates/Internal_Users_Notification_for_WorkPlan_Assignment_from_PRF</template>
     </alerts>
     <alerts>
         <fullName>Internal_Assignee_Notification_For_Workplan_Assignment_Reminder_From_PRF</fullName>
@@ -162,8 +130,7 @@
             <type>Alert</type>
         </actions>
         <active>true</active>
-        <formula>TEXT(Status__c) = &apos;Sent&apos; &amp;&amp;  
-Workplan_Type_Task__r.Send_Notification__c</formula>
+        <formula>AND(TEXT(Status__c) = &apos;Sent&apos; &amp;&amp;   Workplan_Type_Task__r.Send_Notification__c, ISBLANK(Proposal_Request_Form__c))</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -173,7 +140,7 @@ Workplan_Type_Task__r.Send_Notification__c</formula>
             <type>Alert</type>
         </actions>
         <active>true</active>
-        <formula>ISCHANGED(OwnerId)</formula>
+        <formula>AND(ISCHANGED(OwnerId),ISBLANK(Proposal_Request_Form__c))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -224,7 +191,7 @@ Workplan_Type_Task__r.Send_Notification__c</formula>
     <rules>
         <fullName>AIA_External_Assignee_Notification_From_PRF</fullName>
         <actions>
-            <name>External_Assignee_Notification_For_Workplan_Assignment_From_PRF</name>
+            <name>External_Assignee_Notification_For_Workplan_Assignment_Reminder_From_PRF</name>
             <type>Alert</type>
         </actions>
         <actions>
@@ -274,7 +241,7 @@ Workplan_Type_Task__r.Send_Notification__c</formula>
     <rules>
         <fullName>AIA_Internal_Assignee_Notification_From_PRF</fullName>
         <actions>
-            <name>Internal_Assignee_Notification_For_Workplan_Assignment_From_PRF</name>
+            <name>Internal_Assignee_Notification_For_Workplan_Assignment_Reminder_From_PRF</name>
             <type>Alert</type>
         </actions>
         <actions>
@@ -296,6 +263,11 @@ Workplan_Type_Task__r.Send_Notification__c</formula>
         <criteriaItems>
             <field>AIA_Workplan_Assignment__c.OwnerId</field>
             <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>AIA_Workplan_Assignment__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PRF Assignment</value>
         </criteriaItems>
         <description>Internal Assignee Notification From PRF</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>

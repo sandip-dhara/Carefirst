@@ -73,10 +73,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>AIA_ImplementationHandler</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>AIA_ImplementationTriggerHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -2484,6 +2480,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Workplan_Type_Stage__c.Number_of_Assignments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Workplan_Type_Stage__c.Parent_Workplan_Type_Stage__c</field>
         <readable>true</readable>
@@ -2710,7 +2711,7 @@
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
-        <allowDelete>false</allowDelete>
+        <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>

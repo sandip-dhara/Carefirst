@@ -1042,7 +1042,6 @@
             <picklistValues>
                 <fullName>$8/$15/$35/50% w/ $75 maximum and combined Medical/Rx deductible</fullName>
                 <default>false</default>
-                <controllingFieldValues>BlueChoice Advantage HRA Non-Integrated Deductible</controllingFieldValues>
                 <controllingFieldValues>BluePreferred HRA Integrated Deductible</controllingFieldValues>
                 <controllingFieldValues>BluePreferred HSA Integrated Deductible</controllingFieldValues>
                 <controllingFieldValues>BluePreferred Integrated High Deductible</controllingFieldValues>
@@ -2233,7 +2232,7 @@
                 <controllingFieldValues>Group Medigap - 65</controllingFieldValues>
             </picklistValues>
             <picklistValues>
-                <fullName>Plan L-N</fullName>
+                <fullName>Plan L</fullName>
                 <default>false</default>
                 <controllingFieldValues>Group Medigap - 65</controllingFieldValues>
             </picklistValues>
@@ -2285,6 +2284,16 @@
                 <default>false</default>
                 <controllingFieldValues>HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)</controllingFieldValues>
                 <controllingFieldValues>HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Plan M</fullName>
+                <default>false</default>
+                <controllingFieldValues>Group Medigap - 65</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Plan N</fullName>
+                <default>false</default>
+                <controllingFieldValues>Group Medigap - 65</controllingFieldValues>
             </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>
             <sorted>false</sorted>
@@ -6115,7 +6124,15 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Plan L-N</fullName>
+                <fullName>Plan L</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan N</fullName>
                 <default>false</default>
             </values>
             <values>
