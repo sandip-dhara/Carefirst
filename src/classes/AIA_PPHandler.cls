@@ -28,8 +28,9 @@ public class AIA_PPHandler extends TriggerHandler {
     
     protected override void afterInsert() {     
         if(!firstRun)
-            // Please add comments
         updateMHPTest((list<Proposed_Products__c>) trigger.new,(Map<id,Proposed_Products__c>) trigger.oldMap);
+            // Please add comments
+        
         updateBRFMHPTestResult((list<Proposed_Products__c>) trigger.new,(Map<id,Proposed_Products__c>) trigger.oldMap);
         validationForCustomCheck((list<Proposed_Products__c>) trigger.new,(Map<id,Proposed_Products__c>) trigger.oldMap);
     }
@@ -49,13 +50,22 @@ public class AIA_PPHandler extends TriggerHandler {
         if(ppList.size()>0){
                     
             for(Proposed_Products__c pp: ppList){
-            IF(oldPPMap.get(pp.id).MHP_Test_Result__c!=null && pp.MHP_Test_Result__c!=null){
-                if(oldPPMap.get(pp.id).MHP_Test_Result__c!=pp.MHP_Test_Result__c){
-                    pp.MHP_Test_Completed_Date__c = system.now();
-                    pp.MHP_Test_Completed_By__c=userInfo.getUserId();               
+                if(oldPPMap!=null){
+                    if(oldPPMap.get(pp.id).MHP_Test_Result__c!=null && pp.MHP_Test_Result__c!=null){
+                        if(oldPPMap.get(pp.id).MHP_Test_Result__c!=pp.MHP_Test_Result__c){
+                            pp.MHP_Test_Completed_Date__c = system.now();
+                            pp.MHP_Test_Completed_By__c=userInfo.getUserId();               
+                        }
+                    }
                 }
+                else{
+                    if(pp.MHP_Test_Result__c!=null){
+                        pp.MHP_Test_Completed_Date__c = system.now();
+                        pp.MHP_Test_Completed_By__c=userInfo.getUserId();
+                    }
                 }
             }
+            
             firstRun=true;
             update ppList;
         }

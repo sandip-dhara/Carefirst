@@ -2538,19 +2538,16 @@
                 <fullName>Option 1 - $0 exam copay/12 month benefit period</fullName>
                 <default>false</default>
                 <controllingFieldValues>BlueVision Plus</controllingFieldValues>
-                <controllingFieldValues>Voluntary Blue Vision Plus</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Option 2 - $0 exam copay/24 month benefit period</fullName>
                 <default>false</default>
                 <controllingFieldValues>BlueVision Plus</controllingFieldValues>
-                <controllingFieldValues>Voluntary Blue Vision Plus</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Option 3 - $10 exam copay/12 month benefit period</fullName>
                 <default>false</default>
                 <controllingFieldValues>BlueVision Plus</controllingFieldValues>
-                <controllingFieldValues>Voluntary Blue Vision Plus</controllingFieldValues>
             </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>
             <sorted>false</sorted>
@@ -5882,6 +5879,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>1-S</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>10</fullName>
                 <default>false</default>
             </values>
@@ -5926,6 +5927,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>2-S</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>20</fullName>
                 <default>false</default>
             </values>
@@ -5946,7 +5951,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>3-S</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-S</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5974,7 +5987,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>A-S</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B-S</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5982,7 +6003,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>C-S</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D-S</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5990,7 +6019,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>E-S</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F-S</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -8730,5 +8767,13 @@
         <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice HMO Open Access HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
         <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
         <errorMessage>EPP0233 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP234</fullName>
+        <active>true</active>
+        <description>Blue Rewards field cannot have value if the funding arrangements is of type Risk</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; AND(TEXT( Benefit_Request_Form__r.Funding_Arrangements__c )=&apos;Risk&apos;,NOT(ISBLANK( TEXT(Blue_Rewards__c)) ) )</errorConditionFormula>
+        <errorDisplayField>Blue_Rewards__c</errorDisplayField>
+        <errorMessage>EPP234 : If Funding Arrangements on BRF is &quot;Risk&quot; then Blue Rewards field cannot have value</errorMessage>
     </validationRules>
 </CustomObject>

@@ -275,7 +275,7 @@ public class AIA_Workplan_Test{
             localesidkey='en_US', profileid = profile.Id, 
             timezonesidkey='Europe/London', username=alias +randomString+ '@test.com'
             );
-        return user;     
+        return user;      
         
     }
      
