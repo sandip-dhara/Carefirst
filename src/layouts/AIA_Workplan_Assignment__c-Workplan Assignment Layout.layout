@@ -63,6 +63,10 @@
                 <behavior>Edit</behavior>
                 <field>Post_Sales_Implementation__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Send_Notification__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
@@ -181,11 +185,11 @@
         <label>Related To</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Account__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Opportunity__c</field>
             </layoutItems>
             <layoutItems>
@@ -193,7 +197,7 @@
                 <field>Benefit_Request_Form__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Account_Plan_Implementation__c</field>
             </layoutItems>
         </layoutColumns>

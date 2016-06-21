@@ -919,11 +919,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Account_Case__c.Implementation__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Account_Case__c.Issue_Category__c</field>
         <readable>false</readable>
     </fieldPermissions>

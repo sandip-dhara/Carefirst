@@ -12,51 +12,53 @@
 *******************************************************************************************************/
 
 @isTest
-// First test is for positive testing where the code runs as desired.
-public class AIA_DocumentTriggerHandlerTest {
-    // Run positive test when check testing is false as expected in the Account Process code
+private class AIA_DocumentTriggerHandlerTest {
     static testMethod void CreateAIADocument() {
-        Profile p = [SELECT Id FROM Profile WHERE Name='AIA 200+ Standard User - Custom']; 
-                     User u = new User(Alias = 'standt', Email='spmss.process@carefirst.com.xxx', 
-                     EmailEncodingKey='UTF-8', LastName='Testing', LanguageLocaleKey='en_US', 
-                     LocaleSidKey='en_US', ProfileId = p.Id, 
-                     TimeZoneSidKey='America/Los_Angeles', UserName='spmss.process@carefirst.com.xxx');
-
-
+        // Create Account
+        Account a = AIA_TestUtil.CreateAccount('TestAccount');
+        system.assertNotEquals(null,a.id);
+        
+        Id AdminPID = [select id from profile where Name = 'System Administrator'].Id;
         List<User> lstinsertuser=new List<User>();
-
-
-            System.runAs(u) {
-             Account a = AIA_TestUtil.AIA_createAccount();
-             
+        for(Integer i=0;i<7;i++)
+        {
+            User admin = new User();
+            admin.FirstName = 'MrX';
+            admin.LastName = 'LastMrx';
+            admin.email = 'mrxzz@mytest.com';
+            admin.alias = 'zzts';
+            admin.communityNickname = 'MrXLastMrx'+i;
+            admin.username = 'mrxzzt'+i+'@mytest.com';
+            admin.EmailEncodingKey = 'ISO-8859-1';
+            admin.LanguageLocaleKey = 'en_US';
+            admin.LocaleSidKey = 'en_US';
+            admin.TimeZoneSidKey = 'America/New_York';
+            admin.ProfileId = AdminPID;
+            lstinsertuser.add(admin);
+        }        
+        
+        insert lstinsertuser;
+        system.assertNotEquals(0, lstinsertuser.size());
+        
         List<AccountTeamMember> lstAcctTeamMbr=new List<AccountTeamMember>();
         for(Integer i=0;i<7;i++)
         {
-        
-
             AccountTeamMember member=new AccountTeamMember();
             member.AccountAccessLevel ='Edit';
             member.AccountId =a.Id;
-            if(i==0)
-            {
-                member.TeamMemberRole ='Implementation Coordinator';
-            }else if(i==1)
-            {
-                member.TeamMemberRole ='Sales Consultant';
-            }else if(i==2)
-            {
+            if(i==0){
+                member.TeamMemberRole ='Par Plan';
+            }else if(i==1){
+                member.TeamMemberRole ='Customer Support';
+            }else if(i==2){
                 member.TeamMemberRole ='Sales Service Rep';
-            }else if(i==3)
-            {
+            }else if(i==3){
                 member.TeamMemberRole ='QA Auditor';
-            }else if(i==4)
-            {
+            }else if(i==4){
                 member.TeamMemberRole ='Billing Tech';
-            }else if(i==5)
-                        {
+            }else if(i==5){
                 member.TeamMemberRole ='Settlements Tech';
-            }else if(i==6)
-            {
+            }else if(i==6){
                 member.TeamMemberRole ='Implementation PM';
             }
             member.UserId =lstinsertuser[i].Id;
@@ -64,9 +66,11 @@ public class AIA_DocumentTriggerHandlerTest {
         }
         
         insert lstAcctTeamMbr;
+        system.assertNotEquals(0, lstAcctTeamMbr.size());
+        
         List<AccountTeamMember> lstquery=[Select Id,TeamMemberRole from AccountTeamMember Where AccountId =: a.Id];
-        for(AccountTeamMember team: lstquery){
-            System.debug('\n'+team.TeamMemberRole);
+        for(AccountTeamMember tesam: lstquery){
+            System.debug('\n'+tesam.TeamMemberRole);
         }
         
         System.debug(lstAcctTeamMbr);
@@ -77,12 +81,13 @@ public class AIA_DocumentTriggerHandlerTest {
             doc.Account__c = a.Id;
             doc.Document_Type__c ='Production Id Card';
             insert doc;
-            doc.Document_Type__c ='Group Structure Document';
-            insert doc;
+
             doc.Document_Type__c ='Mock ID Card';
+            update doc;
+            
+            doc.Document_Type__c ='Group Structure Document';
             update doc;
             
         Test.StopTest();
     }
-}
 }

@@ -273,7 +273,7 @@ public with sharing class AIA_WP_SubProcess_Controller {
                     string msg = string.format(system.label.AIA_WP_SubProcess_EmailTemplate,replaceVars);
                     msgList.add(generateEmailMsg(emailAdr,msg));    
                 }
-                if(isUser && userToAddr != NULL && userToAddr.size() >0){
+                if(isUser && userToAddr != NULL && userToAddr.size() >0 && userToAddr.containsKey(wpAsgn.ownerId)){
                     //get email address from user map
                     string emailAdr = userToAddr.get(wpAsgn.ownerId);
                     //generate link to WPA record

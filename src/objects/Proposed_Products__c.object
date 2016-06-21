@@ -2497,19 +2497,16 @@
                 <fullName>Option 1 - Core to HealthyBlue HMO, BlueChoice HMO Open Access, BlueChoice Opt-Out Plus Open Access, BlueChoice HMO</fullName>
                 <default>false</default>
                 <controllingFieldValues>Blue Vision (Core)</controllingFieldValues>
-                <controllingFieldValues>BlueVision Plus</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Option 2 - Core to HealthyBlue 2.0, HealthyBlue Advantage, and BlueChoice Opt-out Open Access</fullName>
                 <default>false</default>
                 <controllingFieldValues>Blue Vision (Core)</controllingFieldValues>
-                <controllingFieldValues>BlueVision Plus</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Option 3 - Core to HealthyBlue PPO, BluePreferred, BlueChoice Advantage</fullName>
                 <default>false</default>
                 <controllingFieldValues>Blue Vision (Core)</controllingFieldValues>
-                <controllingFieldValues>BlueVision Plus</controllingFieldValues>
             </picklistValues>
             <picklistValues>
                 <fullName>Option A - $0 exam copay/12/12/24 month benefit period</fullName>
@@ -2533,6 +2530,24 @@
             </picklistValues>
             <picklistValues>
                 <fullName>Option D - $10 exam copay/12 month benefit period</fullName>
+                <default>false</default>
+                <controllingFieldValues>BlueVision Plus</controllingFieldValues>
+                <controllingFieldValues>Voluntary Blue Vision Plus</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Option 1 - $0 exam copay/12 month benefit period</fullName>
+                <default>false</default>
+                <controllingFieldValues>BlueVision Plus</controllingFieldValues>
+                <controllingFieldValues>Voluntary Blue Vision Plus</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Option 2 - $0 exam copay/24 month benefit period</fullName>
+                <default>false</default>
+                <controllingFieldValues>BlueVision Plus</controllingFieldValues>
+                <controllingFieldValues>Voluntary Blue Vision Plus</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Option 3 - $10 exam copay/12 month benefit period</fullName>
                 <default>false</default>
                 <controllingFieldValues>BlueVision Plus</controllingFieldValues>
                 <controllingFieldValues>Voluntary Blue Vision Plus</controllingFieldValues>
@@ -6956,11 +6971,23 @@
         <picklistValues>
             <picklist>Vision_Product_Options__c</picklist>
             <values>
+                <fullName>Option 1 - %240 exam copay%2F12 month benefit period</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Option 1 - Core to HealthyBlue HMO%2C BlueChoice HMO Open Access%2C BlueChoice Opt-Out Plus Open Access%2C BlueChoice HMO</fullName>
                 <default>false</default>
             </values>
             <values>
+                <fullName>Option 2 - %240 exam copay%2F24 month benefit period</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Option 2 - Core to HealthyBlue 2%2E0%2C HealthyBlue Advantage%2C and BlueChoice Opt-out Open Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Option 3 - %2410 exam copay%2F12 month benefit period</fullName>
                 <default>false</default>
             </values>
             <values>

@@ -5,10 +5,10 @@
     <letterhead>CarefirstBlueCrossBlueShield</letterhead>
     <name>AIA_MockID_Card_Approved</name>
     <style>freeForm</style>
-    <subject>Mock ID Card Approved</subject>
-    <textOnly>The following Mock ID Card has been approved
+    <subject>{!AIA_Document__c.Name}  approval has been accepted</subject>
+    <textOnly>Mock Id Card Document for {!AIA_Document__c.Name} has been accepted.
 
-Below is a link to the request.
+
 {!AIA_Document__c.Link}</textOnly>
     <type>html</type>
 </EmailTemplate>

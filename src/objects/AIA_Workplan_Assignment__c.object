@@ -822,7 +822,19 @@ Owner:User.FirstName + &quot; &quot; + Owner:User.LastName, Owner:Queue.QueueNam
     <validationRules>
         <fullName>EWPA001</fullName>
         <active>true</active>
-        <errorConditionFormula>AND(ISCHANGED( Due_Date__c ),OR(( $Profile.Name  &lt;&gt; &apos;System Administrator&apos;  ),($User.Id &lt;&gt; CreatedBy.Id)))</errorConditionFormula>
+        <errorConditionFormula>AND(
+ISCHANGED( Due_Date__c ),
+OR(  
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+ CreatedById   &lt;&gt;  $User.Id 
+)
+)</errorConditionFormula>
+        <errorMessage>EWPA001: Only Administrators or the creator of an Assignment can change the Due Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EWPA001_2</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISCHANGED(Due_Date__c)  &amp;&amp; ($User.Id &lt;&gt; CreatedBy.Id)</errorConditionFormula>
         <errorMessage>EWPA001: Only Administrators or the creator of an Assignment can change the Due Date.</errorMessage>
     </validationRules>
     <validationRules>

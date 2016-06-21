@@ -8,7 +8,7 @@
         <label>Implementation Process</label>
         <layoutColumns>
             <layoutItems>
-                <height>200</height>
+                <height>350</height>
                 <page>AIA_PostSalesControl</page>
                 <showLabel>false</showLabel>
                 <showScrollbars>false</showScrollbars>
@@ -173,10 +173,6 @@
         <fields>Status__c</fields>
         <fields>Approval_Status__c</fields>
         <relatedList>AIA_Benefit_Design__c.Implementation__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>Account_Case__c.Implementation__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>CASES.CASE_NUMBER</fields>
