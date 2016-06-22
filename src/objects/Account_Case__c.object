@@ -148,6 +148,19 @@ Case__r.Owner:User.LastName
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
+        <fullName>Implementation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Implementation</label>
+        <referenceTo>AIA_Implementation__c</referenceTo>
+        <relationshipLabel>Account Cases</relationshipLabel>
+        <relationshipName>Account_Cases</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Issue_Category__c</fullName>
         <externalId>false</externalId>
         <formula>TEXT(Case__r.Issue_Category__c)</formula>
@@ -196,11 +209,15 @@ Case__r.Owner:User.LastName
         <unique>false</unique>
     </fields>
     <label>Account Case</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
-        <displayFormat>AC-{00000000}</displayFormat>
-        <label>Account Case Number</label>
+        <label>Account Case Name</label>
         <trackHistory>false</trackHistory>
-        <type>AutoNumber</type>
+        <type>Text</type>
     </nameField>
     <pluralLabel>Account Cases</pluralLabel>
     <searchLayouts/>

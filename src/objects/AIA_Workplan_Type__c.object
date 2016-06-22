@@ -159,6 +159,15 @@
         </sharedTo>
     </listViews>
     <listViews>
+        <fullName>Benefits_Core_Team_AIA_Workplan_Type</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Benefits Core Team</label>
+        <queue>Benefits_Core_Team</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
         <fullName>LGIT_Queue_AIA_Workplan_Type</fullName>
         <filterScope>Queue</filterScope>
         <label>LGIT Queue</label>

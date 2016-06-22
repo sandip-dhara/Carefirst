@@ -177,21 +177,16 @@ public class AIA_PPHandler extends TriggerHandler {
      
      public static void validationForCustomCheck(list<Proposed_Products__c> newPPList,Map<id,Proposed_Products__c> oldPPMap){
 
-        map<id,Proposed_Products__c> ppMap = new map<id,Proposed_Products__c>([SELECT Custom__c,Id,(select id, Document_Type__c from File_Net_Documents__r) FROM Proposed_Products__c where id in:newPPList]);
+        map<id,Proposed_Products__c> ppMap = new map<id,Proposed_Products__c>([SELECT Custom__c,Id,(select id, Document_Type__c from File_Net_Documents__r where Document_Type__c ='Marked Up Benefit Summary') FROM Proposed_Products__c where id in:newPPList]);
         system.debug('errorMsg'+errorMsg);
          system.debug('ppMap'+ ppMap);
         if(ppMap != null && ppMap.size()>0){
             for(Proposed_Products__c pp: newPPList){
-                    if(pp.Custom__c == True)
-                {
-                    if(ppMap.containsKey(pp.Id) && ppMap.get(pp.Id).File_Net_Documents__r.size()>0){
-                    for(AIA_Document__c FND: ppMap.get(pp.Id).File_Net_Documents__r){
-                        if(FND.Document_Type__c != 'Marked Up Benefit Summary'){
-                            firstRun=true;
-                            pp.adderror(errorMsg);
-                        }
-                    }
-                    }else{
+            system.debug('pp.Custom__c'+ pp.Custom__c);
+                if(pp.Custom__c == True)
+                {  
+                    system.debug('ppMap.get(pp.Id).File_Net_Documents__r.size()'+  ppMap.get(pp.Id).File_Net_Documents__r.size());
+                    if(ppMap.containsKey(pp.Id) && ppMap.get(pp.Id).File_Net_Documents__r.size() == 0){
                         firstRun=true;
                         pp.adderror(errorMsg);
                     }

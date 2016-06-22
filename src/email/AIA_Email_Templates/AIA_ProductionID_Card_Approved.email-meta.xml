@@ -6,7 +6,7 @@
     <name>AIA_ProductionID_Card_Approved</name>
     <style>freeForm</style>
     <subject>{!AIA_Document__c.Name}  approval has been accepted</subject>
-    <textOnly>Production Id Card Document for {!AIA_Document__c.Name} has been accepted.
+    <textOnly>Production Id Card Document for {!AIA_Document__c.Account__c} has been accepted.
 
 
 

@@ -50,7 +50,6 @@
         <members>Account_Trigger_Test</members>
         <members>OpportunityTriggerHandler</members>
         <members>QueryBase2</members>
-        <members>TriggerHandler</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -85,6 +84,19 @@
         <members>WorkplanTypeAssignmentTrigger</members>
         <members>WorkplanTypeStageTrigger</members>
         <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>AIA_Benefit_Design__c.AIA_Benefit_Design_Approval</members>
+        <members>AIA_Document__c.AIA_Approve_Production_ID_Cards</members>
+        <members>AIA_Document__c.AIA_Group_Structure_Document_Approval</members>
+        <members>AIA_Document__c.AIA_Unsigned_Quote_Approval</members>
+        <members>AIA_Document__c.Approve_Mock_ID_Cards</members>
+        <members>Benfit_Request_Form__c.AIA_BRF_ARC_Approval_Process</members>
+        <members>Benfit_Request_Form__c.AIA_BRF_ARC_Approval_Process1</members>
+        <members>Benfit_Request_Form__c.AIA_BRF_ARC_Approval_Process_2</members>
+        <members>Contract.AIA_Contracts_Internal_Contract_Approval</members>
+        <members>Contract.AIA_Sales_Contract_Approval</members>
+        <name>ApprovalProcess</name>
     </types>
     <types>
         <members>Account.Account_Alias_1__c</members>
@@ -228,6 +240,7 @@
         <members>AIA_Workplan_Assignment__c</members>
         <members>AIA_Workplan_Type__c</members>
         <members>Benfit_Request_Form__c</members>
+        <members>Opportunity</members>
         <members>PRF__c</members>
         <name>CustomTab</name>
     </types>
@@ -357,6 +370,10 @@
         <name>Queue</name>
     </types>
     <types>
+        <members>*</members>
+        <name>Queue</name>
+    </types>
+    <types>
         <members>AIA_Workplan_Assignment__c.PRF_Assignment</members>
         <members>AIA_Workplan_Assignment__c.Workplan_Assignment</members>
         <members>AIA_Workplan_Type_Task__c.Workplan_Assignment</members>
@@ -390,7 +407,6 @@
         <members>AIA_Reports/AIA_My_Past_Due_PRF_Assignments</members>
         <members>AIA_Reports/AIA_My_Past_Due_Pre_Sales_Assignments</members>
         <members>AIA_Reports/AIA_My_Pre_Sales_Assignments_by_Status</members>
-        <members>AIA_Reports/AIA_Post_Sales_Workplan_Type</members>
         <name>Report</name>
     </types>
     <types>
@@ -401,6 +417,17 @@
         <members>Event.EEvent001</members>
         <members>Event.No_Bid_Comments_Mandatory</members>
         <members>Opportunity.EOPP070</members>
+        <members>PRF__c.EPRF010</members>
+        <members>PRF__c.EPRF011</members>
+        <members>PRF__c.PRF001</members>
+        <members>PRF__c.PRF002</members>
+        <members>PRF__c.PRF003</members>
+        <members>PRF__c.PRF004</members>
+        <members>PRF__c.PRF005</members>
+        <members>PRF__c.PRF006</members>
+        <members>PRF__c.PRF007</members>
+        <members>PRF__c.PRF008</members>
+        <members>PRF__c.PRF009</members>
         <name>ValidationRule</name>
     </types>
     <types>

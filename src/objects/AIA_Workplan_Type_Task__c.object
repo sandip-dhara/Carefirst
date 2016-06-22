@@ -449,7 +449,7 @@
         <label>Sequence Number</label>
         <precision>18</precision>
         <required>false</required>
-        <scale>0</scale>
+        <scale>2</scale>
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
@@ -858,7 +858,7 @@ TEXT(  Assignee_Type__c  ) = &quot;User&quot;,
 ISBLANK(  Default_Owner__c  )), True, False 
 )</errorConditionFormula>
         <errorDisplayField>Default_Owner__c</errorDisplayField>
-        <errorMessage>EWTA_001:  Please Enter Value in User</errorMessage>
+        <errorMessage>EWTA_001 :  Please Enter Value in User</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>EWTA_002</fullName>

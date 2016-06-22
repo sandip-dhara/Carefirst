@@ -6,7 +6,7 @@
     <name>AIA_ProductionID_Card_Rejected</name>
     <style>freeForm</style>
     <subject> {!AIA_Document__c.Name} approval has been rejected.</subject>
-    <textOnly>Production Id Card Document for {!AIA_Document__c.Name} has been Rejected.  Please request LGIT to correct the document and re-submit it for approval.
+    <textOnly>Production Id Card Document for {!AIA_Document__c.Account__c} has been Rejected.  Please request LGIT to correct the document and re-submit it for approval.
 
 
 

@@ -1,7 +1,15 @@
 <table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
 <tr valign="top" height="400" >
 <td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
-<![CDATA[<p class="p1"><font face="Arial, sans-serif"><span class="s1">Production&nbsp;Id Card Document for&nbsp;{!AIA_Document__c.Name}&nbsp;has been&nbsp;Rejected.&nbsp;</span><span style="color: rgb(38, 38, 38); line-height: 13.8px; background-color: rgb(255, 255, 255);">&nbsp;</span><span style="color: rgb(38, 38, 38); line-height: 13.8px; background-color: rgb(255, 255, 255);">Please request LGIT to correct the document and re-submit it for approval.</span></font></p>
+<![CDATA[<p class="p1"><font face="Arial, sans-serif"><span class="s1">Production&nbsp;Id Card Document for&nbsp;</span></font><span style="font-size: 12pt;">{!AIA_Document__c.Account__c}</span><span class="s1" style="font-family: Arial, sans-serif; font-size: 12pt;">&nbsp;has been&nbsp;Rejected.&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 12pt; color: rgb(38, 38, 38); line-height: 13.8px; background-color: rgb(255, 255, 255);">&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 12pt; color: rgb(38, 38, 38); line-height: 13.8px; background-color: rgb(255, 255, 255);">Please request LGIT to correct the document and re-submit it for approval.</span></p>
+
+
+
+
+
+
+
+
 <p class="p2" style="font-size: 12pt; font-family: arial;"><br><span class="s1"></span></p>
 <p class="p3" style="font-size: 12pt; font-family: arial;"><span class="s1"></span><br></p>
 <p class="p4" style="font-size: 12pt; font-family: arial;"><span class="s1">{!AIA_Document__c.Link}&nbsp;</span></p>]]></td>

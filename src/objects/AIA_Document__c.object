@@ -110,6 +110,10 @@
                 <fullName>Pending</fullName>
                 <default>false</default>
             </picklistValues>
+            <picklistValues>
+                <fullName>In Approvals</fullName>
+                <default>false</default>
+            </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>
             <sorted>false</sorted>
         </picklist>
@@ -600,6 +604,15 @@
         <type>Lookup</type>
     </fields>
     <label>AIA Document</label>
+    <listViews>
+        <fullName>AIA_Quality_Audit_AIA_Document</fullName>
+        <filterScope>Queue</filterScope>
+        <label>AIA Quality Audit</label>
+        <queue>AIA_Quality_Audit</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
     <nameField>
         <displayFormat>FD-{000000}</displayFormat>
         <label>AIA Document Name</label>

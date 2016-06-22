@@ -188,14 +188,8 @@ public class AIA_Workplan
         
         /*Creating Workplan stage */
         if (!toCreate.isEmpty())
-        {    
-            try{
-                insert tocreate;
-            }
-            catch(Exception ex){
-                System.debug(' \n CLog : '+ex.getMessage());
-            }
-            
+        {
+            insert tocreate;
             Map<id,id> parentMap = new Map<id,id>();
             for(Workplan_Stage__c ws:tocreate)
             {

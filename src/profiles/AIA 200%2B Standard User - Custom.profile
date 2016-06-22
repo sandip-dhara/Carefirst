@@ -6,7 +6,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>AIADocumentUploadController_Test</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_BRFCloneWithProductsCX</apexClass>
@@ -22,7 +22,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_BRFTriggerHandler_Test</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_BRFTriggerHelper</apexClass>
@@ -30,11 +30,11 @@
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_BenefitDesignApproversHelper</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_BenefitDesignTriggerHandler</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_Constants</apexClass>
@@ -54,11 +54,11 @@
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_DocumentTriggerHandler</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_DocumentTriggerHandlerTest</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_EventHandler</apexClass>
@@ -70,11 +70,11 @@
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_EventTriggerHandler</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_ImplementationTriggerHandler</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_IntermediatController</apexClass>
@@ -82,7 +82,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_OpenEnrollmentMeetingController</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_OpenEnrollmentMeetingSignUp</apexClass>
@@ -90,7 +90,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_OpenEnrollmentMeetingSignUp_Test</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_OpportunityTrigger_Test</apexClass>
@@ -122,7 +122,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_WP_SubProcess_Controller</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_WorkAssignmentFileUploadCX</apexClass>
@@ -162,7 +162,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_Workplan_Implementation</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>AIA_Workplan_Test</apexClass>
@@ -182,10 +182,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>QueryBase2</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>TriggerHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <custom>true</custom>
@@ -245,7 +241,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>AIA_Document__c.Approval_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -705,7 +701,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>AIA_Workplan_Type_Task__c.Assignee_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -720,7 +716,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>AIA_Workplan_Type_Task__c.Default_Owner__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -740,12 +736,12 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>AIA_Workplan_Type_Task__c.Queue_Id__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>AIA_Workplan_Type_Task__c.Queue_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -770,7 +766,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>AIA_Workplan_Type_Task__c.Sequence_Number__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -780,12 +776,12 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>AIA_Workplan_Type_Task__c.Task_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>AIA_Workplan_Type_Task__c.Task_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -912,6 +908,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account_Case__c.Case_Owner__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account_Case__c.Implementation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1295,7 +1296,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Benfit_Request_Form__c.Request_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1315,12 +1316,12 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Benfit_Request_Form__c.Sales_Rep_Email__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Benfit_Request_Form__c.Sales_Segment_Size__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1971,6 +1972,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Proposed_Products__c.BlueVision_Plus_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Proposed_Products__c.Blue_Rewards__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2012,6 +2018,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Proposed_Products__c.Dental_Product_Options__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Proposed_Products__c.Dental_Variables_by_Product__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2162,6 +2173,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Proposed_Products__c.Product_Line__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Proposed_Products__c.Product_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Proposed_Products__c.Product_Option__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2480,27 +2501,22 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Workplan_Type_Stage__c.Number_of_Assignments__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Workplan_Type_Stage__c.Parent_Workplan_Type_Stage__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Workplan_Type_Stage__c.Sequence_Number__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Workplan_Type_Stage__c.Stage_Category__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Workplan_Type_Stage__c.Stage__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2674,9 +2690,9 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
-        <allowCreate>false</allowCreate>
+        <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
+        <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>AIA_Workplan_Type_Task__c</object>
@@ -2693,7 +2709,7 @@
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
+        <allowDelete>false</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
@@ -2728,7 +2744,7 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
-        <allowCreate>false</allowCreate>
+        <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
@@ -2789,7 +2805,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Benfit_Request_Form__c.ASO</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -2809,18 +2824,18 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
-        <default>false</default>
+        <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
         <recordType>Event.AIA_Meeting</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Event.AIA_Open_Enrollment_Meeting</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Opportunity.AIA_200</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -2830,7 +2845,8 @@
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
-        <default>false</default>
+        <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
         <recordType>PRF__c.AIA_CF_200</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -2877,6 +2893,7 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
         <recordType>Workplan_Type_Stage__c.Process</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -2932,6 +2949,10 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>ChatterInviteExternalUsers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>ChatterOwnGroups</name>
     </userPermissions>
     <userPermissions>
@@ -2965,6 +2986,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>EditTask</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditTopics</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -3009,5 +3034,9 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewHelpLink</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewSetup</name>
     </userPermissions>
 </Profile>

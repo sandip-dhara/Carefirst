@@ -79,6 +79,10 @@
                 <behavior>Edit</behavior>
                 <field>AIA_Prescription_RX__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Network_Title_Reg_HMO_POS_Network_Prov__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

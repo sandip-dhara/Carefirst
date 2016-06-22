@@ -184,10 +184,6 @@
         <apexClass>QueryBase2</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <classAccesses>
-        <apexClass>TriggerHandler</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
         <editable>false</editable>
@@ -912,6 +908,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account_Case__c.Case_Owner__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account_Case__c.Implementation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1971,6 +1972,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Proposed_Products__c.BlueVision_Plus_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Proposed_Products__c.Blue_Rewards__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2012,6 +2018,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Proposed_Products__c.Dental_Product_Options__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Proposed_Products__c.Dental_Variables_by_Product__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2162,6 +2173,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Proposed_Products__c.Product_Line__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Proposed_Products__c.Product_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Proposed_Products__c.Product_Option__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2477,11 +2498,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Workplan_Type_Stage__c.Display_Order__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Workplan_Type_Stage__c.Number_of_Assignments__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3384,19 +3400,11 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ViewDataAssessment</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ViewDataCategories</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewEventLogFiles</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewGlobalHeader</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

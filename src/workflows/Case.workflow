@@ -93,13 +93,8 @@
             <operation>equals</operation>
             <value>False</value>
         </criteriaItems>
-        <criteriaItems>
-            <field>Case.RecordTypeId</field>
-            <operation>equals</operation>
-            <value>AIA Account Issue</value>
-        </criteriaItems>
         <description>If an Issue (Case) with Priority = &quot;High&quot; and it is not closed within 1 week from the time of creation  then application will send an email to the Issue(Case) Onwer</description>
-        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <triggerType>onCreateOnly</triggerType>
         <workflowTimeTriggers>
             <actions>
                 <name>Email_Alert_For_High_Priority_Cases</name>
@@ -123,13 +118,8 @@
             <operation>equals</operation>
             <value>False</value>
         </criteriaItems>
-        <criteriaItems>
-            <field>Case.RecordTypeId</field>
-            <operation>equals</operation>
-            <value>AIA Account Issue</value>
-        </criteriaItems>
         <description>If an Issue (Case) with Priority = &quot;Low&quot; and it is not closed within 1 week from the time of creation  then application will send an email to the Issue(Case) Onwer</description>
-        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <triggerType>onCreateOnly</triggerType>
         <workflowTimeTriggers>
             <actions>
                 <name>Email_Alert_For_Low_Priority_Cases</name>
@@ -153,13 +143,8 @@
             <operation>equals</operation>
             <value>False</value>
         </criteriaItems>
-        <criteriaItems>
-            <field>Case.RecordTypeId</field>
-            <operation>equals</operation>
-            <value>AIA Account Issue</value>
-        </criteriaItems>
         <description>If an Issue (Case) with Priority = &quot;Medium&quot; and it is not closed within 1 week from the time of creation  then application will send an email to the Issue(Case) Onwer</description>
-        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <triggerType>onCreateOnly</triggerType>
         <workflowTimeTriggers>
             <actions>
                 <name>Email_Alert_For_Medium_Priority_Cases</name>
@@ -183,14 +168,9 @@
             <operation>equals</operation>
             <value>False</value>
         </criteriaItems>
-        <criteriaItems>
-            <field>Case.RecordTypeId</field>
-            <operation>equals</operation>
-            <value>AIA Account Issue</value>
-        </criteriaItems>
         <description>If an Issue with Priority = Urgent has not been closed within 4 hours from the 
 time of creation, the Application sends a notification to the Issue owner</description>
-        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <triggerType>onCreateOnly</triggerType>
         <workflowTimeTriggers>
             <actions>
                 <name>Email_Alert_For_Urgent_Priority_Cases</name>

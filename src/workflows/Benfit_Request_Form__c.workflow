@@ -2,6 +2,7 @@
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
         <fullName>AAA_Zip_Code_Notification_For_Sales_Users</fullName>
+        <ccEmails>testaia@carefirst.com</ccEmails>
         <description>Zip Code Notification For Sales Users</description>
         <protected>false</protected>
         <recipients>
@@ -27,7 +28,7 @@
             <type>accountTeam</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>AIA_Email_Templates/AIA_BRF_Implementation_Others_Notification</template>
+        <template>AIA_Email_Templates/AIA_BRF_Implementation_Others_Notification1</template>
     </alerts>
     <alerts>
         <fullName>AIA_BRF_Implementation_PM_Notification</fullName>
@@ -42,6 +43,7 @@
     </alerts>
     <alerts>
         <fullName>AIA_Rejection_Notification</fullName>
+        <ccEmails>testaia@carefirst.com</ccEmails>
         <description>AIA Rejection Notification</description>
         <protected>false</protected>
         <recipients>
@@ -72,6 +74,10 @@
         <recipients>
             <type>owner</type>
         </recipients>
+        <recipients>
+            <recipient>testaia@carefirst.com.q1aia</recipient>
+            <type>user</type>
+        </recipients>
         <senderType>CurrentUser</senderType>
         <template>AIA_Email_Templates/AIA_Zip_Code_Notification_Outside_CareFirst_Service_Area_Request_Cede</template>
     </alerts>
@@ -82,6 +88,10 @@
         <recipients>
             <recipient>ARC_Senior_Management</recipient>
             <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>testaia@carefirst.com.q1aia</recipient>
+            <type>user</type>
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>AIA_Email_Templates/ARC_Senior_Management_Notification</template>
@@ -94,19 +104,23 @@
             <recipient>ARC_Senior_Management</recipient>
             <type>group</type>
         </recipients>
+        <recipients>
+            <recipient>testaia@carefirst.com.q1aia</recipient>
+            <type>user</type>
+        </recipients>
         <senderType>CurrentUser</senderType>
         <template>AIA_Email_Templates/ARC_Senior_Management_Notification_with_PRF</template>
     </alerts>
     <alerts>
         <fullName>Benefit_Request_Review_MHP_Result_Notification</fullName>
+        <ccEmails>testaia@carefirst.com</ccEmails>
         <description>Benefit Request: Review MHP Result Notification</description>
         <protected>false</protected>
         <recipients>
-            <recipient>goutham.rapolu@carefirst.com</recipient>
-            <type>user</type>
+            <type>accountOwner</type>
         </recipients>
         <recipients>
-            <recipient>vutrera@salesforce.com</recipient>
+            <recipient>lakshminarayana.angara@carefirst.com.q1aia</recipient>
             <type>user</type>
         </recipients>
         <senderType>CurrentUser</senderType>
@@ -117,15 +131,10 @@
         <description>Cede Document Request New Account Notification</description>
         <protected>false</protected>
         <recipients>
-            <recipient>carefirsttestacc@gmail.com</recipient>
-            <type>user</type>
+            <type>accountOwner</type>
         </recipients>
         <recipients>
-            <recipient>goutham.rapolu@carefirst.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>vutrera@salesforce.com</recipient>
+            <recipient>lakshminarayana.angara@carefirst.com.q1aia</recipient>
             <type>user</type>
         </recipients>
         <senderType>CurrentUser</senderType>
@@ -136,15 +145,10 @@
         <description>Cede Document Request New Account Notification1</description>
         <protected>false</protected>
         <recipients>
-            <recipient>carefirsttestacc@gmail.com</recipient>
-            <type>user</type>
+            <type>accountOwner</type>
         </recipients>
         <recipients>
-            <recipient>goutham.rapolu@carefirst.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>vutrera@salesforce.com</recipient>
+            <recipient>lakshminarayana.angara@carefirst.com.q1aia</recipient>
             <type>user</type>
         </recipients>
         <senderType>CurrentUser</senderType>
@@ -155,15 +159,10 @@
         <description>Cede Document Request Renewal Account Notification</description>
         <protected>false</protected>
         <recipients>
-            <recipient>carefirsttestacc@gmail.com</recipient>
-            <type>user</type>
+            <type>accountOwner</type>
         </recipients>
         <recipients>
-            <recipient>goutham.rapolu@carefirst.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>vutrera@salesforce.com</recipient>
+            <recipient>vinayak.soodireddy@carefirst.com</recipient>
             <type>user</type>
         </recipients>
         <senderType>CurrentUser</senderType>
@@ -171,11 +170,11 @@
     </alerts>
     <alerts>
         <fullName>Zip_Code_Verify</fullName>
+        <ccEmails>testaia@carefirst.com</ccEmails>
         <description>Zip Code Verify</description>
         <protected>false</protected>
         <recipients>
-            <recipient>goutham.rapolu@carefirst.com</recipient>
-            <type>user</type>
+            <type>accountOwner</type>
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>AIA_Email_Templates/AIA_Zip_Code_Verification_for_BRF</template>

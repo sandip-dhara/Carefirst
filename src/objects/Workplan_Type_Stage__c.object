@@ -86,20 +86,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Number_of_Assignments__c</fullName>
-        <externalId>false</externalId>
-        <label>Number of Assignments</label>
-        <summaryFilterItems>
-            <field>AIA_Workplan_Type_Task__c.Active__c</field>
-            <operation>equals</operation>
-            <value>True</value>
-        </summaryFilterItems>
-        <summaryForeignKey>AIA_Workplan_Type_Task__c.Workplan_Type_Stage__c</summaryForeignKey>
-        <summaryOperation>count</summaryOperation>
-        <trackTrending>false</trackTrending>
-        <type>Summary</type>
-    </fields>
-    <fields>
         <fullName>Parent_Workplan_Type_Stage__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
@@ -114,7 +100,6 @@
     <fields>
         <fullName>Sequence_Number__c</fullName>
         <externalId>false</externalId>
-        <inlineHelpText>The sequence number should be incremented in multiples of 10.</inlineHelpText>
         <label>Sequence Number</label>
         <precision>18</precision>
         <required>false</required>

@@ -104,6 +104,15 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
+        <fullName>BlueVision_Plus_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>BlueVision Plus Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>Blue_Rewards__c</fullName>
         <externalId>false</externalId>
         <label>Blue Rewards</label>
@@ -296,6 +305,18 @@
             </picklistValues>
             <picklistValues>
                 <fullName>Dental HMO Opt-Out (Available ridered to BlueChoice medical products only)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BlueDental Plus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Preferred Dental</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Traditional Dental</fullName>
                 <default>false</default>
             </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>
@@ -617,7 +638,71 @@
                 <default>false</default>
                 <controllingFieldValues>Dental HMO Opt-Out (Available ridered to BlueChoice medical products only)</controllingFieldValues>
             </picklistValues>
+            <picklistValues>
+                <fullName>TBD - Dynamic based on product</fullName>
+                <default>false</default>
+            </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Dental_Variables_by_Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Dental Variables by Product</label>
+        <picklist>
+            <controllingField>Dental_Product_Name__c</controllingField>
+            <picklistValues>
+                <fullName>Deductible Applies to All Basic Services</fullName>
+                <default>false</default>
+                <controllingFieldValues>BlueDental Basic</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Annual Maximum Applies to All Basic Services</fullName>
+                <default>false</default>
+                <controllingFieldValues>BlueDental Basic</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Preventive &amp; Diagnostic Services</fullName>
+                <default>false</default>
+                <controllingFieldValues>BlueDental Basic</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Basic Services</fullName>
+                <default>false</default>
+                <controllingFieldValues>BlueDental Basic</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deductible Applies to All Basic and Major Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Annual Maximum Applies to All Basic and Major Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Basic Services and Major Services - Surgical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Major Services - Restorative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Annual Deductible and Maximum</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Major Services - Surgical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Orthodontic Services</fullName>
+                <default>false</default>
+            </picklistValues>
             <sorted>false</sorted>
         </picklist>
         <trackHistory>false</trackHistory>
@@ -1087,6 +1172,8 @@
                 <controllingFieldValues>BlueChoice HMO Open Access Smart Selections</controllingFieldValues>
                 <controllingFieldValues>BlueChoice HMO Smart Selections</controllingFieldValues>
                 <controllingFieldValues>BluePreferred Smart Selections</controllingFieldValues>
+                <controllingFieldValues>HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)</controllingFieldValues>
+                <controllingFieldValues>HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)</controllingFieldValues>
                 <controllingFieldValues>HealthyBlue HMO/HealthyBlue HMO HRA (Non-integrated Deductible)</controllingFieldValues>
                 <controllingFieldValues>HealthyBlue PPO/HealthyBlue PPO HRA (Non-integrated Deductible)</controllingFieldValues>
             </picklistValues>
@@ -1097,6 +1184,8 @@
                 <controllingFieldValues>BlueChoice HMO Open Access Smart Selections</controllingFieldValues>
                 <controllingFieldValues>BlueChoice HMO Smart Selections</controllingFieldValues>
                 <controllingFieldValues>BluePreferred Smart Selections</controllingFieldValues>
+                <controllingFieldValues>HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)</controllingFieldValues>
+                <controllingFieldValues>HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)</controllingFieldValues>
                 <controllingFieldValues>HealthyBlue HMO/HealthyBlue HMO HRA (Non-integrated Deductible)</controllingFieldValues>
                 <controllingFieldValues>HealthyBlue PPO/HealthyBlue PPO HRA (Non-integrated Deductible)</controllingFieldValues>
             </picklistValues>
@@ -1107,6 +1196,8 @@
                 <controllingFieldValues>BlueChoice HMO Open Access Smart Selections</controllingFieldValues>
                 <controllingFieldValues>BlueChoice HMO Smart Selections</controllingFieldValues>
                 <controllingFieldValues>BluePreferred Smart Selections</controllingFieldValues>
+                <controllingFieldValues>HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)</controllingFieldValues>
+                <controllingFieldValues>HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)</controllingFieldValues>
                 <controllingFieldValues>HealthyBlue HMO/HealthyBlue HMO HRA (Non-integrated Deductible)</controllingFieldValues>
                 <controllingFieldValues>HealthyBlue PPO/HealthyBlue PPO HRA (Non-integrated Deductible)</controllingFieldValues>
             </picklistValues>
@@ -2286,12 +2377,12 @@
                 <controllingFieldValues>HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)</controllingFieldValues>
             </picklistValues>
             <picklistValues>
-                <fullName>Plan M</fullName>
+                <fullName>Plan N</fullName>
                 <default>false</default>
                 <controllingFieldValues>Group Medigap - 65</controllingFieldValues>
             </picklistValues>
             <picklistValues>
-                <fullName>Plan N</fullName>
+                <fullName>Plan M</fullName>
                 <default>false</default>
                 <controllingFieldValues>Group Medigap - 65</controllingFieldValues>
             </picklistValues>
@@ -2356,7 +2447,7 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>CareFirst Private Exchange</fullName>
+                <fullName>CareFirst Private exchange</fullName>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -2381,6 +2472,128 @@
             <picklistValues>
                 <fullName>POS</fullName>
                 <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Name</label>
+        <picklist>
+            <controllingField>Product_Line__c</controllingField>
+            <picklistValues>
+                <fullName>A</fullName>
+                <default>false</default>
+                <controllingFieldValues>HMO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B</fullName>
+                <default>false</default>
+                <controllingFieldValues>HMO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>C</fullName>
+                <default>false</default>
+                <controllingFieldValues>HMO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D</fullName>
+                <default>false</default>
+                <controllingFieldValues>HMO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E</fullName>
+                <default>false</default>
+                <controllingFieldValues>PPO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F</fullName>
+                <default>false</default>
+                <controllingFieldValues>PPO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>G</fullName>
+                <default>false</default>
+                <controllingFieldValues>PPO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>H</fullName>
+                <default>false</default>
+                <controllingFieldValues>POS</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I</fullName>
+                <default>false</default>
+                <controllingFieldValues>POS</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product_Option__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Option</label>
+        <picklist>
+            <controllingField>Product_Name__c</controllingField>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+                <controllingFieldValues>A</controllingFieldValues>
+                <controllingFieldValues>D</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+                <controllingFieldValues>A</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+                <controllingFieldValues>A</controllingFieldValues>
+                <controllingFieldValues>B</controllingFieldValues>
+                <controllingFieldValues>E</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+                <controllingFieldValues>C</controllingFieldValues>
+                <controllingFieldValues>D</controllingFieldValues>
+                <controllingFieldValues>E</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+                <controllingFieldValues>A</controllingFieldValues>
+                <controllingFieldValues>C</controllingFieldValues>
+                <controllingFieldValues>E</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+                <controllingFieldValues>B</controllingFieldValues>
+                <controllingFieldValues>D</controllingFieldValues>
+                <controllingFieldValues>E</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+                <controllingFieldValues>C</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+                <controllingFieldValues>C</controllingFieldValues>
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
@@ -2488,6 +2701,14 @@
                 <fullName>Voluntary Blue Vision Plus</fullName>
                 <default>false</default>
             </picklistValues>
+            <picklistValues>
+                <fullName>Dummy 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dummy 2</fullName>
+                <default>false</default>
+            </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>
             <sorted>false</sorted>
         </picklist>
@@ -2558,6 +2779,15 @@
                 <default>false</default>
                 <controllingFieldValues>BlueVision Plus</controllingFieldValues>
             </picklistValues>
+            <picklistValues>
+                <fullName>Option 4 - $10 exam copay/24 month benefit period</fullName>
+                <default>false</default>
+                <controllingFieldValues>BlueVision Plus</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>
             <sorted>false</sorted>
         </picklist>
@@ -2575,6 +2805,11 @@
         <type>Checkbox</type>
     </fields>
     <label>Proposed Products</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <displayFormat>PP-{000000}</displayFormat>
         <label>Proposed Products Id</label>
@@ -2746,6 +2981,53 @@
             </values>
             <values>
                 <fullName>Plan 8 %28100%2F80%2F50%2F50 IN and 80%2F60%2F35%2F35 OON%29 - %242%2C000 max%2C %2425 deductible and %241%2C500 ortho max or no ortho</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dental_Variables_by_Product__c</picklist>
+            <values>
+                <fullName>Annual Deductible and Maximum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Annual Maximum Applies to All Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Annual Maximum Applies to All Basic and Major Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basic Services and Major Services - Surgical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deductible Applies to All Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deductible Applies to All Basic and Major Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Services - Restorative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Services - Surgical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orthodontic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preventive %26 Diagnostic Services</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -3361,7 +3643,7 @@
         <picklistValues>
             <picklist>Product_Category__c</picklist>
             <values>
-                <fullName>CareFirst Private Exchange</fullName>
+                <fullName>CareFirst Private exchange</fullName>
                 <default>true</default>
             </values>
         </picklistValues>
@@ -3377,6 +3659,84 @@
             </values>
             <values>
                 <fullName>PPO</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Name__c</picklist>
+            <values>
+                <fullName>A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>H</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Option__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -3777,6 +4137,53 @@
             </values>
             <values>
                 <fullName>Plan 8 %28100%2F80%2F50%2F50 IN and 80%2F60%2F35%2F35 OON%29 - %242%2C000 max%2C %2425 deductible and %241%2C500 ortho max or no ortho</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dental_Variables_by_Product__c</picklist>
+            <values>
+                <fullName>Annual Deductible and Maximum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Annual Maximum Applies to All Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Annual Maximum Applies to All Basic and Major Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basic Services and Major Services - Surgical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deductible Applies to All Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deductible Applies to All Basic and Major Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Services - Restorative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Services - Surgical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orthodontic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preventive %26 Diagnostic Services</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -4400,6 +4807,84 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Product_Name__c</picklist>
+            <values>
+                <fullName>A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>H</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Option__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Standard_Network__c</picklist>
             <values>
                 <fullName>No</fullName>
@@ -4588,6 +5073,53 @@
             </values>
             <values>
                 <fullName>Plan 8 %28100%2F80%2F50%2F50 IN and 80%2F60%2F35%2F35 OON%29 - %242%2C000 max%2C %2425 deductible and %241%2C500 ortho max or no ortho</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dental_Variables_by_Product__c</picklist>
+            <values>
+                <fullName>Annual Deductible and Maximum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Annual Maximum Applies to All Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Annual Maximum Applies to All Basic and Major Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basic Services and Major Services - Surgical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deductible Applies to All Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deductible Applies to All Basic and Major Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Services - Restorative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Services - Surgical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orthodontic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preventive %26 Diagnostic Services</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -5215,6 +5747,84 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Product_Name__c</picklist>
+            <values>
+                <fullName>A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>H</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Option__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Standard_Network__c</picklist>
             <values>
                 <fullName>No</fullName>
@@ -5403,6 +6013,53 @@
             </values>
             <values>
                 <fullName>Plan 8 %28100%2F80%2F50%2F50 IN and 80%2F60%2F35%2F35 OON%29 - %242%2C000 max%2C %2425 deductible and %241%2C500 ortho max or no ortho</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dental_Variables_by_Product__c</picklist>
+            <values>
+                <fullName>Annual Deductible and Maximum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Annual Maximum Applies to All Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Annual Maximum Applies to All Basic and Major Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basic Services and Major Services - Surgical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deductible Applies to All Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deductible Applies to All Basic and Major Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Services - Restorative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Services - Surgical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orthodontic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preventive %26 Diagnostic Services</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -6182,6 +6839,84 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Product_Name__c</picklist>
+            <values>
+                <fullName>A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>H</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Option__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Standard_Network__c</picklist>
             <values>
                 <fullName>No</fullName>
@@ -6370,6 +7105,53 @@
             </values>
             <values>
                 <fullName>Plan 8 %28100%2F80%2F50%2F50 IN and 80%2F60%2F35%2F35 OON%29 - %242%2C000 max%2C %2425 deductible and %241%2C500 ortho max or no ortho</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dental_Variables_by_Product__c</picklist>
+            <values>
+                <fullName>Annual Deductible and Maximum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Annual Maximum Applies to All Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Annual Maximum Applies to All Basic and Major Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basic Services and Major Services - Surgical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deductible Applies to All Basic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deductible Applies to All Basic and Major Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Services - Restorative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Services - Surgical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orthodontic Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preventive %26 Diagnostic Services</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -6993,6 +7775,84 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Product_Name__c</picklist>
+            <values>
+                <fullName>A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>H</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Option__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Standard_Network__c</picklist>
             <values>
                 <fullName>No</fullName>
@@ -7049,6 +7909,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Option 4 - %2410 exam copay%2F24 month benefit period</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Option A - %240 exam copay%2F12%2F12%2F24 month benefit period</fullName>
                 <default>false</default>
             </values>
@@ -7081,7 +7945,7 @@
         <description>Funding Arrangement must be &quot;Risk&quot; if Benfit Request form is of type &quot;Risk&quot;</description>
         <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules) &amp;&amp; IF( TEXT(PRIORVALUE(Funding_Arrangement__c))=&apos;Risk&apos;  &amp;&amp; ISCHANGED( Funding_Arrangement__c ),true,false)</errorConditionFormula>
         <errorDisplayField>Funding_Arrangement__c</errorDisplayField>
-        <errorMessage>EPP001 : If Benfit Request form is of type &quot;Risk&quot; then funding arrangements should be only &quot;Risk&quot;</errorMessage>
+        <errorMessage>EPP001 : If the Benefit Request Form funding arrangement is &quot;RISK&quot; then the product funding arrangement should also be &quot;RISK&quot;</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>EPP009</fullName>
@@ -7097,7 +7961,7 @@
         <description>Funding Arrangement must be &quot;ASO&quot; if Benfit Request form is of type &quot;ASO&quot;</description>
         <errorConditionFormula>NOT($Permission.Ignore_Validation_Rules) &amp;&amp; IF( TEXT(PRIORVALUE(Funding_Arrangement__c))=&apos;ASO&apos;  &amp;&amp; ISCHANGED( Funding_Arrangement__c ),true,false)</errorConditionFormula>
         <errorDisplayField>Funding_Arrangement__c</errorDisplayField>
-        <errorMessage>EPP010 : If Benfit Request form is of type &quot;ASO&quot; then funding arrangements should be only &quot;ASO&quot;</errorMessage>
+        <errorMessage>EPP010 : If the Benefit Request Form funding arrangement is &quot;ASO&quot; then the product funding arrangement should also be &quot;ASO&quot;</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>EPP0102</fullName>
@@ -7132,6 +7996,13 @@
         <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp;(RecordType.DeveloperName = &apos;Medical&apos; &amp;&amp; IF( TEXT(PRIORVALUE( Grandfathered_Status__c ))=&apos;Non-Grandfathered&apos; &amp;&amp; ISCHANGED(  Grandfathered_Status__c  ),true,false))</errorConditionFormula>
         <errorDisplayField>Grandfathered_Status__c</errorDisplayField>
         <errorMessage>EPP013 : If the Grandfathered status for ProposedProducts is Non-Grandfathered then it cannot be modified</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP014</fullName>
+        <active>false</active>
+        <description>Enrollment type cannot be blank</description>
+        <errorConditionFormula>IF(  Benefit_Request_Form__r.Count_of_Medical_Proposed_Products__c  &gt;=1 &amp;&amp;  Benefit_Request_Form__r.Count_of_Proposed_Products_Non_Medical1__c  &gt;=1 &amp;&amp; ISBLANK(TEXT(  Benefit_Request_Form__r.Enrollment_Type__c )),true,IF(Benefit_Request_Form__r.Count_of_Proposed_Products__c  &gt;=1 || Benefit_Request_Form__r.Count_of_Proposed_Products_Non_Medical1__c  &gt;=1,false,NULL))</errorConditionFormula>
+        <errorMessage>EPP014 : If Benefit Request Form has more than 1 Medical with Ancillary, then Enrollment Type on Benefit Request Form cannot be blank</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>EPP015</fullName>
@@ -7240,6 +8111,14 @@
         <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice HMO&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
         <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
         <errorMessage>EPP032 : Option 4: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP033</fullName>
+        <active>true</active>
+        <description>Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;BlueChoice HMO&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP033 : Option 9: $0/$25/$45/50% w/ $75 max and $100 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>EPP035</fullName>
@@ -8792,5 +9671,61 @@
         <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; AND(TEXT( Benefit_Request_Form__r.Funding_Arrangements__c )=&apos;Risk&apos;,NOT(ISBLANK( TEXT(Blue_Rewards__c)) ) )</errorConditionFormula>
         <errorDisplayField>Blue_Rewards__c</errorDisplayField>
         <errorMessage>EPP234 : If Funding Arrangements on BRF is &quot;Risk&quot; then Blue Rewards field cannot have value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP235</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP235 : Option 4: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP236</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO HRA Non-Integrated Deductible&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP236 : Option 4: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP237</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue HMO/HealthyBlue HMO HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP237 : Option 4: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP238</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue PPO/HealthyBlue PPO HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP238 : Option 4: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP239</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue Advantage/HealthyBlue Advantage HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP239 : Option 4: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP240</fullName>
+        <active>true</active>
+        <description>Option 4: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;MD&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0/HealthyBlue 2.0 HRA (Non-integrated Deductible)&apos;) &amp;&amp; (TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;DC&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;VA&apos; || TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;  ) &amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 4: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP240 : Option 4: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction &apos;MD&apos; on BRF. Please check the Jurisdiction of BRF</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPP242</fullName>
+        <active>true</active>
+        <description>Option 7: $10/$20/$35 w/ $0 deductible is only valid when Jurisdiction = &quot;DC&quot; or &quot;VA&quot;</description>
+        <errorConditionFormula>Not($Permission.Ignore_Validation_Rules) &amp;&amp; (AND(RecordType.DeveloperName = &apos;Medical&apos;,TEXT( Medical_Product_Name__c )=&apos;HealthyBlue 2.0 Non-Integrated Deductible&apos;) &amp;&amp; OR(TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;MD&apos;,TEXT( Benefit_Request_Form__r.Jurisdiction__c )=&apos;Other - Cede Required&apos;)&amp;&amp; TEXT(  Drug_Product_Options__c  )= &apos;Option 7: $10/$20/$35 w/ $0 deductible&apos;)</errorConditionFormula>
+        <errorDisplayField>Drug_Product_Options__c</errorDisplayField>
+        <errorMessage>EPP242 : Option 7: $10/$20/$35 w/ $0 deductible is available only for Jurisdiction VA/DC on BRF. Please check the Jurisdiction of BRF</errorMessage>
     </validationRules>
 </CustomObject>

@@ -2176,7 +2176,6 @@ IF (Count_of_Medical_Proposed_Products__c   =  0 , &apos;No&apos; , NULL)))</for
         <columns>Submit_to_ARC_Approval__c</columns>
         <columns>Submit_to_Underwriting__c</columns>
         <columns>Count_of_Proposed_Products__c</columns>
-        <columns>Count_of_Medical_Proposed_Products__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -5538,7 +5537,7 @@ ISBLANK(  Enrollment_Vendor__c  ))))</errorConditionFormula>
     <validationRules>
         <fullName>EBRF011</fullName>
         <active>true</active>
-        <errorConditionFormula>AND ( Submit_to_ARC_Approval__c ,  NOT(OR(ISCHANGED(Status__c),ISCHANGED(Submit_to_Underwriting__c))))</errorConditionFormula>
+        <errorConditionFormula>AND ( Submit_to_ARC_Approval__c ,  NOT(OR(ISCHANGED(Status__c),ISCHANGED( Submit_to_ARC_Approval__c ))))</errorConditionFormula>
         <errorMessage>EBRF011:  You cannot edit a BRF when an ARC Approval Required BRF has been submitted for ARC approval</errorMessage>
     </validationRules>
     <validationRules>

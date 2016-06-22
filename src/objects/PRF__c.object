@@ -970,4 +970,91 @@ Opt3: Health Assessment with Telephonic Health Advising, Online Health Coaching,
             </values>
         </picklistValues>
     </recordTypes>
+    <validationRules>
+        <fullName>EPRF010</fullName>
+        <active>true</active>
+        <description>Account Legal Verification is required before creating a proposal</description>
+        <errorConditionFormula>NOT (Opportunity__r.Legal_Account_Name_Verified__c)
+ &amp;&amp; RecordType.Name = &apos;CF (200+)&apos;</errorConditionFormula>
+        <errorMessage>EPRF010: Please validate the Legal Name on the Opportunity before proceeding</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EPRF011</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL( Delivery_Method__c , &quot;Other&quot;), Other_Delivery_Method__c  = &apos;&apos; )</errorConditionFormula>
+        <errorDisplayField>Other_Delivery_Method__c</errorDisplayField>
+        <errorMessage>EPRF011: Please provide the Other Delivery Method</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRF001</fullName>
+        <active>true</active>
+        <description>If Required Mapping field&apos;s selection equals &apos;Alt. Network&apos; then the user must select from the Alternative Network field (states).</description>
+        <errorConditionFormula>INCLUDES( Required_Mapping__c , &apos;Alt. Networks&apos;) &amp;&amp; ISNULL(Alternative_Network__c)</errorConditionFormula>
+        <errorDisplayField>Alternative_Network__c</errorDisplayField>
+        <errorMessage>PRF001: A value must be selected from the Alternative Network field when &apos;Alt. Networks&apos; is selected on the Required Mapping field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRF002</fullName>
+        <active>true</active>
+        <description>If the Alternative Network field has a selected value then the Required Mapping field must also have a selection.</description>
+        <errorConditionFormula>NOT(INCLUDES( Required_Mapping__c , &apos;Alt. Networks&apos;)) &amp;&amp; NOT(ISNULL(Alternative_Network__c))</errorConditionFormula>
+        <errorDisplayField>Required_Mapping__c</errorDisplayField>
+        <errorMessage>PRF002: The &apos;Alt. Networks&apos; value must be selected from the Required Mapping field when a value is selected on the Alternative Network field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRF003</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(INCLUDES(Medical_Networks__c, &apos;Alternative Networks&apos;) &amp;&amp; ISNULL( Alt_Network_State__c), TRUE, FALSE) || 
+IF (NOT(ISNULL(Alt_Network_State__c)) &amp;&amp; NOT(INCLUDES(Medical_Networks__c, &apos;Alternative Networks&apos;)), TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>Alt_Network_State__c</errorDisplayField>
+        <errorMessage>PRF003: When the Medical Networks field contains &apos;Alternative Networks&apos; a state must be chosen or if the Alt. Network State field is selected then the &apos;Alternative Networks&apos; must be selected on the Medical Networks field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRF004</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( INCLUDES( Medical_Products__c , &apos;CDH&apos; ) &amp;&amp; ISNULL( CDH_Products__c ) || 
+INCLUDES( Medical_Products__c , &apos;CDH&apos; ) &amp;&amp; ISPICKVAL( CDH_Administrator__c, &apos;&apos; )  ||
+INCLUDES( Medical_Products__c , &apos;CDH&apos; )  &amp;&amp; ISPICKVAL( CDH_Funding_Arrangement__c, &apos;&apos; ), true, false )</errorConditionFormula>
+        <errorDisplayField>Medical_Products__c</errorDisplayField>
+        <errorMessage>PRF004: When the Medical Products field contains &apos;CDH&apos; the CDH Products,  CDH Administrator, CDH Funding Arrangement, and CDH Add&apos;l Info must be filled out</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRF005</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( NOT(INCLUDES( Medical_Products__c, &apos;CDH&apos; )) &amp;&amp; NOT(ISNULL( CDH_Products__c )) || NOT(INCLUDES( Medical_Products__c , &apos;CDH&apos; )) &amp;&amp; NOT(ISBLANK( CDH_Addl_Info__c )) ||
+NOT(INCLUDES( Medical_Products__c, &apos;CDH&apos; )) &amp;&amp; NOT(ISPICKVAL( CDH_Administrator__c, &apos;&apos; ))  ||
+NOT(INCLUDES( Medical_Products__c, &apos;CDH&apos; ))  &amp;&amp; NOT(ISPICKVAL( CDH_Funding_Arrangement__c, &apos;&apos; )), true, false )</errorConditionFormula>
+        <errorDisplayField>Medical_Products__c</errorDisplayField>
+        <errorMessage>PRF005: When the Medical Products field does not contain &apos;CDH&apos; the CDH Products,  CDH Administrator, CDH Funding Arrangement, and CDH Add&apos;l Info must be blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRF006</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( INCLUDES( Vision_Empl_Sponsored__c , &apos;Custom&apos;) &amp;&amp;  ISBLANK(Vision_Empl_Sponsored_Addl__c), true, false)</errorConditionFormula>
+        <errorDisplayField>Vision_Empl_Sponsored_Addl__c</errorDisplayField>
+        <errorMessage>PRF006: When Vision Sponsored contains &apos;Custom&apos; then Vision Empl Sponsored Add&apos;l must be filled out</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRF007</fullName>
+        <active>true</active>
+        <errorConditionFormula>$RecordType.DeveloperName = &apos;TPA_Proposal_Request&apos; &amp;&amp;  $Profile.Name = &apos;RFP CF - Custom&apos;</errorConditionFormula>
+        <errorMessage>PRF007: CareFirst Proposal Coordinators cannot edit TPA Proposals</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRF008</fullName>
+        <active>true</active>
+        <errorConditionFormula>$RecordType.DeveloperName = &apos;CF_Proposal_Request&apos; &amp;&amp;  $Profile.Name = &apos;RFP TPA - Custom&apos;</errorConditionFormula>
+        <errorMessage>PRF007: TPA Proposal Coordinators cannot edit CareFirst Proposals</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRF009</fullName>
+        <active>true</active>
+        <description>Prevent the value &apos;None&apos; from being selected if other values are selected</description>
+        <errorConditionFormula>INCLUDES(Analysis_Requested__c, &apos;None&apos;) &amp;&amp; INCLUDES(Analysis_Requested__c, &apos;ADA Code Analysis&apos;) ||
+INCLUDES(Analysis_Requested__c, &apos;None&apos;) &amp;&amp; INCLUDES(Analysis_Requested__c, &apos;CPT Code Analysis&apos;) ||
+INCLUDES(Analysis_Requested__c, &apos;None&apos;) &amp;&amp; INCLUDES(Analysis_Requested__c, &apos;Disruption&apos;) ||
+INCLUDES(Analysis_Requested__c, &apos;None&apos;) &amp;&amp; INCLUDES(Analysis_Requested__c, &apos;GeoAccess&apos;)</errorConditionFormula>
+        <errorDisplayField>Analysis_Requested__c</errorDisplayField>
+        <errorMessage>PRF009: &apos;None&apos; can only be selected by itself</errorMessage>
+    </validationRules>
 </CustomObject>

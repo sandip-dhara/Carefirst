@@ -40,23 +40,6 @@ public class AIA_BRFTriggerHandler  extends TriggerHandler {
     protected override void afterUpdate() {
         
     }
-    
-    public static List<Benfit_Request_Form__c> UpdateBRFLst = new List<Benfit_Request_Form__c>();
-    public static set<Id> PRFids = new set<Id>();
-    public static List<PRF__c> PRFLst = new List<PRF__c>();
-    
-    // TODO: Comments, Input, Output
-    // TODO: Example
-    /**
-    * Gets the list of lineitem sobjects for the given agreement or proposal id
-    * @param agreementOrProposalId the agreement or proposal id associated with the lineitem sobjects
-    * @param productId the product id associated with the lineitem sobjects
-    * @param sObjectType the lineitem sobject type
-    * @return the list of lineitem sobjects 
-    */
-    // TODO: Test the code below and see if it works, worst case, add a formula field on the BRF
-    // We cant update values in Loop because we are getting this list from Trigger.new (we will get read only error.)
-    
     /**
     * @Author : Rajesh Pennam
     * @param  : This method is used to update the oppotunity of BRF from PRF
@@ -64,6 +47,10 @@ public class AIA_BRFTriggerHandler  extends TriggerHandler {
     * @Output : This method inserts the opportunity on BRF from PRF
     * @return the list of lineitem sobjects 
     */  
+    public static List<Benfit_Request_Form__c> UpdateBRFLst = new List<Benfit_Request_Form__c>();
+    public static set<Id> PRFids = new set<Id>();
+    public static List<PRF__c> PRFLst = new List<PRF__c>();
+ 
    public static void updateOpportunityOnBRF(List<Benfit_Request_Form__c> brflst){
         for(Benfit_Request_Form__c brf: brflst){
             PRFids.add(brf.Proposal_Request_Form__c);

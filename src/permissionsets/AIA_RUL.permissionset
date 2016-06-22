@@ -184,10 +184,6 @@
         <apexClass>QueryBase2</apexClass>
         <enabled>false</enabled>
     </classAccesses>
-    <classAccesses>
-        <apexClass>TriggerHandler</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
     <description>Permission Set for Restricted Use License [RUL]</description>
     <fieldPermissions>
         <editable>false</editable>
@@ -912,6 +908,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account_Case__c.Case_Owner__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account_Case__c.Implementation__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1970,6 +1971,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Proposed_Products__c.BlueVision_Plus_Comments__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Proposed_Products__c.Blue_Rewards__c</field>
         <readable>true</readable>
@@ -2012,6 +2018,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Proposed_Products__c.Dental_Product_Options__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Proposed_Products__c.Dental_Variables_by_Product__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2163,6 +2174,16 @@
         <editable>true</editable>
         <field>Proposed_Products__c.Product_Line__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Proposed_Products__c.Product_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Proposed_Products__c.Product_Option__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -2481,11 +2502,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Workplan_Type_Stage__c.Number_of_Assignments__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Workplan_Type_Stage__c.Parent_Workplan_Type_Stage__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -2539,24 +2555,6 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>AIA_Workplan_Type__c</object>
-        <viewAllRecords>false</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>false</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>Benfit_Request_Form__c</object>
-        <viewAllRecords>false</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>Proposed_Products__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -2667,23 +2665,23 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <recordType>Proposed_Products__c.CareFirst_Private_Exchange</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <recordType>Proposed_Products__c.Dental</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <recordType>Proposed_Products__c.Drug</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <recordType>Proposed_Products__c.Medical</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <recordType>Proposed_Products__c.Vision</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <recordType>Workplan_Stage__c.Process</recordType>

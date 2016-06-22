@@ -1,6 +1,6 @@
 A Benefit Request Form has been sold for the following Account:
 
-Account name: {!Benfit_Request_Form__c.Account_Name__c}
-URL for quote: https://carefirst--devaia.cs44.my.salesforce.com/{!Benfit_Request_Form__c.File_Net_Doc_Id__c}
+Account name: {!Benfit_Request_Form__c.Account__c}
+URL for quote: https://carefirst--qa1aia.cs43.my.salesforce.com/{!Benfit_Request_Form__c.File_Net_Doc_Id__c}
 Benefit effective date: {!Benfit_Request_Form__c.Benefit_Effective_Date__c}
 Quote sold by: {!Benfit_Request_Form__c.LastModifiedBy}

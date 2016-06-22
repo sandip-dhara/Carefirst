@@ -1,5 +1,4 @@
-Please establish Account Kick-off Meetings for the following Account:
-
-Account name: {!Benfit_Request_Form__c.Account_Name__c}
-URL for quote: https://carefirst--devaia.cs44.my.salesforce.com/{!Benfit_Request_Form__c.File_Net_Doc_Id__c}
-Benefit effective date: {!Benfit_Request_Form__c.Benefit_Effective_Date__c}
+1. Message: "Establish Account Kick-off Meetings"
+2. URL for Quote: https://carefirst--qa1aia.cs43.my.salesforce.com/{!Benfit_Request_Form__c.File_Net_Doc_Id__c}
+3. Account name: {!Benfit_Request_Form__c.Account__c}
+4. Benefit effective date: {!Benfit_Request_Form__c.Benefit_Effective_Date__c}

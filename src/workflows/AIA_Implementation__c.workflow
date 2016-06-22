@@ -16,11 +16,7 @@
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <formula>AND(
-ISCHANGED(OwnerId),
-LEFT(PRIORVALUE(OwnerId), 3) = &apos;00G&apos;,
-NOT(BEGINS(OwnerId, &quot;00G&quot;))
-)</formula>
+        <formula>AND( ISCHANGED(OwnerId), LEFT(PRIORVALUE(OwnerId), 3) = &apos;00G&apos;, NOT(BEGINS(OwnerId, &quot;00G&quot;)) )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
 </Workflow>

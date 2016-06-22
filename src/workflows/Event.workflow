@@ -2,11 +2,11 @@
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
         <fullName>AIA_Open_Enrollment_Meeting_3_Day_Not_Full_Notification</fullName>
+        <ccEmails>testaia@carefirst.com</ccEmails>
         <description>AIA Open Enrollment Meeting 3 Day Not Full Notification</description>
         <protected>false</protected>
         <recipients>
-            <recipient>carefirsttestacc@gmail.com</recipient>
-            <type>user</type>
+            <type>accountOwner</type>
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>AIA_Email_Templates/AIA_Open_Enrollment_Meeting_3_Day_Not_Full_Notification</template>

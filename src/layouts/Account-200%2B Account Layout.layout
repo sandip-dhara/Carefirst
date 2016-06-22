@@ -470,13 +470,6 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Case.NAME</fields>
-        <fields>Case.Issue_Category__c</fields>
-        <fields>Case.Issue_Sub_Category__c</fields>
-        <fields>Case.CASE_PRIORITY</fields>
-        <fields>Case.CASE_STATUS</fields>
-        <fields>Case.CASE_DESCRIPTION</fields>
-        <fields>Owner.CASE_OWNER_NAME</fields>
         <relatedList>Account_Case__c.Account__c</relatedList>
     </relatedLists>
     <relatedLists>

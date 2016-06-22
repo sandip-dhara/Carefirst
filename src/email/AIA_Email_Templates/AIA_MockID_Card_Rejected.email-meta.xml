@@ -5,9 +5,8 @@
     <letterhead>CarefirstBlueCrossBlueShield</letterhead>
     <name>AIA_MockID_Card_Rejected</name>
     <style>freeForm</style>
-    <subject>{!AIA_Document__c.Name} approval has been rejected .</subject>
-    <textOnly>Mock Id Card Document for  has been {!AIA_Document__c.Name}
-
+    <subject>{!AIA_Document__c.Name}  approval has been rejected .</subject>
+    <textOnly>Mock Id Card Document for  has been {!AIA_Document__c.Account__c}
 rejected. Please request LGIT to correct the document and re-submit it
 
 for approval.

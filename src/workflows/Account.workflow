@@ -3,6 +3,7 @@
     <alerts>
         <fullName>New_Cede_Document_Notification</fullName>
         <ccEmails>carefirsttestacc@gmail.com</ccEmails>
+        <ccEmails>testaia@carefirst.com</ccEmails>
         <description>New Cede Document Notification</description>
         <protected>false</protected>
         <recipients>

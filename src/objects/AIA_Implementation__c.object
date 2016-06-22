@@ -236,6 +236,23 @@
     </fields>
     <label>Implementation</label>
     <listViews>
+        <fullName>AIA_Implementation_Queue_AIA_Implementation</fullName>
+        <columns>NAME</columns>
+        <columns>Name__c</columns>
+        <columns>Workplan_Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>Account__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Queue</filterScope>
+        <label>AIA Implementation Queue</label>
+        <queue>AIA_Implementation_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
         <fullName>AIA_Implementation_Queue_AIA_Post_Sales_Implementation</fullName>
         <columns>NAME</columns>
         <columns>Name__c</columns>

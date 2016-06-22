@@ -131,7 +131,7 @@
         <fullName>Mark_Not_Required__c</fullName>
         <description>Displays a &quot;not required&quot; button that allows the user to mark a SubProcess as not required when the Workplan Stage Status is &quot;Not Started&quot;</description>
         <externalId>false</externalId>
-        <formula>IF(ISPICKVAL(Status__c, &quot;Not Started&quot;), HYPERLINK(&quot;/apex/AIA_Workplan_SubProcess?type=mnr&amp;Id=&quot;+Id, IMAGE(&quot;/servlet/servlet.FileDownload?file=0157A000000E4kC&quot;, &quot;Mark as Not Required&quot;, 25, 25), &quot;_self&quot;), NULL)</formula>
+        <formula>IF(ISPICKVAL(Status__c, &quot;Not Started&quot;), HYPERLINK(&quot;/apex/AIA_Workplan_SubProcess?type=mnr&amp;Id=&quot;+Id, IMAGE(&quot;/servlet/servlet.FileDownload?file=01563000000DYPu&quot;, &quot;Mark as Not Required&quot;, 25, 25), &quot;_self&quot;), NULL)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Mark Not Required</label>
         <required>false</required>
@@ -198,7 +198,7 @@
         <fullName>Start_SubProcess__c</fullName>
         <description>Displays a &quot;play&quot; button that allows the user to start a SubProcess when the Workplan Stage Status is &quot;Not Started&quot;</description>
         <externalId>false</externalId>
-        <formula>IF(ISPICKVAL(Status__c, &quot;Not Started&quot;), HYPERLINK(&quot;/apex/AIA_Workplan_SubProcess?type=ssp&amp;Id=&quot;+Id, IMAGE(&quot;/servlet/servlet.FileDownload?file=0157A000000E4k7&quot;, &quot;Start&quot;, 25, 25), &quot;_self&quot;), NULL)</formula>
+        <formula>IF(ISPICKVAL(Status__c, &quot;Not Started&quot;), HYPERLINK(&quot;/apex/AIA_Workplan_SubProcess?type=ssp&amp;Id=&quot;+Id, IMAGE(&quot;/servlet/servlet.FileDownload?file=01563000000DYPz&quot;, &quot;Start&quot;, 25, 25), &quot;_self&quot;), NULL)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Start SubProcess</label>
         <required>false</required>

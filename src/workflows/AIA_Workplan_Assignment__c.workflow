@@ -48,6 +48,18 @@
         <template>AIA_Email_Templates/AIA_Workplan_Assignment</template>
     </alerts>
     <alerts>
+        <fullName>External_Assignee_Notification_For_Workplan_Assignment_From_PRF</fullName>
+        <ccEmails>chidagn@yahoo.ccom</ccEmails>
+        <description>External Assignee Notification For Workplan Assignment From PRF</description>
+        <protected>false</protected>
+        <recipients>
+            <field>External_Assignee__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>AIA_Email_Templates/External_Users_Notification_for_WorkPlan_Assignment_From_PRF</template>
+    </alerts>
+    <alerts>
         <fullName>External_Assignee_Notification_For_Workplan_Assignment_Reminder_From_PRF</fullName>
         <description>External Assignee Notification For Workplan Assignment Reminder From PRF</description>
         <protected>false</protected>
@@ -57,6 +69,26 @@
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>AIA_Email_Templates/External_Users_Notification_for_WorkPlan_Assignment_Reminder_From_PRF</template>
+    </alerts>
+    <alerts>
+        <fullName>Internal_Assignee_Notification_For_Workplan_Assignment_From_PRF</fullName>
+        <description>Internal Assignee Notification For Workplan Assignment From PRF</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>AIA_Email_Templates/Internal_Users_Notification_for_WorkPlan_Assignment_from_PRF</template>
+    </alerts>
+    <alerts>
+        <fullName>Internal_Assignee_Notification_For_Workplan_Assignment_From_PRF_When_Created</fullName>
+        <description>Internal Assignee Notification For Workplan Assignment From PRF When Created</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>AIA_Email_Templates/Internal_Users_Notification_for_WorkPlan_Assignment_from_PRF</template>
     </alerts>
     <alerts>
         <fullName>Internal_Assignee_Notification_For_Workplan_Assignment_Reminder_From_PRF</fullName>
@@ -191,6 +223,10 @@
     <rules>
         <fullName>AIA_External_Assignee_Notification_From_PRF</fullName>
         <actions>
+            <name>External_Assignee_Notification_For_Workplan_Assignment_From_PRF</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
             <name>External_Assignee_Notification_For_Workplan_Assignment_Reminder_From_PRF</name>
             <type>Alert</type>
         </actions>
@@ -240,6 +276,10 @@
     </rules>
     <rules>
         <fullName>AIA_Internal_Assignee_Notification_From_PRF</fullName>
+        <actions>
+            <name>Internal_Assignee_Notification_For_Workplan_Assignment_From_PRF</name>
+            <type>Alert</type>
+        </actions>
         <actions>
             <name>Internal_Assignee_Notification_For_Workplan_Assignment_Reminder_From_PRF</name>
             <type>Alert</type>

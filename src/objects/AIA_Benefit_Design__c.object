@@ -183,6 +183,11 @@
         <type>Picklist</type>
     </fields>
     <label>Benefit Design</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <displayFormat>BD-{00000000}</displayFormat>
         <label>Benefit Design Name</label>
